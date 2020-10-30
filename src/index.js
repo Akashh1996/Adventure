@@ -1,12 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import AdventureDetails from '../src/components/detail/AdventureDetails'
+import AdventureMap from '../src/components/map/AdventureMap'
 import './index.css';
-import App from './App';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <AdventureMap />
   </React.StrictMode>,
   document.getElementById('root')
 );
