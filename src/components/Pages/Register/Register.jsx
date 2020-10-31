@@ -33,7 +33,7 @@ class Form extends Component {
 						<div className="email">
 							<label htmlFor="email">Email</label>
 							<input
-								type="text"
+								type="email"
 								className="user-email"
 								placeholder="Email"
 								name="email"
@@ -44,13 +44,16 @@ class Form extends Component {
 						<div className="password">
 							<label htmlFor="password">Password</label>
 							<input
-								type="text"
+								type="password"
 								className="user-password"
 								placeholder="Password"
 								name="password"
 								onChange={this.handleChange}
 								noValidate
 							/>
+						</div>
+						<div className="createAccount">
+							<button type="submit">Create Account</button>
 						</div>
 					</form>
 				</div>
