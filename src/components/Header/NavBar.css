@@ -11,7 +11,7 @@
 }
 
 .NavBar {
-	background-color: #073a18;
+	background-color: #283d3b;
 	height: 80px;
 	display: flex;
 	justify-content: space-between;
@@ -33,7 +33,7 @@
 }
 
 .nav-menu {
-	background-color: #073a18;
+	background-color: #283d3b;
 	width: 250px;
 	height: 100vh;
 	display: flex;
@@ -71,7 +71,7 @@
 }
 
 .nav-text a:hover {
-	background-color: #118136;
+	background-color: #197278;
 }
 
 .nav-menu-items {
@@ -79,7 +79,7 @@
 }
 
 .navbar-toggle {
-	background-color: #073a18;
+	background-color: #283d3b;
 	width: 100%;
 	height: 80px;
 	display: flex;
