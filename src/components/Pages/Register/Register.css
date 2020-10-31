@@ -19,3 +19,67 @@ magenta/low -- #772e25
 	align-items: center;
 	background-color: #772e25;
 }
+
+.form-wrapper {
+	width: 400px;
+	display: flex;
+	flex-direction: column;
+	padding: 20px 40px;
+	border-radius: 20px;
+	box-shadow: 0px 0px 20px #555;
+	background-color: snow;
+}
+
+form {
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+h1 {
+	text-align: center;
+	width: 100%;
+	color: #111;
+	font-weight: 600;
+	margin-bottom: 20px;
+}
+
+label {
+	font-size: 16px;
+	margin-bottom: 0.25em;
+	color: #222;
+	font-weight: 400;
+}
+
+input {
+	padding: 10px 10px;
+	border-radius: 5px;
+	outline: none;
+	border: 1px solid #cfcfcf;
+}
+
+input::placeholder {
+	font-size: 12px;
+	font-weight: 200;
+	color: #999;
+}
+
+.firstName,
+.lastName {
+	margin-right: 1%;
+	width: 49%;
+}
+
+.firstName,
+.lastName,
+.email,
+.password {
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 15px;
+}
+
+.email,
+.password {
+	width: 100%;
+}
