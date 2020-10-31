@@ -104,10 +104,12 @@ input::placeholder {
 	font-weight: 300;
 	letter-spacing: 1px;
 	margin-bottom: 7px;
+	outline: none;
 }
 
 .createAccount > button:hover {
 	cursor: pointer;
 	color: snow;
 	background-color: #197278;
+	outline: none;
 }
