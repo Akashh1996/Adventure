@@ -6,15 +6,15 @@ import sportStore from '../../store/adventure-store'
 function PrintMap(props) {
     const [map, setMap] = useState(sportStore.getMapData());
 
-    useEffect(()=> {
+    useEffect(() => {
         sportStore.addEventListener(handleChange)
-        if(!map) {
+        if (!map) {
             loadDataFromMaps();
         }
         return () => {
             sportStore.removeEventListener(handleChange)
         }
-    },[map]);
+    }, [map]);
 
     function handleChange() {
         setMap(sportStore.getMapData());
