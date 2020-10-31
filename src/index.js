@@ -1,15 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import AdventureDetails from '../src/components/detail/AdventureDetails'
-import AdventureMap from '../src/components/map/AdventureMap'
+import AdventureDetails from '../src/components/detail/AdventureDetails';
+import AdventureMap from '../src/components/map/AdventureMap';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
-  <React.StrictMode>
-    <AdventureMap />
-  </React.StrictMode>,
-  document.getElementById('root')
+	<React.StrictMode>
+		<AdventureMap />
+	</React.StrictMode>,
+	document.getElementById('root')
 );
 
 // If you want to start measuring performance in your app, pass a function
