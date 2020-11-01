@@ -1,0 +1,16 @@
+footer {
+	display: flex;
+	justify-content: space-evenly;
+	background-color: skyblue;
+	color: white;
+	padding: 15px;
+	font-size: 18px;
+}
+a {
+	text-decoration: none;
+	color: white;
+}
+a:hover {
+	text-decoration: none;
+	color: red;
+}

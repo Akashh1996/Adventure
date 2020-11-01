@@ -1,13 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import AdventureDetails from '../src/components/detail/AdventureDetails';
-import AdventureMap from '../src/components/map/AdventureMap';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
+import Adventure from './components/Adventure/Adventure';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import Main from './components/Home/Main/Main';
 
 ReactDOM.render(
 	<React.StrictMode>
-		<AdventureMap />
+		<Adventure />
 	</React.StrictMode>,
 	document.getElementById('root')
 );
