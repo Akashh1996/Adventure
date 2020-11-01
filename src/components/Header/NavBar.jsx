@@ -8,7 +8,9 @@ import logo from './logo-adventure-awaits.png';
 
 function NavBar() {
 	const [sidebar, setSidebar] = useState(false);
+	const [loginOn, setLoginOn] = useState(true);
 
+	const offOnLogin = () => setLoginOn(!loginOn);
 	const showSidebar = () => setSidebar(!sidebar);
 
 	return (
@@ -26,6 +28,33 @@ function NavBar() {
 							<AiIcons.AiOutlineClose />
 						</Link>
 					</li>
+					<li
+						className={loginOn ? 'nav-text' : 'nav-text-inactive'}
+						onClick={offOnLogin}
+					>
+						<Link to="/login">
+							<AiIcons.AiOutlineLogin />
+							<span>Login</span>
+						</Link>
+					</li>
+					<li
+						className={loginOn ? 'nav-text' : 'nav-text-inactive'}
+						onClick={offOnLogin}
+					>
+						<Link to="/register">
+							<AiIcons.AiOutlineLogin />
+							<span>Register</span>
+						</Link>
+					</li>
+					<li
+						className={!loginOn ? 'nav-text' : 'nav-text-inactive'}
+						onClick={offOnLogin}
+					>
+						<Link to="/profile">
+							<FaIcons.FaUserAlt />
+							<span>My profile</span>
+						</Link>
+					</li>
 					{SidebarData.map((item, index) => {
 						return (
 							<li key={index} className={item.cName}>
@@ -36,6 +65,15 @@ function NavBar() {
 							</li>
 						);
 					})}
+					<li
+						className={!loginOn ? 'nav-text' : 'nav-text-inactive'}
+						onClick={offOnLogin}
+					>
+						<Link to="/logout">
+							<AiIcons.AiOutlineLogout />
+							<span>Log Out</span>
+						</Link>
+					</li>
 				</ul>
 			</nav>
 		</>
