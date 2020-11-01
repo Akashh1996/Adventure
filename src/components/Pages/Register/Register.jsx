@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import './Register.css';
 
 const emailRegex = RegExp(
@@ -19,7 +20,7 @@ const formValid = ({ formErrors, ...rest }) => {
 	return valid;
 };
 
-class Form extends Component {
+class RegisterForm extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
@@ -78,6 +79,8 @@ class Form extends Component {
 			default:
 				break;
 		}
+
+		this.setState({ formErrors, [name]: value });
 	};
 
 	render() {
@@ -86,6 +89,11 @@ class Form extends Component {
 			<div className="wrapper">
 				<div className="form-wrapper">
 					<h1>Create Account</h1>
+					<div className="small-container">
+						<Link to="./Login" style={{ textDecoration: 'none' }}>
+							<small>Already Have an Account</small>
+						</Link>
+					</div>
 					<form onSubmit={this.handleSubmit} noValidate>
 						<div className="firstName">
 							<label htmlFor="firstName">First Name</label>
@@ -144,7 +152,13 @@ class Form extends Component {
 							)}
 						</div>
 						<div className="createAccount">
-							<button type="submit">Create Account</button>
+							<Link
+								to="/Home"
+								className="createAccount"
+								style={{ textDecoration: 'none' }}
+							>
+								<button type="submit">Create Account</button>
+							</Link>
 						</div>
 					</form>
 				</div>
@@ -153,4 +167,4 @@ class Form extends Component {
 	}
 }
 
-export default Form;
+export default RegisterForm;

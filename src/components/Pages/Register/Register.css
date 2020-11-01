@@ -124,3 +124,25 @@ input::placeholder {
 .error {
 	border: 1px solid red;
 }
+
+.small-container {
+	text-align: center;
+	width: 100%;
+	margin-top: -20px;
+	margin-bottom: 20px;
+}
+
+small {
+	color: #999;
+	font-weight: lighter;
+}
+
+small:hover {
+	color: #283d3b;
+}
+
+@media screen and (max-width: 375px) {
+	.form-wrapper {
+		width: 350px;
+	}
+}

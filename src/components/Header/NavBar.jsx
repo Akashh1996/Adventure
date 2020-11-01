@@ -26,12 +26,6 @@ function NavBar() {
 							<AiIcons.AiOutlineClose />
 						</Link>
 					</li>
-					<li className="nav-text">
-						<Link to="/register">
-							<AiIcons.AiOutlineLogin />
-							<span>Register</span>
-						</Link>
-					</li>
 					{SidebarData.map((item, index) => {
 						return (
 							<li key={index} className={item.cName}>

@@ -10,8 +10,8 @@ function App() {
 			<BrowserRouter>
 				<NavBar />
 				<Switch>
-					<Route path="/login" component={Login} />
 					<Route path="/register" component={Register} />
+					<Route path="/Login" component={Login} />
 				</Switch>
 			</BrowserRouter>
 		</>

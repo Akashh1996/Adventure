@@ -12,12 +12,12 @@ export const SidebarData = [
 		icon: <AiIcons.AiOutlineLogin />,
 		cName: 'nav-text'
 	},
-	// {
-	// 	title: 'Register',
-	// 	path: '/register',
-	// 	icon: <AiIcons.AiOutlineLogin />,
-	// 	cName: 'nav-text'
-	// },
+	{
+		title: 'Register',
+		path: '/register',
+		icon: <AiIcons.AiOutlineLogin />,
+		cName: 'nav-text'
+	},
 	{
 		title: 'Home',
 		path: '/',
