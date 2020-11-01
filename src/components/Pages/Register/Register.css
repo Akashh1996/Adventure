@@ -113,3 +113,14 @@ input::placeholder {
 	background-color: #197278;
 	outline: none;
 }
+
+.errorMessage {
+	color: red;
+	position: relative;
+	font-size: 10px;
+	margin-left: 2px;
+}
+
+.error {
+	border: 1px solid red;
+}
