@@ -78,8 +78,6 @@ class Form extends Component {
 			default:
 				break;
 		}
-
-		// this.setState({ formErrors, [name]: value }, () => console.log(this.state));
 	};
 
 	render() {
