@@ -1,25 +1,30 @@
-import logo from './logo.svg';
 import './App.css';
+import NavBar from './components/Header/NavBar';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import Login from './components/Pages/Login/Login';
+import Register from './components/Pages/Register/Register';
+import Footer from './components/Footer/Footer';
+import Help from './components/Pages/Help/Help';
+import Contact from './components/Pages/Contact/Contact';
+import Slider from './components/Pages/Home/Slider';
+import MapContainer from './components/Pages/Map/Map';
 
 function App() {
 	return (
-		<div className="App">
-			<img
-				className="image"
-				src="https://trello-attachments.s3.amazonaws.com/5f9bfa5dd498fc35d70d6d4f/1199x314/5f40bb3b41e9e071b43776f5d90ab72d/71JB6lAf3uL._AC_SL1500_.jpg"
-				alt="akash-47"
-			></img>
-			<div>
-				<img
-					src="https://ca.slack-edge.com/T0SJKHBFZ-U016XU900E6-fa0eb758bde3-512"
-					alt="animal-abandonado"
-				></img>
-				<img
-					src="https://ca.slack-edge.com/T0SJKHBFZ-U016VE1N4PN-3b8b61cef136-512"
-					alt="eric-s"
-				></img>
-			</div>
-		</div>
+		<>
+			<BrowserRouter>
+				<NavBar />
+				<Switch>
+					<Route path="/register" component={Register} />
+					<Route path="/Login" component={Login} />
+					<Route path="/Help" component={Help} />
+					<Route path="/Contact" exact component={Contact} />
+					<Route path="/" exact component={Slider} />
+					<Route path="/maps" component={MapContainer} />
+				</Switch>
+				<Footer />
+			</BrowserRouter>
+		</>
 	);
 }
 
