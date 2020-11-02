@@ -4,6 +4,8 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import App from './App';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
+import Adventure from './components/Adventure/Adventure';
+import Main from './components/Home/Main/Main';
 
 ReactDOM.render(
 	<React.StrictMode>

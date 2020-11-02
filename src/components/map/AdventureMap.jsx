@@ -6,6 +6,7 @@ import sportStore from '../../store/adventure-store';
 function PrintMap(props) {
 	const [map, setMap] = useState(sportStore.getMapData());
 
+
 	useEffect(() => {
 		sportStore.addEventListener(handleChange);
 		if (!map) {
@@ -15,6 +16,7 @@ function PrintMap(props) {
 			sportStore.removeEventListener(handleChange);
 		};
 	}, [map]);
+
 
 	function handleChange() {
 		setMap(sportStore.getMapData());
