@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { getPlaceByID } from '../../../actions/place-actions'
+import placeStore from '../../../store/place-store'
 import { Map, GoogleApiWrapper, InfoWindow, Marker } from 'google-maps-react';
 const mapStyles = {
 	width: '100%',
@@ -64,7 +66,8 @@ export class MapContainer extends Component {
 				showingInfoWindow: false,
 				activeMarker: null
 			});
-		}
+        }
+        console.log(placeStore.getPlace());
 	};
 	onMarkerClick = (props, marker, e) =>
 		this.setState({
@@ -74,6 +77,7 @@ export class MapContainer extends Component {
 		});
 	render() {
 		return (
+            
 			<div style={{ height: '100vh' }}>
 				<Map
 					google={this.props.google}

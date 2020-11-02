@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> 2c9cdf7186f58db9bdccac3be1af5d8cdc0fa029
 import NavBar from './components/Header/NavBar';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Login from './components/Pages/Login/Login';
