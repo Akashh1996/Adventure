@@ -1,14 +1,20 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import App from './App';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
 import Adventure from './components/Adventure/Adventure';
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Main from './components/Home/Main/Main';
 
 ReactDOM.render(
 	<React.StrictMode>
-		<Adventure />
+		<BrowserRouter>
+			<App />
+			<Switch>
+				<Route path="/" />
+			</Switch>
+		</BrowserRouter>
 	</React.StrictMode>,
 	document.getElementById('root')
 );
