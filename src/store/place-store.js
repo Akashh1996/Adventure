@@ -1,6 +1,7 @@
 import { EventEmitter } from 'events';
+import axios from 'axios';
 import dispatcher from '../dispatcher/dispatcher';
-import { loadPlace } from '../actions/place-actions';
+import { getPlaceByID } from '../actions/place-actions';
 
 const CHANGE = 'CHANGE';
 let _place;
