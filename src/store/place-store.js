@@ -7,7 +7,6 @@ let _place;
 
 export class PlaceStore extends EventEmitter {
     getPlace() {
-        console.log({_place})
         return  _place
     }
 
@@ -26,18 +25,15 @@ const placeStore = new PlaceStore();
 
 
 dispatcher.register((action) => {
-    
-    console.log("CACACACACACA");
-    
-    // switch(action.type) {
-    //     case 'LOAD_PLACE':
-    //     _place = action.payload;
-    //     placeStore.emitChange(); 
-    //     break;
+    switch(action.type) {
+        case 'LOAD_PLACE_ID':
+        _place = action.payload;
+        placeStore.emitChange(); 
+        break;
 
-    //     default:
-    //     break;
-    // }
+        default:
+        break;
+    }
 });
 
 export default placeStore

@@ -1,7 +1,7 @@
 import React, { useEffect, useState, Component } from 'react';
 import { Link } from 'react-router-dom';
-// import { loadDataFromMaps } from '../../actions/adventure-actions';
-// import sportStore from '../../store/adventure-store'
+import { loadDataFromMaps } from '../../actions/adventure-actions';
+import sportStore from '../../store/adventure-store'
 import { Map, GoogleApiWrapper, InfoWindow, Marker } from 'google-maps-react';
 
 
