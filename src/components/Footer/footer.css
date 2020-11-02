@@ -5,6 +5,10 @@ footer {
 	color: white;
 	padding: 15px;
 	font-size: 18px;
+	z-index: 1000;
+	width: 100%;
+	position: sticky;
+	bottom: 0;
 }
 a {
 	text-decoration: none;
