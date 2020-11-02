@@ -4,7 +4,9 @@ import * as FaIcons from 'react-icons/fa';
 import * as AiIcons from 'react-icons/ai';
 import { SidebarData } from './SideBarData';
 import './NavBar.css';
-import logo from './logo-adventure-awaits.png';
+
+const logo =
+	'https://trello-attachments.s3.amazonaws.com/5f9fe516582bea5ce01d06b2/5f9fe5242167b873b8f1f631/3e0221f7d523436eb2520790995026bc/logo-adventure-awaits.png';
 
 function NavBar() {
 	const [sidebar, setSidebar] = useState(false);
