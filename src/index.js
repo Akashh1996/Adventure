@@ -1,7 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import AdventureMap from '../src/components/map/AdventureMap'
-import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import { BrowserRouter } from 'react-router-dom';
 import App from './App';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
@@ -10,7 +9,6 @@ ReactDOM.render(
 	<React.StrictMode>
 		<BrowserRouter>
 			<App />
-			
 		</BrowserRouter>
 	</React.StrictMode>,
 	document.getElementById('root')
