@@ -1,0 +1,26 @@
+img {
+	max-height: 550px;
+	height: auto;
+}
+
+p {
+	background-color: #007bff;
+	width: fit-content;
+	margin: auto;
+	padding: 5px;
+	margin-bottom: 10px;
+}
+
+@media screen and (max-width: 600px) {
+	.quote {
+		font-size: 1rem;
+	}
+}
+@media screen and (max-width: 400px) {
+	.quote {
+		display: none;
+	}
+	p {
+		padding: 3px;
+	}
+}
