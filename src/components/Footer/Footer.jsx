@@ -31,7 +31,7 @@ function Footer() {
 				{footerItems.map((item) => {
 					return (
 						<Link to={item.path} key={item.id}>
-							{item.name}{' '}
+							{item.name}
 						</Link>
 					);
 				})}
