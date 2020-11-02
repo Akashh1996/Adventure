@@ -26,7 +26,7 @@ function Footer() {
 		}
 	];
 	return (
-		<div className="papadelfooter">
+		<div className="foot-container">
 			<footer>
 				{footerItems.map((item) => {
 					return (
