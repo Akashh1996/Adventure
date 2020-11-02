@@ -1,7 +1,6 @@
 import React, { useEffect, useState, Component } from 'react';
 import { Link } from 'react-router-dom';
 import { loadDataFromMaps } from '../../actions/adventure-actions';
-<<<<<<< HEAD
 import sportStore from '../../store/adventure-store'
 import { Map, GoogleApiWrapper, InfoWindow, Marker } from 'google-maps-react';
 
@@ -129,29 +128,6 @@ export class MapContainer extends Component {
         
       );
     }
-=======
-import sportStore from '../../store/adventure-store';
-
-function PrintMap(props) {
-	const [map, setMap] = useState(sportStore.getMapData());
-
-
-	useEffect(() => {
-		sportStore.addEventListener(handleChange);
-		if (!map) {
-			loadDataFromMaps();
-		}
-		return () => {
-			sportStore.removeEventListener(handleChange);
-		};
-	}, [map]);
-
-
-	function handleChange() {
-		setMap(sportStore.getMapData());
-	}
-	return <></>;
->>>>>>> 9e2cf1bc10aed1dcc4112538721df6e944f23982
 }
   
 
