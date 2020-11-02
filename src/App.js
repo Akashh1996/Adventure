@@ -19,8 +19,8 @@ function App() {
 					<Route path="/Login" component={Login} />
 					<Route path="/Help" component={Help} />
 					<Route path="/Contact" exact component={Contact} />
-					<Route path="/" exact component={Slider} />
 					<Route path="/maps" component={MapContainer} />
+					<Route path="/" exact component={Slider} />
 				</Switch>
 				<Footer />
 			</BrowserRouter>

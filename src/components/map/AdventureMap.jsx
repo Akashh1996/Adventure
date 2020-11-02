@@ -135,7 +135,3 @@ export default GoogleApiWrapper({
     apiKey: 'AIzaSyD6YZ7TzQl_TKgHxHWI9s_9u-NLM1B1nRo'
 })(MapContainer);
 
-<<<<<<< HEAD
-=======
-export default PrintMap;
->>>>>>> 9e2cf1bc10aed1dcc4112538721df6e944f23982
