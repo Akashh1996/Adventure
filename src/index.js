@@ -1,10 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-<<<<<<< HEAD
 import { BrowserRouter } from 'react-router-dom';
-=======
-import { BrowserRouter, Switch, Route } from 'react-router-dom';
->>>>>>> 2c9cdf7186f58db9bdccac3be1af5d8cdc0fa029
 import App from './App';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
