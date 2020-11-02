@@ -74,44 +74,46 @@ export class MapContainer extends Component {
 		});
 	render() {
 		return (
-			<Map
-				google={this.props.google}
-				zoom={14}
-				style={mapStyles}
-				initialCenter={{ lat: 41.390205, lng: 2.154007 }}
-				onClick={this.onMapClicked}
-			>
-				{places.map((ObjMapMarker) => {
-					return (
-						<Marker
-							onClick={this.onMarkerClick}
-							onMouseover={this.onMouseoverMarker}
-							name={`${ObjMapMarker.name}`}
-							id={`${ObjMapMarker.name}`}
-							url={`${ObjMapMarker.url}`}
-							prices={`${ObjMapMarker.prices}`}
-							activities={`${ObjMapMarker.activities}`}
-							rating={`${ObjMapMarker.rating}`}
-							position={{
-								lat: `${ObjMapMarker.location.lat}`,
-								lng: `${ObjMapMarker.location.lng}`
-							}}
-						/>
-					);
-				})}
-				<InfoWindow
-					marker={this.state.activeMarker}
-					visible={this.state.showingInfoWindow}
+			<div style={{ height: "100vh" }}>
+				<Map
+					google={this.props.google}
+					zoom={14}
+					style={mapStyles}
+					initialCenter={{ lat: 41.390205, lng: 2.154007 }}
+					onClick={this.onMapClicked}
 				>
-					<div>
-						<h1>{this.state.selectedPlace.name}</h1>
-						<h2>{this.state.selectedPlace.activities}</h2>
-						<h3>{this.state.selectedPlace.prices}</h3>
-						<h2>{this.state.selectedPlace.url}</h2>
-						<h3>{this.state.selectedPlace.rating}</h3>
-					</div>
-				</InfoWindow>
-			</Map>
+					{places.map((ObjMapMarker) => {
+						return (
+							<Marker
+								onClick={this.onMarkerClick}
+								onMouseover={this.onMouseoverMarker}
+								name={`${ObjMapMarker.name}`}
+								id={`${ObjMapMarker.name}`}
+								url={`${ObjMapMarker.url}`}
+								prices={`${ObjMapMarker.prices}`}
+								activities={`${ObjMapMarker.activities}`}
+								rating={`${ObjMapMarker.rating}`}
+								position={{
+									lat: `${ObjMapMarker.location.lat}`,
+									lng: `${ObjMapMarker.location.lng}`
+								}}
+							/>
+						);
+					})}
+					<InfoWindow
+						marker={this.state.activeMarker}
+						visible={this.state.showingInfoWindow}
+					>
+						<div>
+							<h1>{this.state.selectedPlace.name}</h1>
+							<h2>{this.state.selectedPlace.activities}</h2>
+							<h3>{this.state.selectedPlace.prices}</h3>
+							<h2>{this.state.selectedPlace.url}</h2>
+							<h3>{this.state.selectedPlace.rating}</h3>
+						</div>
+					</InfoWindow>
+				</Map>
+			</div>
 		);
 	}
 }
