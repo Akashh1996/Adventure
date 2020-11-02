@@ -1,3 +1,8 @@
+.papadelfooter {
+	height: 100vh;
+	position: relative;
+}
+
 footer {
 	display: flex;
 	justify-content: space-evenly;
@@ -7,7 +12,7 @@ footer {
 	font-size: 18px;
 	z-index: 1000;
 	width: 100%;
-	position: sticky;
+	position: absolute;
 	bottom: 0;
 }
 a {

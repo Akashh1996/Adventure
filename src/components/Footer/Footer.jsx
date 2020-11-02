@@ -26,15 +26,17 @@ function Footer() {
 		}
 	];
 	return (
-		<footer>
-			{footerItems.map((item) => {
-				return (
-					<Link to={item.path} key={item.id}>
-						{item.name}{' '}
-					</Link>
-				);
-			})}
-		</footer>
+		<div className="papadelfooter">
+			<footer>
+				{footerItems.map((item) => {
+					return (
+						<Link to={item.path} key={item.id}>
+							{item.name}{' '}
+						</Link>
+					);
+				})}
+			</footer>
+		</div>
 	);
 }
 
