@@ -1,126 +1,90 @@
-import React, { Component } from 'react';
-import { getPlaceByID } from '../../../actions/place-actions'
-import placeStore from '../../../store/place-store'
-import { Map, GoogleApiWrapper, InfoWindow, Marker } from 'google-maps-react';
-const mapStyles = {
-	width: '100%',
-	height: '100%'
+import React, { useEffect, useState } from 'react';
+import { loadPlaces } from '../../../actions/place-actions';
+import placeStore from '../../../store/place-store';
+import {
+    GoogleMap,
+    useLoadScript,
+    Marker,
+    InfoWindow,
+} from '@react-google-maps/api';
+
+const libraries = ["places"];
+
+const mapContainerStyle = {
+    width:'100vh',
+    height:'100vh',
 };
-const places = [
-	{
-		name: 'Adenture Time',
-		prices: 'Prices : from 20 to 50',
-		rating: 'rating: ' + 4.1,
-		activities: 'kayak',
-		url: 'http://adventuretime.com',
-		location: { lat: 41.390103, lng: 2.154007 }
-	},
-	{
-		name: 'Canyon Mari Carmen',
-		prices: 'Prices : from 20 to 90',
-		rating: 'rating: ' + 5,
-		activities: 'canyoning',
-		url: 'http://maricarmenmola.com',
-		location: { lat: 41.40009, lng: 2.154007 }
-	},
-	{
-		name: 'Yep yep yep',
-		prices: 'Prices : from 20 to 50',
-		rating: 'rating: ' + 3.1,
-		activities: 'rafting',
-		url: 'http://yepaeldeporte.com',
-		location: { lat: 41.420103, lng: 2.184007 }
-	},
-	{
-		name: 'Que tal adventure',
-		prices: 'Prices : from 1 to 10',
-		rating: 'rating: ' + 4.5,
-		activities: 'rafting',
-		url: 'http://quetaladventures.com',
-		location: { lat: 41.400103, lng: 2.164007 }
-	},
-	{
-		name: 'Deportes extremos',
-		prices: 'Prices : from 10 to 60',
-		rating: 'rating: ' + 3.6,
-		activities: 'kayak',
-		url: 'http://adventuretime.com',
-		location: { lat: 41.380103, lng: 2.104007 }
-	}
-];
-export class MapContainer extends Component {
-	state = {
-		showingInfoWindow: false,
-		activeMarker: {},
-		selectedPlace: {}
-	};
-	onMouseoverMarker = (props, marker, e) =>
-		this.setState({
-			selectedPlace: props,
-			activeMarker: marker,
-			showingInfoWindow: true
-		});
-	onMapClicked = (props) => {
-		if (this.state.showingInfoWindow) {
-			this.setState({
-				showingInfoWindow: false,
-				activeMarker: null
-			});
-        }
-        console.log(placeStore.getPlace());
-	};
-	onMarkerClick = (props, marker, e) =>
-		this.setState({
-			selectedPlace: props.name,
-			activeMarker: marker,
-			showingInfoWindow: true
-		});
-	render() {
-		return (
-            
-			<div style={{ height: '100vh' }}>
-				<Map
-					google={this.props.google}
-					zoom={14}
-					style={mapStyles}
-					initialCenter={{ lat: 41.390205, lng: 2.154007 }}
-					onClick={this.onMapClicked}
-				>
-					{places.map((ObjMapMarker) => {
-						return (
-							<Marker
-								onClick={this.onMarkerClick}
-								onMouseover={this.onMouseoverMarker}
-								name={`${ObjMapMarker.name}`}
-								id={`${ObjMapMarker.name}`}
-								url={`${ObjMapMarker.url}`}
-								prices={`${ObjMapMarker.prices}`}
-								activities={`${ObjMapMarker.activities}`}
-								rating={`${ObjMapMarker.rating}`}
-								position={{
-									lat: `${ObjMapMarker.location.lat}`,
-									lng: `${ObjMapMarker.location.lng}`
-								}}
-							/>
-						);
-					})}
-					<InfoWindow
-						marker={this.state.activeMarker}
-						visible={this.state.showingInfoWindow}
-					>
-						<div>
-							<h1>{this.state.selectedPlace.name}</h1>
-							<h2>{this.state.selectedPlace.activities}</h2>
-							<h3>{this.state.selectedPlace.prices}</h3>
-							<h2>{this.state.selectedPlace.url}</h2>
-							<h3>{this.state.selectedPlace.rating}</h3>
-						</div>
-					</InfoWindow>
-				</Map>
-			</div>
-		);
-	}
+const center = {
+    lat: 41.390205,
+    lng: 2.154007,
 }
-export default GoogleApiWrapper({
-	apiKey: 'AIzaSyD6YZ7TzQl_TKgHxHWI9s_9u-NLM1B1nRo'
-})(MapContainer);
+
+function Map() {
+    const [place, setDetail] = useState(placeStore.getPlace());
+    const {isLoaded, loadError} = useLoadScript({
+        googleMapsApiKey: process.env.REACT_APP_GOOGLE_MAPS_API_KEY,
+        libraries,
+    });
+    const [ markerSelected, setMarkerSelected ] = useState({});
+
+    useEffect(() => {
+        placeStore.addEventListener(handleChange);
+        if (!place) {
+            loadPlaces();
+        }
+        return () => {
+            placeStore.removeEventListener(handleChange);
+        };
+    }, [place]);
+
+    function handleChange() {
+        setDetail(placeStore.getPlace());
+    };
+    
+    console.log(place);
+    // place?.map((ObjMapMarker) => { return (
+    //         console.log(ObjMapMarker.result.name)
+    //     ) });
+        
+        if(loadError) return "Error loading maps";
+        if(!isLoaded) return "Loading Maps";
+        return  (
+            <div>
+        <GoogleMap 
+        mapContainerStyle={mapContainerStyle} 
+        zoom={14}
+        center={center}
+        >  
+        {place.map((placeDetail) => {
+            return (
+                <Marker key={placeDetail.result.name}
+                position={placeDetail.result.geometry.location}
+                icon={{
+                url:'https://trello-attachments.s3.amazonaws.com/5f9fe5242167b873b8f1f631/372x594/69d66633dffceabc33074ec6670c06b1/clipart51531.png',
+                scaledSize: new window.google.maps.Size(20,30)}}
+                // onMouseOver={()=> setMarkerSelected(placeDetail)}
+                /> 
+            );
+        })}
+  
+        {/* {   
+            markerSelected.geometry.location && 
+            (
+            <InfoWindow
+            position={markerSelected.geometry.location}
+            clickable={true}
+            onMouseDown={() => setMarkerSelected({})}
+            >
+            <div>
+                <h1>{markerSelected.name}</h1>
+                <h2>{markerSelected.place_id}</h2>
+            </div>
+            </InfoWindow>
+            )
+         } */}
+         </GoogleMap>
+             </div>
+        )
+} 
+
+export default Map
