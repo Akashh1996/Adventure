@@ -6,7 +6,7 @@ import Footer from './components/Footer/Footer';
 import Help from './components/Pages/Help/Help';
 import Contact from './components/Pages/Contact/Contact';
 import Slider from './components/Pages/Home/Slider';
-import MapContainer from './components/Pages/Map/Map';
+import Map from './components/Pages/Map/Map';
 
 function App() {
 	return (
@@ -18,7 +18,7 @@ function App() {
 					<Route path="/Login" component={Login} />
 					<Route path="/Help" component={Help} />
 					<Route path="/Contact" exact component={Contact} />
-					<Route path="/maps" component={MapContainer} />
+					<Route path="/maps" component={Map} />
 					<Route path="/" exact component={Slider} />
 				</Switch>
 				<Footer />
