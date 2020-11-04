@@ -26,17 +26,19 @@ function Footer() {
 		}
 	];
 	return (
-		<div className="foot-container">
-			<footer>
-				{footerItems.map((item) => {
-					return (
-						<Link to={item.path} key={item.id}>
-							{item.name}{' '}
-						</Link>
-					);
-				})}
-			</footer>
-		</div>
+		<footer className="foot-container">
+			{footerItems.map((item) => {
+				return (
+					<Link
+						data-test-id={`footer-link__${item.name}`}
+						to={item.path}
+						key={item.id}
+					>
+						{item.name}
+					</Link>
+				);
+			})}
+		</footer>
 	);
 }
 
