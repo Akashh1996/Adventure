@@ -106,6 +106,7 @@ function Map() {
 						<Marker
 							data-test-id={`marker__${placeDetail.name}`}
 							key={placeDetail.name}
+							address={placeDetail.address}
 							position={placeDetail.location}
 							icon={{
 								url:
