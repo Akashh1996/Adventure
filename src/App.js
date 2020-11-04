@@ -7,6 +7,7 @@ import Help from './components/Pages/Help/Help';
 import Contact from './components/Pages/Contact/Contact';
 import Slider from './components/Pages/Home/Slider';
 import Map from './components/Pages/Map/Map';
+import DetailSlider from './components/Pages/Detail/DetailSlider';
 
 function App() {
 	return (
@@ -20,6 +21,7 @@ function App() {
 					<Route path="/Contact" exact component={Contact} />
 					<Route path="/maps" component={Map} />
 					<Route path="/" exact component={Slider} />
+					<Route path="/detail" exact component={DetailSlider} />
 				</Switch>
 				<Footer />
 			</BrowserRouter>
