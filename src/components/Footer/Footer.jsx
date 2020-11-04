@@ -26,19 +26,6 @@ function Footer() {
 		}
 	];
 	return (
-<<<<<<< HEAD
-		<div className="foot-container">
-			<footer>
-				{footerItems.map((item) => {
-					return (
-						<Link to={item.path} key={item.id}>
-							{item.name}
-						</Link>
-					);
-				})}
-			</footer>
-		</div>
-=======
 		<footer className="foot-container">
 			{footerItems.map((item) => {
 				return (
@@ -52,7 +39,6 @@ function Footer() {
 				);
 			})}
 		</footer>
->>>>>>> c2dde2c80cd0cdd4f883136cd447c643b6fd764b
 	);
 }
 
