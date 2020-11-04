@@ -3,11 +3,18 @@ import dispatcher from '../dispatcher/dispatcher';
 
 const CHANGE = 'CHANGE';
 let _place;
+let _placeData;
 
 export class PlaceStore extends EventEmitter {
 	getPlace() {
 		return _place;
 	}
+
+	getPlaceData() {
+		debugger;
+		return _placeData;
+	}
+
 
 	addEventListener(callback) {
 		this.on(CHANGE, callback);
@@ -28,7 +35,16 @@ dispatcher.register((action) => {
 			_place = action.payload;
 			placeStore.emitChange();
 			break;
+
+		case 'LOAD_PLACE_DATA':
+			_placeData = action.payload;
+			placeStore.emitChange();
+			break;
+
+		default:
+			break;
 	}
 });
 
 export default placeStore;
+
