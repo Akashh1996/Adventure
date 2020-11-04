@@ -1,0 +1,370 @@
+[	
+	{
+		"id": 1,
+		"phone_number": "628 77 35 08",
+		"address": "Avinguda de la Generalitat, 1, 25560 Sort, Lleida",
+		"location": { "lat": 42.412571, "lng": 1.132111 },
+		"name": "Rafting Catalunya",
+		"url": "https://raftingcatalunya.es/",
+		"type": "rafting",
+		"price": "40€-80€",
+		"description":
+			"Comparte en familia o con amigos la aventura del Rafting en las bravas aguas del río Noguera Pallaresa. Descenderás en una balsa neumática un río de aguas bravas acompañado de guías experto con gran experiencia y profesionalidad Tu seguridad será lo primero. Y tu disfrute también",
+		"photos": [
+			{
+				"photo1":
+					"https://raftingcatalunya.es/images/rafting/descenso-de-un-rio-en-rafting.jpg",
+				"photo2":
+					"https://raftingcatalunya.es/images/rafting/grupo-de-ninos-haciendo-rafting.jpg",
+				"photo3":
+					"https://raftingcatalunya.es/images/rafting/rafting-por-los-rios-de-catalunya.jpg",
+				"photo4":
+					"https://raftingcatalunya.es/images/rafting/pasando-por-debajo-de-un-puente-en-rafting.jpg",
+				"photo5":
+					"https://raftingcatalunya.es/images/rafting/familia-haciendo-rafting-en-catalunya.jpg"
+			}
+		],
+		"rating": 4.8,
+		"reviews": [
+			{
+				"author_name": "Marcin Górny",
+				"profile_photo_url":
+					"https://lh6.googleusercontent.com/-nF5y3DEoUz0/AAAAAAAAAAI/AAAAAAAAAAA/AMZuucl2AqkZSxxQDUjYY1cVeZF47W7iDQ/s128-c0x00000000-cc-rp-mo-ba3/photo.jpg",
+				"rating": 5,
+				"relative_time_description": "3 months ago",
+				"text":
+					"As a small group of 3 people we were teamed up with another 2 and had an amazing time, lead by Alfonso in Inferno Canyon. He is an extremely professional guide and I felt secure following his advice. The canyon was great for beginners with a decent level of physical fitness and willingness to overcome some fears. I would totally repeat barranquismo in another canyon there."
+			},
+			{
+				"author_name": "Busra Savli",
+				"profile_photo_url":
+					"https://lh3.googleusercontent.com/a-/AOh14GiH-LSCY1S03pSa1POX-7Tugexa2_46urXKJoBl=s128-c0x00000000-cc-rp-mo",
+				"rating": 5,
+				"relative_time_description": "a year ago",
+				"text":
+					"As Blu Selection, we had an amazing team building event with Rafting Catalunya. We felt really safe and most importantly, had a lot of fun.\n\nThey first gave us every single detail regarding security and as we felt more expert, the level of entertainment went up higher. The nature surrounding is amazing and since we had ours in early July water was not cold but really refreshing.\n\nBig thanks to our lovely guide, Miguel, for his clear instructions and making rafting even more entertaining than it already is."
+			},
+			{
+				"author_name": "Benos Shregger",
+				"profile_photo_url":
+					"https://lh3.googleusercontent.com/a-/AOh14GiCaBezZyJk8fj5h1djMly89EhtZdceqyvYT6mDmg=s128-c0x00000000-cc-rp-mo-ba3",
+				"rating": 5,
+				"relative_time_description": "a year ago",
+				"text":
+					"Had a really fun time rafting with rafting Catalunya. The tour guide was fun and stopped us so we could jump of cliffs, swim and float in the river. We also got to see land marks and stop in small caves. When you go with this company you get nice surprises 👌 and very nice tour guides."
+			},
+			{
+				"author_name": "Alina Iurina",
+				"profile_photo_url":
+					"https://lh3.googleusercontent.com/a-/AOh14GjIFLxtLxOga_DCrl9Y72imSc7cuZJOFug-th1Vbg=s128-c0x00000000-cc-rp-mo",
+				"rating": 5,
+				"relative_time_description": "a year ago",
+				"text":
+					"Amazing rafting company, I didn’t except to have so much fan, Edu is a cool guide, we enjoyed a lot 😊"
+			},
+			{
+				"author_name": "D",
+				"profile_photo_url":
+					"https://lh3.googleusercontent.com/a-/AOh14Gg9RiY5twfPxc9iZeCKO_eM819xyKnk-xttm7E-Lvs=s128-c0x00000000-cc-rp-mo-ba3",
+				"rating": 5,
+				"relative_time_description": "a year ago",
+				"text":
+					"Professional, entertaining and friendly staff. Fantastic experience all round!! English speaking"
+			}
+		]
+	},
+	{
+		"id": 2,
+		"phone_number": "608 27 35 50",
+		"address": "Panta de Darnius, Girona",
+		"location": { "lat": 42.337487, "lng": 2.79427 },
+		"name": "Rafting Darnius",
+		"url": "https://www.livewater.es/",
+		"type": "rafting",
+		"price": "50€-60€",
+		"description":
+			"Tras  varios años de experiencia en el sector del  turismo de aventura, los componentes de nuestro equipo decidimos juntarnos y ofertar al mercado un servicio más personal y profesional: nuestros visitantes disfrutarían  tanto de la actividad como lo hacemos nosotros mismos. Para ello contamos con guías titulados, apasionados por su trabajo y con los pies en la tierra. Brindamos la seguridad que buscas en tus aventuras, con la equipación homologada y adecuada para cada tipo de actividad, ofreciéndote así un servicio de calidad y confianza.",
+		"photos": [
+			{
+				"photo1":
+					"https://static2.laverdad.es/www/multimedia/201805/04/media/cortadas/rafting1-k9iF-U501818270540hF-624x385@La%20Verdad.jpg",
+				"photo2":
+					"https://alcorceaventura.com/wp-content/uploads/2017/03/rafting-pirineos.jpg",
+				"photo3":
+					"https://upload.wikimedia.org/wikipedia/commons/a/ac/Rio_Salvaje_Jalcomulco.jpeg",
+				"photo4":
+					"https://cdn.getyourguide.com/img/tour/5c8ff2db67d63.jpeg/146.jpg",
+				"photo5":
+					"https://media.tacdn.com/media/attractions-splice-spp-674x446/06/70/7f/63.jpg"
+			}
+		],
+		"rating": 4.6,
+		"reviews": [
+			{
+				"author_name": "Fernando Polo",
+				"profile_photo_url":
+					"https://lh3.googleusercontent.com/a-/AOh14Gjh6JZO4dfVmNTNQFW96FNND8l76B2Yz1GVX3QsmA=s128-c0x00000000-cc-rp-mo-ba3",
+				"rating": 5,
+				"relative_time_description": "a year ago",
+				"text":
+					"Amazing experience. We had a real blast. Great people: our guide, Jorge, kind and fun. Fernando, the photographer, and Julián, guiding the other raft. Thanks for this, guys."
+			},
+			{
+				"author_name": "Julien Andrillon",
+				"profile_photo_url":
+					"https://lh3.googleusercontent.com/a-/AOh14GisvYqKbM_Bc-wJuuDbBEFEksueQjJ3k2-9-Xxql2U=s128-c0x00000000-cc-rp-mo-ba3",
+				"rating": 5,
+				"relative_time_description": "3 years ago",
+				"text": "Good team. Perfect place. Try it"
+			},
+			{
+				"author_name": "Emma Van Hee",
+				"profile_photo_url":
+					"https://lh3.googleusercontent.com/a-/AOh14GjDaEd3ikP16FPVG5_9SAj74KUXY7nT_CSh7xxTNxw=s128-c0x00000000-cc-rp-mo-ba2",
+				"rating": 5,
+				"relative_time_description": "2 years ago",
+				"text":
+					"We had a blast! Perfect for kids, instructors are nice, friendly!"
+			},
+			{
+				"author_name": "David Schouten",
+				"profile_photo_url":
+					"https://lh3.googleusercontent.com/-tryBZMfBQ7w/AAAAAAAAAAI/AAAAAAAAAAA/AMZuuclENM35D102wNf6s2lokbeaR3_UjA/s128-c0x00000000-cc-rp-mo-ba5/photo.jpg",
+				"rating": 5,
+				"relative_time_description": "4 years ago",
+				"text": "Very fun thing to do. Really recommend it!!"
+			},
+			{
+				"author_name": "René Salden",
+				"profile_photo_url":
+					"https://lh3.googleusercontent.com/a-/AOh14Gj1m_gL9nwVBRPry5vrAAD9AKn8r18cMEAmkx10I9E=s128-c0x00000000-cc-rp-mo-ba5",
+				"rating": 5,
+				"relative_time_description": "a year ago",
+				"text":
+					"The rafting was a lot of fun. Never done before, but worth repeating. The guides are great! They even master a few words of Dutch."
+			}
+		]
+	},
+	{
+		"id": 3,
+		"phone_number": "973 62 21 58",
+		"address": "Panta de Darnius, Girona",
+		"location": { "lat": 42.495309, "lng": 1.211471 },
+		"name": "Rafting Llavorsí",
+		"url": "https://raftingllavorsi.cat/",
+		"type": "rafting",
+		"price": "50€-70€",
+		"description":
+			"Somos un equipo dedicado por entero a los deportes de aventura y a la actividad al aire libre. Nuestro objetivo es enseñarte todo lo que sabemos y hacer que cada momento que pases con nosotros sea inolvidable.",
+		"photos": [
+			{
+				"photo1":
+					"https://www.somosaventura.com/wp-content/uploads/2016/09/Raf1.jpg",
+				"photo2":
+					"https://media.tacdn.com/media/attractions-splice-spp-674x446/06/6c/81/ad.jpg",
+				"photo3":
+					"https://alua.es/wp-content/uploads/2018/03/RAFTING-2-600x400.jpg",
+				"photo4":
+					"https://activasur.com/wp-content/themes/yootheme/cache/medidas-de-seguridad-en-el-rafting...-94d8734c.jpeg",
+				"photo5":
+					"https://jairecanoas.com/blog/wp-content/uploads/2019/09/rafting3-825x510.jpg"
+			}
+		],
+		"rating": 4.6,
+		"reviews": [
+			{
+				"author_name": "Davide Stefani",
+				"profile_photo_url":
+					"https://lh3.googleusercontent.com/a-/AOh14Gim-T_W0S4tSI8hnnUIrcGqm764q58oDFt7v8EgYw=s128-c0x00000000-cc-rp-mo-ba3",
+				"rating": 4,
+				"relative_time_description": "3 months ago",
+				"text":
+					"Rafting was really fun! First time I did it but the experience and the staff was nice! Definitely recommend!!"
+			},
+			{
+				"author_name": "Amit Beckenstein",
+				"profile_photo_url":
+					"https://lh3.googleusercontent.com/a-/AOh14GgPDasZLQFg21aOcYrPsPWFfnhNXOVL60bOkqddAKs=s128-c0x00000000-cc-rp-mo-ba5",
+				"rating": 5,
+				"relative_time_description": "a year ago",
+				"text":
+					"Amazing experience and lots of fun! We came in the last day of the season, right before winter, so there wasn't too much water, but it's been said that in the spring the level of the water is much higher, reaching about 2 meters. Marc, our instructor, was real nice and super friendly and gave us a great time!\nYou get water suits and boots to change to in the toilet/showers/changing room before going on the rafts, so you don't need anything besides swimsuits. It's possible to leave your stuff at the site. You'll be driven back to the starting point by a minibus."
+			},
+			{
+				"author_name": "Sabina M",
+				"profile_photo_url":
+					"https://lh3.googleusercontent.com/a-/AOh14GgfZgcpzFVE1869yDieFB_o19vvshUZEpYd3BcP8io=s128-c0x00000000-cc-rp-mo-ba2",
+				"rating": 5,
+				"relative_time_description": "a year ago",
+				"text":
+					"Amazing rafting experience! All was super fun!!! The instructor we had was very funny and friendly.\nWill definitely come back!"
+			},
+			{
+				"author_name": "Joe Goodall",
+				"profile_photo_url":
+					"https://lh3.googleusercontent.com/a-/AOh14GhPwgUy7MnWqmXUHdHl7P43WxzqqPoeJpNJNLTE8Q=s128-c0x00000000-cc-rp-mo-ba3",
+				"rating": 3,
+				"relative_time_description": "a year ago",
+				"text":
+					"Our guide was great and the experience was fun but with any action sport, safety should be a number one concern. Our boat had a puncture in the main bottom section, which meant we completely flooded as soon as we hit the white water, making it impossible to steer and badly hurt my back on underwater rocks we should have floated over.\n\nHalf way down the boat was pumped up and emptied of water, but I felt we should have been taken back and offered the option of a refund or restart with a working boat, as the same thing happened again in the second section of rapids.\n\nQuality equipment should be a given for these sports considering the amount they cost and the experience would have been great if it wasn’t for this."
+			},
+			{
+				"author_name": "Sebastian Gomez",
+				"profile_photo_url":
+					"https://lh3.googleusercontent.com/a-/AOh14Gj5Lm4F2dEODd9frgiQgl1wtsb7DuwRr4rHqQDN_A=s128-c0x00000000-cc-rp-mo-ba5",
+				"rating": 4,
+				"relative_time_description": "a year ago",
+				"text":
+					"Good guides, this was the first time for us and our children, and the experience was very good. Long enough to start."
+			}
+		]
+	},
+	{
+		"id": 4,
+		"phone_number": "973 62 65 13",
+		"address":
+			"Carrer Major s/n, Edifici Agulla de les Ares, Local 4 25580, Esterri dÀneu, Lleida",
+		"location": { "lat": 42.623586, "lng": 1.125201 },
+		"name": "Alta Ruta Aventura",
+		"url": "https://www.altaruta.com/",
+		"type": "canyoning",
+		"price": "40€-60€",
+		"description":
+			"Alta Ruta Aventura S.L. es una empresa dedicada a la organización y realización de actividades de aventura para todas las edades, gustos y condiciones físicas. Con más de 27 años de historia, ponemos a tu disposición todo nuestro conocimiento y experiencia para hacer de vuestra aventura un recuerdo inolvidable.",
+		"photos": [
+			{
+				"photo1":
+					"https://www.loscauces.com/wp-content/uploads/2019/10/barranquismo-en-asturias.jpg",
+				"photo2":
+					"https://d2q2l2ko2chbyo.cloudfront.net/uploads/activity_image/image/2092/medium_P4271429.jpg",
+				"photo3":
+					"https://d2q2l2ko2chbyo.cloudfront.net/uploads/activity_image/image/5031/barranquismo.jpg",
+				"photo4":
+					"https://marinalia.es/698-large_default/barranquismo-acuatico-en-alicante.jpg",
+				"photo5":
+					"https://i2.wp.com/turismoactiva.com/wp-content/uploads/2015/08/curso-de-inicicion-al-barranquiemo-valle-del-jerte-2015-7.jpg?ssl=1"
+			}
+		],
+		"rating": 4.7,
+		"reviews": [
+			{
+				"author_name": "Lluís Alcaraz",
+				"profile_photo_url":
+					"https://lh6.googleusercontent.com/-oh6MYCIgt7Q/AAAAAAAAAAI/AAAAAAAAAAA/AMZuuckv_QhGlDyX5oSK3AYOCmz_GHoKdQ/s128-c0x00000000-cc-rp-mo/photo.jpg",
+				"rating": 5,
+				"relative_time_description": "2 months ago",
+				"text": "A great canyoning excursion."
+			},
+			{
+				"author_name": "Sergi (Sergipear)",
+				"profile_photo_url":
+					"https://lh3.googleusercontent.com/a-/AOh14GhS-KlTaU0_9nrKlkmLvab9R6gyaN395-PitF0zDA=s128-c0x00000000-cc-rp-mo-ba5",
+				"rating": 4,
+				"relative_time_description": "2 months ago",
+				"text":
+					"It was our first experience of canyoning. We decided to start with the Barranc de l'infern.\nIt was a very fun experience, adaptable to everyone and the great guides, very professional and friendly, make you feel safe and at home.\nI recommend it 100% to anyone who wants to spend a few hours to disconnect and be in contact with nature.\n\nEager to do the next ravine with them. We will repeat."
+			},
+			{
+				"author_name": "Ainara Olaba",
+				"profile_photo_url":
+					"https://lh5.googleusercontent.com/-8ZbY3-Xpx3M/AAAAAAAAAAI/AAAAAAAAAAA/AMZuuclaB6bgXR-fg4NVJe3tScFnCZfsHQ/s128-c0x00000000-cc-rp-mo/photo.jpg",
+				"rating": 5,
+				"relative_time_description": "2 months ago",
+				"text":
+					"Excellent! Recommendable. We did family and perfect canyoning. We had a gauging problem and it was fixed for us in no time.\nThe guide pepelu, professional and very nice.\nWe will repeat"
+			},
+			{
+				"author_name": "Carlos Contijoch",
+				"profile_photo_url":
+					"https://lh3.googleusercontent.com/-xPgcUXka8do/AAAAAAAAAAI/AAAAAAAAAAA/AMZuucl-DUZU4oI3S546n-mVNv02wxPGnw/s128-c0x00000000-cc-rp-mo/photo.jpg",
+				"rating": 5,
+				"relative_time_description": "3 months ago",
+				"text":
+					"All perfect. They coordinated different activities for us and everything was great. Gemma treated us very well, sympathy and professionalism. Thank you."
+			},
+			{
+				"author_name": "Loli Perez Vergara",
+				"profile_photo_url":
+					"https://lh3.googleusercontent.com/-Itp6feSG_hU/AAAAAAAAAAI/AAAAAAAAAAA/AMZuuck3iXgUZkR5WJr223eoHp3Z9XUqgg/s128-c0x00000000-cc-rp-mo-ba2/photo.jpg",
+				"rating": 5,
+				"relative_time_description": "a month ago",
+				"text":
+					"The treatment of the 10 monitors, everything perfect, the office girls great. Highly recommended"
+			}
+		]
+	},
+	{
+		"id": 5,
+		"phone_number": "973 62 65 13",
+		"address": "Carrer d'Empúries, 17, 17005 Girona",
+		"location": { "lat": 41.960196, "lng": 2.459708 },
+		"name": "Aventura Girona",
+		"url": "https://www.aventuragirona.com/index.php/ca/",
+		"type": "canyoning",
+		"price": "60€-80€",
+		"description":
+			"A Aventura Girona ens avalen més de 10 anys d’experiència en activitats d’aventura i les apliquem per reforçar el llaç entre els companys de feina, amb l’objectiu de buscar l’evasió, la diversió i la sociabilitat allunyats de l’entorn quotidià.",
+		"photos": [
+			{
+				"photo1":
+					"https://www.emocionday.com/media/catalog/product/cache/7/image/600x600/9df78eab33525d08d6e5fb8d27136e95/b/a/xbarranquismo-en-tuejar-valencia-adrenalina-aventura-emocionday_6.jpg.pagespeed.ic.0iGBFVYm37.jpg",
+				"photo2":
+					"https://travesiapirenaica.com/wp-content/uploads/2018/11/Barranquismo-en-guara_1080x1350.jpg",
+				"photo3":
+					"https://www.estiber.com/blog/wp-content/uploads/2018/05/barranquismo-andorra-pirineos-3.jpg",
+				"photo4":
+					"https://naturaliste.es/wp-content/uploads/2016/05/barranquismo-jerte-papuos.jpg",
+				"photo5":
+					"https://img.redbull.com/images/c_crop,x_0,y_0,h_1413,w_2119/c_fill,w_1040,h_650/q_auto,f_auto/redbullcom/2018/11/05/376a0320-a405-4c44-8534-cec6c7c8e02d/barranquismo-espana"
+			}
+		],
+		"rating": 5,
+		"reviews": [
+			{
+				"author_name": "Alison Johnson",
+				"profile_photo_url":
+					"https://lh3.googleusercontent.com/a-/AOh14GgWzixD4tVByqIM3CqYaigWEy_zBpPw0StGxYD0-w=s128-c0x00000000-cc-rp-mo",
+				"rating": 5,
+				"relative_time_description": "3 months ago",
+				"text":
+					"We had a wonderful day with the team from Aventura Girona.  They met us outside our campsite and took 11 of us on a really fun afternoon.  We were aged from 12 - old and all of us had fun.  They knew the river well so could tell us where we could jump off high rocks, go down slides and under waterfalls.  They were so friendly and fun but safety conscious at the same time.  Highly recommend these guys.  Oh and the wetsuits they give you are high quality so kept us warm in a cold river!!"
+			},
+			{
+				"author_name": "Al Johnson",
+				"profile_photo_url":
+					"https://lh3.googleusercontent.com/-O4fqhmy-Q_4/AAAAAAAAAAI/AAAAAAAAAAA/AMZuuckwFaBIe5ull_GBigF9XgZARLG1EQ/s128-c0x00000000-cc-rp-mo/photo.jpg",
+				"rating": 5,
+				"relative_time_description": "3 months ago",
+				"text":
+					"Such a nice trip. Great guides, so much fun for kids (we had 5 kids from 12 -15 and all loved it), and the adults had a great day too. Perfect blend of safety and excitement. Good quality wet-suits were also welcome as the water is chilly, but with wet-suits on no one got cold. And, the river is so, so beautiful. Would love to do it again soon!"
+			},
+			{
+				"author_name": "Amy Rao",
+				"profile_photo_url":
+					"https://lh3.googleusercontent.com/a-/AOh14GgJtzDMWjP4NZGWJIQ3S9Tb-avQMVnFgHm73JrF=s128-c0x00000000-cc-rp-mo",
+				"rating": 5,
+				"relative_time_description": "2 months ago",
+				"text":
+					"We had a lot of fun and excitements. I think canyoning is one of coolest things to do in the hot summer. Carlos and his team took a good care of us. We’d love to do the next level with them.😎👍"
+			},
+			{
+				"author_name": "Karin Van Loon",
+				"profile_photo_url":
+					"https://lh6.googleusercontent.com/-ciSrlJER3oQ/AAAAAAAAAAI/AAAAAAAAAAA/AMZuucme5CAPuiwax2fztaROgcplAvAUQg/s128-c0x00000000-cc-rp-mo/photo.jpg",
+				"rating": 5,
+				"relative_time_description": "2 months ago",
+				"text":
+					"Absolutely wonderful experience! We did it as a family of 4 with two children aged 9 and almost 13 and they both loved it! We didn\"t expect it to be so spectacular as it was advertised as a family canyoning trip but it was very safe and we all absolutely loved it. Arnau was a great guide who really took care of us. A bonus were the pictures they took and sent trough afterwards. An extra plus was 'thanks to' the corona regulations, it was just us 4 and the guide which made it extra special. Thanks again for the best day of our holiday!"
+			},
+			{
+				"author_name": "Maryam Adejumo",
+				"profile_photo_url":
+					"https://lh5.googleusercontent.com/-FOmwfRNfmVs/AAAAAAAAAAI/AAAAAAAAAAA/AMZuuclONiVzn6ypnxLwD1bTjvKj5j7LOw/s128-c0x00000000-cc-rp-mo/photo.jpg",
+				"rating": 5,
+				"relative_time_description": "a month ago",
+				"text":
+					"Via Ferrat was great! Well organised and the guide was a very helpful patient and encouraging. This was my first time and I really recommend it to everyone."
+			}
+		]
+	}
+]
