@@ -68,7 +68,6 @@ class MapContainer extends Component {
 				activeMarker: null
 			});
         }
-        debugger;
         placeStore.getPlace()
 	};
 	onMarkerClick = (props, marker, e) =>
