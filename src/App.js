@@ -1,4 +1,3 @@
-
 import NavBar from './components/Header/NavBar';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Login from './components/Pages/Login/Login';
