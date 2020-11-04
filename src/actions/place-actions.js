@@ -13,6 +13,7 @@ const iDPlaces = [
 	'ChIJYwOqty3nuhIR64SK9_r9YwU'
 ];
 
+
 export async function loadPlacesData() {
 	debugger;
 	const adventures = await axios('/adventures.json');
@@ -20,6 +21,16 @@ export async function loadPlacesData() {
 	dispatcher.dispatch({
 		type: 'LOAD_PLACE_DATA',
 		payload: adventures.data
+
+export function loadUser(userName = 'Señora') {
+	const userPro = {
+		name: userName,
+		picture:
+			'https://fiverr-res.cloudinary.com/images/t_main1,q_auto,f_auto,q_auto,f_auto/gigs/75238076/original/d274960485df2a5b8b3e9960c2c9dda01eb8237d/ask-20-random-strangers-to-choose-your-best-profile-picture.jpg'
+	};
+	dispatcher.dispatch({
+		type: 'LOAD_USER',
+		payload: userPro
 	});
 }
 
@@ -45,3 +56,10 @@ export async function loadPlaces() {
 		}
 	});
 }
+
+// export function addFavorites(bestPlace) {
+// 	const updateFavorites = loadFavorites();
+// 	updateFavorites.push(bestPlace);
+// }
+// click en favorites.
+// El objeto en el que estoy se suma al array de objetos de favoritos
