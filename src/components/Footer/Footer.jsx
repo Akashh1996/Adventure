@@ -34,7 +34,7 @@ function Footer() {
 						to={item.path}
 						key={item.id}
 					>
-						{item.name}
+						<div className="footer-strings">{item.name}</div>
 					</Link>
 				);
 			})}

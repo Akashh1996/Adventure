@@ -4,8 +4,7 @@
 
 footer {
 	display: flex;
-	justify-content: space-evenly;
-	background-color: skyblue;
+	background-color: #283d3b;
 	color: white;
 	padding: 15px;
 	font-size: 18px;
@@ -13,11 +12,13 @@ footer {
 	width: 100%;
 	bottom: 0;
 }
-a {
+.footer-strings {
+	display: inline-flex;
+	margin-left: 20px;
 	text-decoration: none;
 	color: white;
 }
-a:hover {
-	text-decoration: none;
-	color: red;
+
+.footer-strings:hover {
+	color: ;
 }
