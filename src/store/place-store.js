@@ -3,6 +3,7 @@ import dispatcher from '../dispatcher/dispatcher';
 
 const CHANGE = 'CHANGE';
 let _place;
+let _placeByID = [];
 let _placeData;
 let _map;
 
