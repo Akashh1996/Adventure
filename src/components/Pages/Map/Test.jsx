@@ -1,128 +1,99 @@
-import React, { Component } from 'react';
-import { getPlaceByID } from '../../../actions/place-actions';
-import placeStore from '../../../store/place-store'
-import { Map, GoogleApiWrapper, InfoWindow, Marker } from 'google-maps-react';
-const mapStyles = {
-	width: '100%',
-	height: '100%'
-};
-const places = [
+import React from 'react';
+const API_KEY = 'AIzaSyD6YZ7TzQl_TKgHxHWI9s_9u-NLM1B1nRo';
+let divStyle = { height: '500px', border: '1px solid red' };
+const placeRequests = [
 	{
-		name: 'Adenture Time',
-		prices: 'Prices : from 20 to 50',
-		rating: 'rating: ' + 4.1,
-		activities: 'kayak',
-		url: 'http://adventuretime.com',
-		location: { lat: 41.390103, lng: 2.154007 }
+		placeId: 'ChIJX_6Ylc78pxIRs8q9I7xVbvs',
+		fields: ['name', 'formatted_address', 'place_id', 'geometry']
 	},
 	{
-		name: 'Canyon Mari Carmen',
-		prices: 'Prices : from 20 to 90',
-		rating: 'rating: ' + 5,
-		activities: 'canyoning',
-		url: 'http://maricarmenmola.com',
-		location: { lat: 41.40009, lng: 2.154007 }
+		placeId: 'ChIJv7jLmO2BVw0RVmWbFel6aH4',
+		fields: ['name', 'formatted_address', 'place_id', 'geometry']
 	},
 	{
-		name: 'Yep yep yep',
-		prices: 'Prices : from 20 to 50',
-		rating: 'rating: ' + 3.1,
-		activities: 'rafting',
-		url: 'http://yepaeldeporte.com',
-		location: { lat: 41.420103, lng: 2.184007 }
+		placeId: 'ChIJI8KsuiAEphIRqDI9VXJvwN8',
+		fields: ['name', 'formatted_address', 'place_id', 'geometry']
 	},
 	{
-		name: 'Que tal adventure',
-		prices: 'Prices : from 1 to 10',
-		rating: 'rating: ' + 4.5,
-		activities: 'rafting',
-		url: 'http://quetaladventures.com',
-		location: { lat: 41.400103, lng: 2.164007 }
+		placeId: 'ChIJrYFCuLKuqBIR9xXaZ1sw85E',
+		fields: ['name', 'formatted_address', 'place_id', 'geometry']
 	},
 	{
-		name: 'Deportes extremos',
-		prices: 'Prices : from 10 to 60',
-		rating: 'rating: ' + 3.6,
-		activities: 'kayak',
-		url: 'http://adventuretime.com',
-		location: { lat: 41.380103, lng: 2.104007 }
+		placeId: 'ChIJYwOqty3nuhIR64SK9_r9YwU',
+		fields: ['name', 'formatted_address', 'place_id', 'geometry']
 	}
 ];
 
-class MapContainer extends Component {
-	state = {
-		showingInfoWindow: false,
-		activeMarker: {},
-		selectedPlace: {}
-	};
-	onMouseoverMarker = (props, marker, e) =>
-		this.setState({
-			selectedPlace: props,
-			activeMarker: marker,
-			showingInfoWindow: true
+class Map extends React.Component {
+	constructor(props) {
+		super(props);
+	}
+
+	componentDidMount() {
+		const script = document.createElement('script');
+		script.type = 'text/javascript';
+		script.src =
+			`https://maps.googleapis.com/maps/api/js?key=` +
+			API_KEY +
+			`&libraries=geometry,places`;
+		script.id = 'googleMaps';
+		script.async = true;
+		script.defer = true;
+		document.body.appendChild(script);
+		script.addEventListener('load', (e) => {
+			this.onScriptLoad();
 		});
-	onMapClicked = (props) => {
-		if (this.state.showingInfoWindow) {
-			this.setState({
-				showingInfoWindow: false,
-				activeMarker: null
-			});
-        }
-        placeStore.getPlace()
-	};
-	onMarkerClick = (props, marker, e) =>
-		this.setState({
-			selectedPlace: props.name,
-			activeMarker: marker,
-			showingInfoWindow: true
-		});
-	render() {
-		return (
-            
-			<div style={{ height: '100vh' }}>
-				<Map
-					google={this.props.google}
-					zoom={14}
-					style={mapStyles}
-					initialCenter={{ lat: 41.390205, lng: 2.154007 }}
-					onClick={this.onMapClicked}
-				>
-					{places.map((ObjMapMarker) => {
-						return (
-							<Marker
-								onClick={this.onMarkerClick}
-								onMouseover={this.onMouseoverMarker}
-								name={`${ObjMapMarker.name}`}
-								id={`${ObjMapMarker.name}`}
-								url={`${ObjMapMarker.url}`}
-								prices={`${ObjMapMarker.prices}`}
-								activities={`${ObjMapMarker.activities}`}
-								rating={`${ObjMapMarker.rating}`}
-								position={{
-									lat: `${ObjMapMarker.location.lat}`,
-									lng: `${ObjMapMarker.location.lng}`
-								}}
-							/>
-						);
-					})}
-					<InfoWindow
-						marker={this.state.activeMarker}
-						visible={this.state.showingInfoWindow}
-					>
-						<div>
-							<h1>{this.state.selectedPlace.name}</h1>
-							<h2>{this.state.selectedPlace.activities}</h2>
-							<h3>{this.state.selectedPlace.prices}</h3>
-							<h2>{this.state.selectedPlace.url}</h2>
-							<h3>{this.state.selectedPlace.rating}</h3>
-						</div>
-					</InfoWindow>
-				</Map>
-			</div>
+	}
+
+	onScriptLoad() {
+		const MAP = new window.google.maps.Map(
+			document.getElementById(this.props.id),
+			this.props.options
 		);
+		const INFO_WINDOW = new window.google.maps.InfoWindow();
+		const SERVICE = new window.google.maps.places.PlacesService(MAP);
+		let markers = [];
+
+		placeRequests.map((request) => {
+			SERVICE.getDetails(request, (place, status) => {
+				let marker = new window.google.maps.Marker({
+					map: MAP,
+					position: place.geometry.location,
+					title: place.formatted_address
+				});
+				markers = [...markers, marker];
+				marker.addListener('click', () => {
+					INFO_WINDOW.setContent(place.name);
+					INFO_WINDOW.open(MAP, marker);
+				});
+			});
+		});
+	}
+
+	render() {
+		return <div className="map" id={this.props.id} style={divStyle} />;
 	}
 }
 
-export default GoogleApiWrapper({
-	apiKey: 'AIzaSyD6YZ7TzQl_TKgHxHWI9s_9u-NLM1B1nRo'
-})(MapContainer);
+export default Map;
+
+// function Map() {
+//     const [loadMap, setLoadMap] = useState(placeStore.getMap())
+
+// 	function handleChange() {
+//         setLoadMap(placeStore.getMap())
+//         const scripthtml = document.createElement('script')
+//         scripthtml = setLoadMap;
+//         document.body.appendChild(scripthtml)
+// 	}
+
+// 	useEffect(() => {
+//         placeStore.addEventListener(handleChange);
+
+// 		if (!loadMap) {
+//             loadMap();
+
+// 		return () => {
+// 			placeStore.removeEventListener(handleChange);
+// 		};
+// 	}, [loadMap]);
