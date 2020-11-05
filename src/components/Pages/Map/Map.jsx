@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import { loadPlaces } from '../../../actions/place-actions';
+import { loadPlaces, loadPlacesData } from '../../../actions/place-actions';
+import { Link } from 'react-router-dom';
 import placeStore from '../../../store/place-store';
 import {
 	GoogleMap,
@@ -12,49 +13,6 @@ const GOOGLE_MAPS_API_KEY = 'AIzaSyD6YZ7TzQl_TKgHxHWI9s_9u-NLM1B1nRo';
 
 const libraries = ['places'];
 
-const directPlaces = [
-	{
-		name: 'Adenture Time',
-		prices: 'Prices : from 20 to 50',
-		rating: 'rating: ' + 4.1,
-		activities: 'kayak',
-		url: 'http://adventuretime.com',
-		location: { lat: 41.390103, lng: 2.154007 }
-	},
-	{
-		name: 'Canyon Mari Carmen',
-		prices: 'Prices : from 20 to 90',
-		rating: 'rating: ' + 5,
-		activities: 'canyoning',
-		url: 'http://maricarmenmola.com',
-		location: { lat: 41.40009, lng: 2.154007 }
-	},
-	{
-		name: 'Yep yep yep',
-		prices: 'Prices : from 20 to 50',
-		rating: 'rating: ' + 3.1,
-		activities: 'rafting',
-		url: 'http://yepaeldeporte.com',
-		location: { lat: 41.420103, lng: 2.184007 }
-	},
-	{
-		name: 'Que tal adventure',
-		prices: 'Prices : from 1 to 10',
-		rating: 'rating: ' + 4.5,
-		activities: 'rafting',
-		url: 'http://quetaladventures.com',
-		location: { lat: 41.400103, lng: 2.164007 }
-	},
-	{
-		name: 'Deportes extremos',
-		prices: 'Prices : from 10 to 60',
-		rating: 'rating: ' + 3.6,
-		activities: 'kayak',
-		url: 'http://adventuretime.com',
-		location: { lat: 41.380103, lng: 2.104007 }
-	}
-];
-
 const mapContainerStyle = {
 	width: '100vh',
 	height: '100vh'
@@ -65,59 +23,70 @@ const center = {
 };
 
 function Map() {
-	const [place, setDetail] = useState(placeStore.getPlace());
+	const [placeApi, setPlaceApi] = useState(placeStore.getPlace());
+	const [places, setPlaces] = useState(placeStore.getPlaceData());
+	const [markerSelected, setMarkerSelected] = useState(null);
+
 	const { isLoaded, loadError } = useLoadScript({
 		googleMapsApiKey: GOOGLE_MAPS_API_KEY,
 		libraries
 	});
-	const [markerSelected, setMarkerSelected] = useState({});
+
+	function handleChange() {
+		setPlaceApi(placeStore.getPlace());
+		setPlaces(placeStore.getPlaceData());
+	}
 
 	useEffect(() => {
 		placeStore.addEventListener(handleChange);
-		if (!place) {
+		if (!placeApi) {
 			loadPlaces();
+		}
+		if (!places) {
+			loadPlacesData();
 		}
 		return () => {
 			placeStore.removeEventListener(handleChange);
 		};
-	}, [place]);
-
-	function handleChange() {
-		setDetail(placeStore.getPlace());
-	}
-
-	// console.log(place);
-	// place?.map((ObjMapMarker) => {
-	// 	return console.log(ObjMapMarker.result.name);
-	// });
+	}, [placeApi, places]);
 
 	if (loadError) return 'Error loading maps';
 	if (!isLoaded) return 'Loading Maps';
+
 	return (
-		<div>
-			<GoogleMap
-				mapContainerStyle={mapContainerStyle}
-				zoom={14}
-				center={center}
-			>
-				{directPlaces.map((placeDetail) => {
-					console.log('hola', placeDetail);
-					return (
-						<Marker
-							data-test-id={`marker__${placeDetail.name}`}
-							key={placeDetail.name}
-							address={placeDetail.address}
-							position={placeDetail.location}
-							icon={{
-								url:
-									'https://trello-attachments.s3.amazonaws.com/5f9fe5242167b873b8f1f631/372x594/69d66633dffceabc33074ec6670c06b1/clipart51531.png',
-								scaledSize: new window.google.maps.Size(20, 30)
-							}}
-							// onMouseOver={()=> setMarkerSelected(placeDetail)}
-						/>
-					);
-				})}
-				{/* {place?.map((placeDetail) => {
+		<>
+			{places && placeApi && (
+				<div>
+					<GoogleMap
+						mapContainerStyle={mapContainerStyle}
+						zoom={14}
+						center={center}
+					>
+						{places.map((placeDetail) => {
+							return (
+								<Marker
+									data-test-id={`marker__${placeDetail.name}`}
+									key={placeDetail.name}
+									id={placeDetail.id}
+									photos={placeDetail.photos[0]['photo1']}
+									name={placeDetail.name}
+									type={placeDetail.type}
+									price={placeDetail.price}
+									rating={placeDetail.rating}
+									address={placeDetail.address}
+									position={placeDetail.location}
+									phone={placeDetail.phone_number}
+									website={placeDetail.url}
+									icon={{
+										url:
+											'https://trello-attachments.s3.amazonaws.com/5f9fe5242167b873b8f1f631/372x594/69d66633dffceabc33074ec6670c06b1/clipart51531.png',
+										scaledSize: new window.google.maps.Size(20, 30)
+									}}
+									onClick={() => setMarkerSelected(placeDetail)}
+								/>
+							);
+						})}
+						{/* {placeApi?.map((placeDetail) => {
 					return (
 						<Marker
 							key={placeDetail.result.name}
@@ -133,23 +102,32 @@ function Map() {
 				})}
  */}
 
-				{/* {   
-            markerSelected.geometry.location && 
-            (
-            <InfoWindow
-            position={markerSelected.geometry.location}
-            clickable={true}
-            onMouseDown={() => setMarkerSelected({})}
-            >
-            <div>
-                <h1>{markerSelected.name}</h1>
-                <h2>{markerSelected.place_id}</h2>
-            </div>
-            </InfoWindow>
-            )
-         } */}
-			</GoogleMap>
-		</div>
+						{markerSelected && (
+							<InfoWindow
+								position={markerSelected.location}
+								onCloseClick={() => {
+									setMarkerSelected(null);
+								}}
+							>
+								<div>
+									<h1>{markerSelected.name}</h1>
+									{/* <img src="{markerSelected.photos}" /> */}
+									<h3>{markerSelected.type}</h3>
+									<h3>{markerSelected.price}</h3>
+									<h3>{markerSelected.rating}</h3>
+									<h3>{markerSelected.address}</h3>
+									<h3>{markerSelected.phone_number}</h3>
+									<h3>{markerSelected.url}</h3>
+									<Link to={`/detail/${markerSelected.id}`}>
+										Get more detials
+									</Link>
+								</div>
+							</InfoWindow>
+						)}
+					</GoogleMap>
+				</div>
+			)}
+		</>
 	);
 }
 
