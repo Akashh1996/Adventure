@@ -24,11 +24,11 @@
 }
 
 .menu-bars:hover {
-	color: #f5f5f5;
+	color: #d48928;
 }
 
 .NavBar:hover {
-	color: #f5f5f5;
+	color: #d48928;
 }
 
 .menu-bars {
@@ -101,9 +101,14 @@
 	border-radius: 4px;
 }
 
+.nav-text-button:hover {
+	background-color: #197278;
+	color: #d48928;
+}
+
 .nav-text a:hover {
 	background-color: #197278;
-	color: #f7877a;
+	color: #d48928;
 }
 
 .nav-menu-items {
@@ -117,6 +122,10 @@
 	display: flex;
 	justify-content: flex-start;
 	align-items: center;
+}
+
+.menu-close:hover {
+	color: #d48928;
 }
 
 span {

@@ -39,6 +39,7 @@ function NavBar() {
 				}}
 			>
 				<AiIcons.AiOutlineLogin />
+				<span></span>
 				Log In
 			</li>
 		);
@@ -55,6 +56,7 @@ function NavBar() {
 				}}
 			>
 				<AiIcons.AiOutlineLogout />
+				<span></span>
 				Log Out
 			</li>
 		) : (
@@ -74,7 +76,7 @@ function NavBar() {
 				<ul className="nav-menu-items" onClick={showSidebar}>
 					<li className="navbar-toggle">
 						<Link to="#" className="menu-close">
-							<AiIcons.AiOutlineClose />
+							<FaIcons.FaWindowClose />
 						</Link>
 					</li>
 					<li onClick={offOnLogin} className="nav-text">
