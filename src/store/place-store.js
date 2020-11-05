@@ -4,6 +4,7 @@ import dispatcher from '../dispatcher/dispatcher';
 const CHANGE = 'CHANGE';
 let _place;
 let _placeData;
+let _map;
 
 export class PlaceStore extends EventEmitter {
 	getPlace() {
@@ -11,10 +12,12 @@ export class PlaceStore extends EventEmitter {
 	}
 
 	getPlaceData() {
-		debugger;
 		return _placeData;
 	}
 
+	getMap() {
+		return _map;
+	}
 
 	addEventListener(callback) {
 		this.on(CHANGE, callback);
@@ -41,10 +44,13 @@ dispatcher.register((action) => {
 			placeStore.emitChange();
 			break;
 
+		case 'LOAD_MAP':
+			_map = action.payload;
+			placeStore.emitChange();
+			break;
 		default:
 			break;
 	}
 });
 
 export default placeStore;
-
