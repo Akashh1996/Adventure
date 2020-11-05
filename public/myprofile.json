@@ -1,0 +1,73 @@
+[
+    {
+    "me": {
+        "my_name": "Pepito los Palotes",
+        "my_picture": "https://fiverr-res.cloudinary.com/images/t_main1,q_auto,f_auto,q_auto,f_auto/gigs/75238076/original/d274960485df2a5b8b3e9960c2c9dda01eb8237d/ask-20-random-strangers-to-choose-your-best-profile-picture.jpg"
+    },
+    "my_favourites": [{
+		"id": 1,
+		"phone_number": "628 77 35 08",
+		"address": "Avinguda de la Generalitat, 1, 25560 Sort, Lleida",
+		"location": { "lat": 42.412571, "lng": 1.132111 },
+		"name": "Rafting Catalunya",
+		"url": "https://raftingcatalunya.es/",
+		"type": "rafting",
+		"price": "40€-80€",
+		"photos": [
+			{
+				"photo1":
+					"https://raftingcatalunya.es/images/rafting/descenso-de-un-rio-en-rafting.jpg",
+				"photo2":
+					"https://raftingcatalunya.es/images/rafting/grupo-de-ninos-haciendo-rafting.jpg",
+				"photo3":
+					"https://raftingcatalunya.es/images/rafting/rafting-por-los-rios-de-catalunya.jpg",
+				"photo4":
+					"https://raftingcatalunya.es/images/rafting/pasando-por-debajo-de-un-puente-en-rafting.jpg",
+				"photo5":
+					"https://raftingcatalunya.es/images/rafting/familia-haciendo-rafting-en-catalunya.jpg"
+			}
+		],
+		"rating": 4.5
+	}],
+    "my_reviews": [{
+		"place_name": "Hecho el loco" ,
+		"url": "https://hechoelloco.com",
+		"my_rating": "Mi nota : 4",
+		"my_description": "Mi comentario : Un gran momento con mis colegas, los monitores son muy majos y el descenso en rafting es una pasada, lo recomiendo 100%. Unico punto a desfavor, el baño podría estar más limpio.",
+		"user_name": "holacaracola31"
+	},
+	{
+		"place_name": "KayAkash",
+		"url": "https://kayakash.com",
+		"my_rating": "Mi nota : 5",
+		"my_description": "Mi comentario : El material que te dan es muy bueno y se nota que lo cuidan, son muy amigables y profesionales a la vez",
+		"user_name": "holacaracola31"
+	},
+	{
+		"place_name": "Barranquismo del abismo",
+		"url": "https://elabismo.com",
+		"my_rating": "Mi nota : 3",
+		"my_description": "Mi comentario : Podría haber estado mejor, no tienen cabinas para cambiarse, te gritan para darte las instrucciones de seguridad y te dejan sólo. Te cobran apenas llegar, tal vez se piensan que te vas corriendo despues. Menos mal que el sitio es muy bonito y que si vas bien acompañado, se te olvida rápido que son unos asquerosos.",
+		"user_name": "holacaracola31"
+	},
+	{
+		"place_name": "Aventuras da Catalunya",
+		"url": "https://quina-aventura-noi",
+		"my_rating": "Mi nota : 5",
+		"my_description": "Mi comentario : INCREIBLE, m'ha agradat molt aquest lloc, es un dels rincons da catalunya mes bonic que he vist.",
+		"user_name": "holacaracola31"
+	}],
+    "my_friends": [{
+        "friend_name": "Eric Sanz",
+        "friend_picture": "https://ca.slack-edge.com/T0SJKHBFZ-U016VE1N4PN-3b8b61cef136-512"
+    },
+    {
+        "friend_name": "Akash Sapkota",
+        "friend_picture": "https://ca.slack-edge.com/T0SJKHBFZ-U015BP2DX5J-907ea87ab898-512"
+    },
+    {
+        "friend_name": "Edith Cantegrit",
+        "friend_picture": "https://ca.slack-edge.com/T0SJKHBFZ-U016XU900E6-fa0eb758bde3-512"
+    }]
+    }
+]

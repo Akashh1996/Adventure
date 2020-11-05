@@ -1,0 +1,27 @@
+[
+	{
+		"id": 1,
+		"phone_number": "628 77 35 08",
+		"address": "Avinguda de la Generalitat, 1, 25560 Sort, Lleida",
+		"location": { "lat": 42.412571, "lng": 1.132111 },
+		"name": "Rafting Catalunya",
+		"url": "https://raftingcatalunya.es/",
+		"type": "rafting",
+		"price": "40€-80€",
+		"photos": [
+			{
+				"photo1":
+					"https://raftingcatalunya.es/images/rafting/descenso-de-un-rio-en-rafting.jpg",
+				"photo2":
+					"https://raftingcatalunya.es/images/rafting/grupo-de-ninos-haciendo-rafting.jpg",
+				"photo3":
+					"https://raftingcatalunya.es/images/rafting/rafting-por-los-rios-de-catalunya.jpg",
+				"photo4":
+					"https://raftingcatalunya.es/images/rafting/pasando-por-debajo-de-un-puente-en-rafting.jpg",
+				"photo5":
+					"https://raftingcatalunya.es/images/rafting/familia-haciendo-rafting-en-catalunya.jpg"
+			}
+		],
+		"rating": 4.5
+	}
+]
