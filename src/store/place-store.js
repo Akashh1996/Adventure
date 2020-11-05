@@ -4,7 +4,7 @@ import dispatcher from '../dispatcher/dispatcher';
 const CHANGE = 'CHANGE';
 let _placeByID = [];
 let _place;
-let _placeData = [];
+let _placeData = null;
 let _map;
 
 export class PlaceStore extends EventEmitter {

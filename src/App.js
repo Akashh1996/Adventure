@@ -7,7 +7,7 @@ import Help from './components/Pages/Help/Help';
 import Contact from './components/Pages/Contact/Contact';
 import Slider from './components/Pages/Home/Slider';
 import Map from './components/Pages/Map/Map';
-import Profile from './components/Pages/Profile/Profile'
+import Profile from './components/Pages/Profile/Profile';
 import DetailSlider from './components/Pages/Detail/DetailSlider';
 
 function App() {
@@ -16,9 +16,9 @@ function App() {
 			<BrowserRouter>
 				<NavBar />
 				<Switch>
-          <Route path="/profile" component={Profile} />
+					<Route path="/profile" component={Profile} />
 					<Route path="/register" component={Register} />
-					<Route path="/Login" component={Login} />
+					{/* <Route path="/Login" component={Login} /> */}
 					<Route path="/Help" component={Help} />
 					<Route path="/Contact" exact component={Contact} />
 					<Route path="/maps" component={Map} />

@@ -5,10 +5,11 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './Slider.css';
 
 function Slider() {
+	debugger;
 	return (
 		<main>
 			<Carousel>
-				<Carousel.Item >
+				<Carousel.Item>
 					<img
 						className="d-block w-100"
 						src="https://i.pinimg.com/originals/5c/98/31/5c98316423594c8ee268e6aae44c1b66.jpg"
