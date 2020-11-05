@@ -1,7 +1,7 @@
 import dispatcher from '../dispatcher/dispatcher';
 import axios from 'axios';
 
-/* const GOOGLE_API_KEY = 'AIzaSyD6YZ7TzQl_TKgHxHWI9s_9u-NLM1B1nRo';
+const GOOGLE_API_KEY = 'AIzaSyD6YZ7TzQl_TKgHxHWI9s_9u-NLM1B1nRo';
 const GOOGLE_PLACES_DETAILS_ENDPOINT =
 	'https://cors-anywhere.herokuapp.com/https://maps.googleapis.com/maps/api/place/details/json?';
 
@@ -11,7 +11,7 @@ const iDPlaces = [
 	'ChIJI8KsuiAEphIRqDI9VXJvwN8',
 	'ChIJrYFCuLKuqBIR9xXaZ1sw85E',
 	'ChIJYwOqty3nuhIR64SK9_r9YwU'
-]; */
+];
 
 export async function loadPlacesData() {
 	const adventures = await axios('/adventures.json');
@@ -33,7 +33,7 @@ export function loadUser(userName = 'Señora') {
 		payload: userPro
 	});
 }
-/* 
+
 export async function loadPlaces() {
 	const placesInfo = [];
 	iDPlaces.forEach(async (place) => {
@@ -55,7 +55,7 @@ export async function loadPlaces() {
 			console.log(error);
 		}
 	});
-} */
+}
 
 // export async function loadMap() {
 // 	const scriptMap = '';
