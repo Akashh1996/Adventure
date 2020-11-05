@@ -23,7 +23,7 @@ function App() {
 					<Route path="/Contact" exact component={Contact} />
 					<Route path="/maps" component={Map} />
 					<Route path="/" exact component={Slider} />
-					<Route path="/detail" exact component={DetailSlider} />
+					<Route path="/detail/:id" exact component={DetailSlider} />
 				</Switch>
 				<Footer />
 			</BrowserRouter>
