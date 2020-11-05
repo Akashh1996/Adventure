@@ -18,7 +18,6 @@ function App() {
 				<Switch>
 					<Route path="/profile" component={Profile} />
 					<Route path="/register" component={Register} />
-					{/* <Route path="/Login" component={Login} /> */}
 					<Route path="/Help" component={Help} />
 					<Route path="/Contact" exact component={Contact} />
 					<Route path="/maps" component={Map} />
