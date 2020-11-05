@@ -13,14 +13,14 @@ const iDPlaces = [
 	'ChIJYwOqty3nuhIR64SK9_r9YwU'
 ];
 
-
 export async function loadPlacesData() {
-	debugger;
 	const adventures = await axios('/adventures.json');
 
 	dispatcher.dispatch({
 		type: 'LOAD_PLACE_DATA',
 		payload: adventures.data
+	});
+}
 
 export function loadUser(userName = 'Señora') {
 	const userPro = {
