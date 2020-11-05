@@ -14,7 +14,6 @@ const iDPlaces = [
 ];
 
 export async function loadPlacesData() {
-	debugger;
 	const adventures = await axios('/adventures.json');
 
 	dispatcher.dispatch({
