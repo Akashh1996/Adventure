@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { loadPlaces } from '../../../actions/place-actions';
+import { loadPlacesData } from '../../../actions/place-actions';
 import placeStore from '../../../store/place-store';
 import {
 	GoogleMap,
@@ -56,9 +56,10 @@ const directPlaces = [
 ];
 
 const mapContainerStyle = {
-	width: '100vh',
-	height: '100vh'
+	width: '1000px',
+	height: '500px'
 };
+
 const center = {
 	lat: 41.390205,
 	lng: 2.154007
@@ -75,7 +76,7 @@ function Map() {
 	useEffect(() => {
 		placeStore.addEventListener(handleChange);
 		if (!place) {
-			loadPlaces();
+			loadPlacesData();
 		}
 		return () => {
 			placeStore.removeEventListener(handleChange);
