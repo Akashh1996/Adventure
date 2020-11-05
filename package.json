@@ -32,9 +32,8 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test --watchAll",
     "test:debug": "node --inspect-brk ./node_modules/jest/bin/jest.js --runInBand",
-    "test:coverage": "react-scripts test --collect-coverage",
+    "test": "react-scripts test --collect-coverage --watchAll",
     "eject": "react-scripts eject",
     "type": "module"
   },

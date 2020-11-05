@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { loadPlaces, loadPlacesData } from '../../../actions/place-actions';
+import { loadPlacesData } from '../../../actions/place-actions';
 import { Link } from 'react-router-dom';
 import placeStore from '../../../store/place-store';
 import {
