@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { loadPlaces, loadPlacesData } from '../../../actions/place-actions';
+import { Link } from 'react-router-dom';
 import placeStore from '../../../store/place-store';
 import {
 	GoogleMap,
@@ -66,6 +67,7 @@ function Map() {
 								<Marker
 									data-test-id={`marker__${placeDetail.name}`}
 									key={placeDetail.name}
+									id={placeDetail.id}
 									photos={placeDetail.photos[0]['photo1']}
 									name={placeDetail.name}
 									type={placeDetail.type}
@@ -109,8 +111,16 @@ function Map() {
 							>
 								<div>
 									<h1>{markerSelected.name}</h1>
-									<h2>{markerSelected.place_id}</h2>
-									<button>Get more detail</button>
+									{/* <img src="{markerSelected.photos}" /> */}
+									<h3>{markerSelected.type}</h3>
+									<h3>{markerSelected.price}</h3>
+									<h3>{markerSelected.rating}</h3>
+									<h3>{markerSelected.address}</h3>
+									<h3>{markerSelected.phone_number}</h3>
+									<h3>{markerSelected.url}</h3>
+									<Link to={`/detail/${markerSelected.id}`}>
+										Get more detials
+									</Link>
 								</div>
 							</InfoWindow>
 						)}
