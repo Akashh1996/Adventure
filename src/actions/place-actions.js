@@ -57,6 +57,19 @@ export async function loadPlaces() {
 	});
 }
 
+// export async function loadMap() {
+// 	const scriptMap = '';
+// 	scriptMap.src = await axios(
+// 		`https://maps.googleapis.com/maps/api/js?key=${GOOGLE_API_KEY}&libraries=geometry,places`
+// 	);
+// 	scriptMap.id = 'googleMaps';
+// 	scriptMap.type = 'text/javascript';
+// 	dispatcher.dispatch({
+// 		type: 'LOAD_MAP',
+// 		payload: scriptMap
+// 	});
+// }
+
 // export function addFavorites(bestPlace) {
 // 	const updateFavorites = loadFavorites();
 // 	updateFavorites.push(bestPlace);
