@@ -30,29 +30,33 @@ function NavBar() {
 
 	function getSignInButton() {
 		return (
-			<button
-				typer="button"
+			<li
+				className="nav-text-button"
+				type="button"
 				onClick={(event) => {
 					event.preventDefault();
 					signInWithGoogle();
 				}}
 			>
+				<AiIcons.AiOutlineLogin />
 				Log In
-			</button>
+			</li>
 		);
 	}
 
 	function isSigninVisible() {
 		return user ? (
-			<button
+			<li
+				className="nav-text-button"
 				type="button"
 				onClick={(event) => {
 					event.preventDefault();
 					signOut();
 				}}
 			>
+				<AiIcons.AiOutlineLogout />
 				Log Out
-			</button>
+			</li>
 		) : (
 			getSignInButton()
 		);
@@ -73,8 +77,7 @@ function NavBar() {
 							<AiIcons.AiOutlineClose />
 						</Link>
 					</li>
-					<li onClick={offOnLogin}>
-						<AiIcons.AiOutlineLogin />
+					<li onClick={offOnLogin} className="nav-text">
 						{isSigninVisible()}
 					</li>
 					<li className={!loginOn ? 'nav-text' : 'nav-text-inactive'}>
