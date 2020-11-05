@@ -5,14 +5,14 @@ import { getPlaceByID } from '../actions/place-actions';
 
 const CHANGE = 'CHANGE';
 let _place;
-let _placeData;
+let _placeData = [];
+let _placeByID = [];
 
 export class PlaceStore extends EventEmitter {
 	getPlace() {
 		return _place;
 	}
 	getPlaceData() {
-		debugger;
 		return _placeData;
 	}
 
@@ -25,12 +25,15 @@ export class PlaceStore extends EventEmitter {
 	emitChange() {
 		this.emit(CHANGE);
 	}
+	getPlaceDetailByID(id) {
+		_placeByID = _placeData.find((place) => place.id === id);
+		return _placeByID;
+	}
 }
 
 const placeStore = new PlaceStore();
 
 dispatcher.register((action) => {
-	debugger;
 	switch (action.type) {
 		case 'LOAD_PLACE_ID':
 			_place = action.payload;
