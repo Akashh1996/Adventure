@@ -10,9 +10,9 @@ import placeStore from "../../../store/place-store"
 
 
 function DetailSlider(props) {
-/*     console.log(props);
- */    let locationId = +props.match.params.id
-    const [placeId] = useState(locationId)
+    console.log(props);
+
+    const [placeId, setPlaceId] = useState(+props.match.params.id)
     const [places, setPlaces] = useState(placeStore.getPlaceDetailByID(placeId))
 
 
@@ -22,10 +22,11 @@ function DetailSlider(props) {
             loadPlacesData()
         }
         return () => { placeStore.removeEventListener(handleChange) }
-    }, [places, locationId])
+    }, [])
 
     function handleChange() {
         setPlaces(placeStore.getPlaceDetailByID(placeId))
+        setPlaceId(+props.match.params.id)
     }
 
 
