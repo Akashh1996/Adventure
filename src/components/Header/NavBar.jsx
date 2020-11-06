@@ -11,7 +11,6 @@ const logo =
 	'https://trello-attachments.s3.amazonaws.com/5f9fe516582bea5ce01d06b2/5f9fe5242167b873b8f1f631/3e0221f7d523436eb2520790995026bc/logo-adventure-awaits.png';
 
 function NavBar() {
-	debugger;
 	const [sidebar, setSidebar] = useState(false);
 	const [loginOn, setLoginOn] = useState(true);
 	const [user, setUser] = useState(authStore.getUser());

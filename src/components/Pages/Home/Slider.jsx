@@ -3,9 +3,9 @@ import React from 'react';
 import Carousel from 'react-bootstrap/Carousel';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './Slider.css';
+import { Link } from 'react-router-dom';
 
 function Slider() {
-	debugger;
 	return (
 		<main>
 			<Carousel>
@@ -15,7 +15,7 @@ function Slider() {
 						src="https://i.pinimg.com/originals/5c/98/31/5c98316423594c8ee268e6aae44c1b66.jpg"
 						alt="First slide"
 					/>
-					<Carousel.Caption style={{ bottom: '40%' }}>
+					<Carousel.Caption style={{ bottom: '50%' }}>
 						<h2 className="quote">
 							"If you think adventure is dangerous, try routine. It’s lethal!"
 						</h2>
@@ -23,9 +23,9 @@ function Slider() {
 					<Carousel.Caption>
 						<div className="button-navigation">
 							<p>Ready to explore catalunya ?</p>
-							<button type="button" className="btn btn-primary">
+							<Link to={'/maps'} className="btn btn-primary">
 								Lets Go
-							</button>
+							</Link>
 						</div>
 					</Carousel.Caption>
 				</Carousel.Item>
@@ -36,15 +36,15 @@ function Slider() {
 						alt="First slide"
 					/>
 					<Carousel.Caption style={{ bottom: '44%' }}>
-						<h2 className="quote">
+						<h2 className="quote ">
 							"When was the last time you did something for the first time?"
 						</h2>
 					</Carousel.Caption>
-					<Carousel.Caption>
-						<p>Ready to explore catalunya ?</p>
-						<button type="button" className="btn btn-primary">
+					<Carousel.Caption className="button--block">
+						<p className="button--margin">Ready to explore catalunya ?</p>
+						<Link to={'/maps'} className="btn btn-primary button--margin">
 							Lets Go
-						</button>
+						</Link>
 					</Carousel.Caption>
 				</Carousel.Item>
 				<Carousel.Item>
@@ -60,9 +60,9 @@ function Slider() {
 					</Carousel.Caption>
 					<Carousel.Caption>
 						<p>Ready to explore catalunya ?</p>
-						<button type="button" className="btn btn-primary">
+						<Link to={'/maps'} className="btn btn-primary">
 							Lets Go
-						</button>
+						</Link>
 					</Carousel.Caption>
 				</Carousel.Item>
 			</Carousel>
