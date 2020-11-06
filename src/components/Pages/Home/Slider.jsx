@@ -20,13 +20,11 @@ function Slider() {
 							"If you think adventure is dangerous, try routine. It’s lethal!"
 						</h2>
 					</Carousel.Caption>
-					<Carousel.Caption>
-						<div className="button-navigation">
-							<p>Ready to explore catalunya ?</p>
-							<Link to={'/maps'} className="btn btn-primary">
-								Lets Go
-							</Link>
-						</div>
+					<Carousel.Caption className="button--block">
+						<p className="button--margin">Ready to explore catalunya ?</p>
+						<Link to={'/maps'} className="btn btn-primary button--margin">
+							Lets Go
+						</Link>
 					</Carousel.Caption>
 				</Carousel.Item>
 				<Carousel.Item>
@@ -58,9 +56,9 @@ function Slider() {
 							"If it scares you, it might be a good thing to try"
 						</h2>
 					</Carousel.Caption>
-					<Carousel.Caption>
-						<p>Ready to explore catalunya ?</p>
-						<Link to={'/maps'} className="btn btn-primary">
+					<Carousel.Caption className="button--block">
+						<p className="button--margin">Ready to explore catalunya ?</p>
+						<Link to={'/maps'} className="btn btn-primary button--margin">
 							Lets Go
 						</Link>
 					</Carousel.Caption>
