@@ -5,7 +5,7 @@ import { loadPlaces, loadPlacesData } from './place-actions';
 jest.mock('axios');
 jest.mock('../dispatcher/dispatcher');
 
-describe('loadPlaces should be true', () => {
+/* describe('loadPlaces should be true', () => {
 	beforeEach(async () => {
 		axios.mockImplementationOnce(() => Promise.resolve({}));
 
@@ -26,7 +26,7 @@ describe('loadPlaces should be true', () => {
 			{}
 		]);
 	});
-});
+}); */
 
 describe('place-actions', () => {
 	beforeEach(async () => {
@@ -48,20 +48,16 @@ describe('place-actions', () => {
 	});
 	test('shoud be defined', () => {
 		expect(dispatcher.dispatch.mock.calls[0][0]).toBeDefined();
-		console.log(dispatcher.dispatch.mock.calls[0][0]);
-	});
-	test('shoud return rafting', () => {
-		expect(dispatcher.dispatch.mock.calls[0][0].payload[0].name).toBe(
-			'rafting'
-		);
 	});
 });
 
-/* describe('place-actions-id', () => {
-	test('Should return null', async () => {
-		axios.mockImplementationOnce(() => Promise.reject());
-
+describe('should throw error', () => {
+	test('shoud return error', async () => {
+		axios.mockImplementation(() => Promise.reject());
 		await loadPlacesData();
-		expect(dispatcher.dispatch.mock.calls[0][0].payload).toBe(undefined);
+
+		expect(dispatcher.dispatch.mock.calls[0][0]).toEqual({
+			type: 'Error'
+		});
 	});
-}); */
+});

@@ -14,12 +14,18 @@ const iDPlaces = [
 ];
 
 export async function loadPlacesData() {
-	const adventures = await axios('/adventures.json');
+	try {
+		const adventures = await axios('/adventures.json');
 
-	dispatcher.dispatch({
-		type: 'LOAD_PLACE_DATA',
-		payload: adventures.data
-	});
+		dispatcher.dispatch({
+			type: 'LOAD_PLACE_DATA',
+			payload: adventures.data
+		});
+	} catch (error) {
+		dispatcher.dispatch({
+			type: 'Error'
+		});
+	}
 }
 
 export function loadUser(userName = 'Señora') {
