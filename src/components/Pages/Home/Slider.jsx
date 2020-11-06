@@ -8,13 +8,13 @@ function Slider() {
 	return (
 		<main>
 			<Carousel>
-				<Carousel.Item >
+				<Carousel.Item>
 					<img
-						className="d-block w-100"
+						className="d-block w-100 img-carrousel"
 						src="https://i.pinimg.com/originals/5c/98/31/5c98316423594c8ee268e6aae44c1b66.jpg"
 						alt="First slide"
 					/>
-					<Carousel.Caption style={{ bottom: '44%' }}>
+					<Carousel.Caption style={{ bottom: '40%' }}>
 						<h2 className="quote">
 							"If you think adventure is dangerous, try routine. It’s lethal!"
 						</h2>
@@ -34,7 +34,7 @@ function Slider() {
 						src="https://i.pinimg.com/originals/6d/a2/19/6da219f774b7fd885d0a9aa217d51c49.jpg"
 						alt="First slide"
 					/>
-					<Carousel.Caption style={{ bottom: '38%' }}>
+					<Carousel.Caption style={{ bottom: '44%' }}>
 						<h2 className="quote">
 							"When was the last time you did something for the first time?"
 						</h2>
