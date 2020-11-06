@@ -22,15 +22,12 @@ export async function loadPlacesData() {
 	});
 }
 
-export function loadUser(userName = 'Señora') {
-	const userPro = {
-		name: userName,
-		picture:
-			'https://fiverr-res.cloudinary.com/images/t_main1,q_auto,f_auto,q_auto,f_auto/gigs/75238076/original/d274960485df2a5b8b3e9960c2c9dda01eb8237d/ask-20-random-strangers-to-choose-your-best-profile-picture.jpg'
-	};
+export async function loadMyProfile() {
+	const myprofile = await axios('/myprofile.json');
+
 	dispatcher.dispatch({
-		type: 'LOAD_USER',
-		payload: userPro
+		type: 'LOAD_MY_PROFILE',
+		payload: myprofile.data
 	});
 }
 
@@ -56,23 +53,3 @@ export async function loadPlaces() {
 		}
 	});
 }
-
-// export async function loadMap() {
-// 	const scriptMap = '';
-// 	scriptMap.src = await axios(
-// 		`https://maps.googleapis.com/maps/api/js?key=${GOOGLE_API_KEY}&libraries=geometry,places`
-// 	);
-// 	scriptMap.id = 'googleMaps';
-// 	scriptMap.type = 'text/javascript';
-// 	dispatcher.dispatch({
-// 		type: 'LOAD_MAP',
-// 		payload: scriptMap
-// 	});
-// }
-
-// export function addFavorites(bestPlace) {
-// 	const updateFavorites = loadFavorites();
-// 	updateFavorites.push(bestPlace);
-// }
-// click en favorites.
-// El objeto en el que estoy se suma al array de objetos de favoritos
