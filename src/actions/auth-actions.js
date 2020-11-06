@@ -3,7 +3,8 @@ import firebase from 'firebase';
 import dispatcher from '../dispatcher/dispatcher';
 import actionTypes from './action-types';
 
-function handleSignIn(user) {
+export function handleSignIn(user) {
+	debugger;
 	const customUserData = {
 		displayName: user.displayName,
 		email: user.email,
