@@ -1,4 +1,4 @@
-/* import placeStore from './place-store';
+import placeStore from './place-store';
 import dispacher from '../dispatcher/dispatcher';
 
 describe(' place store hhhhhh', () => {
@@ -48,4 +48,3 @@ describe(' place store getByid', () => {
 		expect(placeStore.getPlaceDetailByID(1)).toEqual(action.payload[0]);
 	});
 });
- */

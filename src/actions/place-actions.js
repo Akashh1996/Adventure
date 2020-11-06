@@ -61,7 +61,9 @@ export async function loadPlaces() {
 				payload: placesInfo
 			});
 		} catch (error) {
-			console.log(error);
+			dispatcher.dispatch({
+				type: 'Error'
+			});
 		}
 	});
 }
