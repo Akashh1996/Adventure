@@ -1,30 +1,10 @@
 import React from 'react';
 import './footer.css';
 import { Link } from 'react-router-dom';
+import { footerItems } from './Footer-items';
+import * as FaIcons from 'react-icons/fa';
 
 function Footer() {
-	const footerItems = [
-		{
-			id: 1,
-			name: 'Terms of use',
-			path: '/Terms_of_use'
-		},
-		{
-			id: 2,
-			name: 'About',
-			path: '/About'
-		},
-		{
-			id: 3,
-			name: 'Help',
-			path: '/Help'
-		},
-		{
-			id: 4,
-			name: 'Contact',
-			path: '/Contact'
-		}
-	];
 	return (
 		<footer className="foot-container">
 			{footerItems.map((item) => {
@@ -34,10 +14,27 @@ function Footer() {
 						to={item.path}
 						key={item.id}
 					>
-						{item.name}
+						<div className="footer-strings">{item.name}</div>
+						<span className="footer-separator">|</span>
 					</Link>
 				);
 			})}
+			<span className="footer-icon">
+				<FaIcons.FaFacebookSquare />
+			</span>
+			<span className="footer-separator">|</span>
+			<span className="footer-icon">
+				<FaIcons.FaInstagram />
+			</span>
+			<span className="footer-separator">|</span>
+			<span className="footer-icon">
+				<FaIcons.FaTwitter />
+			</span>
+			<span className="footer-separator">|</span>
+			<span className="footer-icon">
+				<FaIcons.FaYoutube />
+			</span>
+			<span className="footer-separator">|</span>
 		</footer>
 	);
 }
