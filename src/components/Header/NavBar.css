@@ -23,6 +23,14 @@
 	align-items: center;
 }
 
+.menu-bars:hover {
+	color: #d48928;
+}
+
+.NavBar:hover {
+	color: #d48928;
+}
+
 .menu-bars {
 	color: #f5f5f5;
 	margin-left: 40px;
@@ -81,9 +89,26 @@
 	border-radius: 4px;
 }
 
+.nav-text-button {
+	text-decoration: none;
+	color: #f5f5f5;
+	font-size: 18px;
+	width: 200px;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	padding: 0 16px;
+	border-radius: 4px;
+}
+
+.nav-text-button:hover {
+	background-color: #197278;
+	color: #d48928;
+}
+
 .nav-text a:hover {
 	background-color: #197278;
-	color: #f7877a;
+	color: #d48928;
 }
 
 .nav-menu-items {
@@ -97,6 +122,10 @@
 	display: flex;
 	justify-content: flex-start;
 	align-items: center;
+}
+
+.menu-close:hover {
+	color: #d48928;
 }
 
 span {

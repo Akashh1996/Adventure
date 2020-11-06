@@ -5,6 +5,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './Slider.css';
 
 function Slider() {
+	debugger;
 	return (
 		<main>
 			<Carousel>

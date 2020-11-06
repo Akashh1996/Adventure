@@ -8,6 +8,7 @@ import {
 	Marker,
 	InfoWindow
 } from '@react-google-maps/api';
+import authStore from '../../../store/auth-store';
 
 const GOOGLE_MAPS_API_KEY = 'AIzaSyD6YZ7TzQl_TKgHxHWI9s_9u-NLM1B1nRo';
 
@@ -102,7 +103,6 @@ function Map() {
 					);
 				})}
  */}
-
 						{markerSelected && (
 							<InfoWindow
 								position={markerSelected.location}
