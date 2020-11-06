@@ -1,18 +1,68 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import * as FaIcons from 'react-icons/fa';
 import * as AiIcons from 'react-icons/ai';
 import { SidebarData } from './SideBarData';
 import './NavBar.css';
+import { signInWithGoogle, signOut } from '../../actions/auth-actions';
+import authStore from '../../store/auth-store';
+
 const logo =
 	'https://trello-attachments.s3.amazonaws.com/5f9fe516582bea5ce01d06b2/5f9fe5242167b873b8f1f631/3e0221f7d523436eb2520790995026bc/logo-adventure-awaits.png';
 
 function NavBar() {
+	debugger;
 	const [sidebar, setSidebar] = useState(false);
 	const [loginOn, setLoginOn] = useState(true);
-
+	const [user, setUser] = useState(authStore.getUser());
 	const offOnLogin = () => setLoginOn(!loginOn);
 	const showSidebar = () => setSidebar(!sidebar);
+
+	function handleChange() {
+		setUser(authStore.getUser());
+	}
+
+	useEffect(() => {
+		authStore.addEventListener(handleChange);
+
+		return () => authStore.removeEventListener(handleChange);
+	});
+
+	function getSignInButton() {
+		return (
+			<li
+				className="nav-text-button"
+				type="button"
+				onClick={(event) => {
+					event.preventDefault();
+					signInWithGoogle();
+				}}
+			>
+				<AiIcons.AiOutlineLogin />
+				<span></span>
+				Log In
+			</li>
+		);
+	}
+
+	function isSigninVisible() {
+		return user ? (
+			<li
+				className="nav-text-button"
+				type="button"
+				onClick={(event) => {
+					event.preventDefault();
+					signOut();
+				}}
+			>
+				<AiIcons.AiOutlineLogout />
+				<span></span>
+				Log Out
+			</li>
+		) : (
+			getSignInButton()
+		);
+	}
 
 	return (
 		<>
@@ -26,31 +76,13 @@ function NavBar() {
 				<ul className="nav-menu-items" onClick={showSidebar}>
 					<li className="navbar-toggle">
 						<Link to="#" className="menu-close">
-							<AiIcons.AiOutlineClose />
+							<FaIcons.FaWindowClose />
 						</Link>
 					</li>
-					<li
-						className={loginOn ? 'nav-text' : 'nav-text-inactive'}
-						onClick={offOnLogin}
-					>
-						<Link to="/login">
-							<AiIcons.AiOutlineLogin />
-							<span>Login</span>
-						</Link>
+					<li onClick={offOnLogin} className="nav-text">
+						{isSigninVisible()}
 					</li>
-					<li
-						className={loginOn ? 'nav-text' : 'nav-text-inactive'}
-						onClick={offOnLogin}
-					>
-						<Link to="/register">
-							<AiIcons.AiOutlineLogin />
-							<span>Register</span>
-						</Link>
-					</li>
-					<li
-						className={!loginOn ? 'nav-text' : 'nav-text-inactive'}
-						onClick={offOnLogin}
-					>
+					<li className={!loginOn ? 'nav-text' : 'nav-text-inactive'}>
 						<Link to="/profile">
 							<FaIcons.FaUserAlt />
 							<span>My profile</span>
@@ -66,15 +98,6 @@ function NavBar() {
 							</li>
 						);
 					})}
-					<li
-						className={!loginOn ? 'nav-text' : 'nav-text-inactive'}
-						onClick={offOnLogin}
-					>
-						<Link to="/logout">
-							<AiIcons.AiOutlineLogout />
-							<span>Log Out</span>
-						</Link>
-					</li>
 				</ul>
 			</nav>
 		</>

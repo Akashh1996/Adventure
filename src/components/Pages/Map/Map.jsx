@@ -8,15 +8,17 @@ import {
 	Marker,
 	InfoWindow
 } from '@react-google-maps/api';
+import authStore from '../../../store/auth-store';
 
 const GOOGLE_MAPS_API_KEY = 'AIzaSyD6YZ7TzQl_TKgHxHWI9s_9u-NLM1B1nRo';
 
 const libraries = ['places'];
 
 const mapContainerStyle = {
-	width: '100vh',
-	height: '100vh'
+	width: '1000px',
+	height: '500px'
 };
+
 const center = {
 	lat: 41.390205,
 	lng: 2.154007
@@ -101,7 +103,6 @@ function Map() {
 					);
 				})}
  */}
-
 						{markerSelected && (
 							<InfoWindow
 								position={markerSelected.location}
