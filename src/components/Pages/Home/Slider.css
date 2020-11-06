@@ -1,5 +1,5 @@
 img {
-	max-height: 600px;
+	max-height: 87vh;
 	height: auto;
 }
 
@@ -11,16 +11,36 @@ p {
 	margin-bottom: 10px;
 }
 
+.button--margin {
+	border-radius: 10px;
+	background-color: #283d3b;
+	font-size: 25px;
+	padding: 10px;
+}
+
+.button--block {
+	margin-bottom: 200px;
+}
+
 @media screen and (max-width: 600px) {
 	.quote {
 		font-size: 1rem;
 	}
+	img {
+		max-height: 100%;
+		height: auto;
+	}
 }
+
 @media screen and (max-width: 400px) {
 	.quote {
 		display: none;
 	}
 	p {
 		padding: 3px;
+	}
+	img {
+		max-height: 100%;
+		height: auto;
 	}
 }

@@ -1,47 +1,52 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import userStore from '../../../store/user-store';
+import authStore from '../../../store/auth-store';
 import { loadMyProfile } from '../../../actions/place-actions';
+import { signInWithGoogle } from '../../../actions/auth-actions';
 import './Profile.css';
 import { Card, CardDeck, Carousel } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 function Profile() {
 	const [profile, setProfile] = useState(userStore.getMyProfile());
+	const [myuser, setUser] = useState(authStore.getUser());
 
 	function handleChange() {
 		setProfile(userStore.getMyProfile());
+		setUser(authStore.getUser());
 	}
 
 	useEffect(() => {
 		userStore.addEventListener(handleChange);
+		authStore.addEventListener(handleChange);
 
 		if (!profile) {
 			loadMyProfile();
 		}
 
+		if (!myuser) {
+			signInWithGoogle();
+		}
+
 		return () => {
 			userStore.removeEventListener(handleChange);
+			authStore.removeEventListener(handleChange);
 		};
-	}, [profile]);
+	}, [profile, myuser]);
 
 	return (
 		<>
-			{profile && (
+			{profile && myuser && (
 				<>
 					{/* PICTURE PROFILE AND NAME */}
 					<section>
 						<div className="userProfile">
 							<span>
-								<img
-									src={profile[0]['me']['my_picture']}
-									className="userProfile--picture"
-								/>
+								<img src={myuser.photoURL} className="userProfile--picture" />
 							</span>
 							<text>Edit my profile</text>
-							<h2 className="userProfile--name">
-								{profile[0]['me']['my_name']}
-							</h2>
+							<h2 className="userProfile--name">{myuser.displayName}</h2>
 						</div>
 					</section>
 					{/* FAVOURITES */}
