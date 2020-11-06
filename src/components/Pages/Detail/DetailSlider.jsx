@@ -1,6 +1,4 @@
 import React, { useState, useEffect } from 'react';
-
-import Carousel from 'react-bootstrap/Carousel';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './detail-slider.css';
 import { loadPlacesData } from '../../../actions/place-actions';
@@ -32,47 +30,63 @@ function DetailSlider(props) {
 			{places && (
 				<div>
 					<main>
-						<div className="img-container">
-							<img src={places.photos[0].photo2} alt="" />{' '}
+						<div className="wrapper">
+							<div className="form-wrapper-img">
+								<img
+									className="detail-img"
+									src={places.photos[0].photo2}
+									alt=""
+								/>{' '}
+							</div>
 						</div>
-						<div className="detail">
-							<div className="detail_header">
-								<div className="detail_place_name">
+						<div className="wrapper">
+							<div className="form-wrapper">
+								<div className="detail_place">
 									<h2>{places.name}</h2>
+									{places.rating}
 								</div>
-								<div className="detail_place_rating">{places.rating}</div>
 								<div className="detail_place_type">Type:{places.type}</div>
-							</div>
-							<div className="detail_descrition">
-								{' '}
-								<u>Description: </u> {places.description}{' '}
-							</div>
-							<div className="detail_price">
-								{' '}
-								<u>Price Range:</u>
-								<span>{places.price}</span>{' '}
-							</div>
-							<div className="detail_contact">
-								{' '}
-								<u>Contact Number:</u>
-								<span>{places.phone_number}</span>
-							</div>
-							<div className="detail_address">
-								{' '}
-								<u>Address:</u>
-								<span>{places.address}</span>
-							</div>
-							<div className="detail_website">
-								{' '}
-								<u>Website:</u>
-								<span>{places.url}</span>
+								<div className="detail_descrition">
+									{' '}
+									<u>Description: </u> {places.description}{' '}
+								</div>
+								<div className="detail_price">
+									{' '}
+									<u>Price Range:</u>
+									<span>{places.price}</span>{' '}
+								</div>
+								<div className="detail_contact">
+									{' '}
+									<u>Contact Number:</u>
+									<span>{places.phone_number}</span>
+								</div>
+								<div className="detail_address">
+									{' '}
+									<u>Address:</u>
+									<span>{places.address}</span>
+								</div>
+								<div className="detail_website">
+									{' '}
+									<u>Website:</u>
+									<span>{places.url}</span>
+								</div>
 							</div>
 						</div>
 					</main>
 					<div>
 						{places.reviews.map((review) => (
-							<div>
-								{review.author_name} {review.rating} {review.text}{' '}
+							<div className="space">
+								<div className="wrapper-map">
+									<div className="form-wrapper-map">
+										<img
+											className="photo-reviewer"
+											src={review.profile_photo_url}
+											alt=""
+										/>
+										<div className="reviewer">{review.author_name} </div>
+										{review.text}{' '}
+									</div>
+								</div>
 							</div>
 						))}
 					</div>
