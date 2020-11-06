@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom';
 import userStore from '../../../store/user-store';
 import { loadMyProfile } from '../../../actions/place-actions';
 import './Profile.css';
+import { Card, CardDeck, Carousel } from 'react-bootstrap';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 function Profile() {
 	const [profile, setProfile] = useState(userStore.getMyProfile());
@@ -27,17 +29,16 @@ function Profile() {
 		<>
 			{profile && (
 				<>
-					<header className="">
-						<Link to="/home">
-							<span>Edit profile</span>
-						</Link>
-					</header>
 					{/* PICTURE PROFILE AND NAME */}
 					<section>
-						<div class="userProfile">
-							<span className="userProfile--picture">
-								<img src={profile[0]['me']['my_picture']} alt="" />
+						<div className="userProfile">
+							<span>
+								<img
+									src={profile[0]['me']['my_picture']}
+									className="userProfile--picture"
+								/>
 							</span>
+							<text>Edit my profile</text>
 							<h2 className="userProfile--name">
 								{profile[0]['me']['my_name']}
 							</h2>
@@ -45,81 +46,132 @@ function Profile() {
 					</section>
 					{/* FAVOURITES */}
 
-					<section>
+					<section className="section--body">
 						{/* FAVOURITES HEADER */}
-						<div>
+						<div className="favorites--header">
 							<h3>Favoritos</h3>
-							<button>Edit my favourites</button>
+							<button className="button--request">Edit my favourites</button>
 						</div>
 
 						{/* FAVOURITES CARD DETAIL */}
-						<div className="cardFav">
-							{profile[0]['my_favourites'].map((FavoriteDetail) => {
-								return (
-									<div className="card">
-										<figure>
-											<img
-												src={FavoriteDetail.photos[0]['photo1']}
-												alt="PictBestPlace"
+						<div className="favorites--deck">
+							<CardDeck>
+								{profile[0]['my_favourites'].map((FavoriteDetail) => {
+									return (
+										<Card border="light" style={{ width: '20rem' }}>
+											<Card.Img
+												variant="top"
+												src={FavoriteDetail.photos[0]['photo2']}
+												style={{ height: '300px', width: 'auto' }}
 											/>
-											<figcaption>{FavoriteDetail.type}</figcaption>
-										</figure>
-										<h1>{FavoriteDetail.name}</h1>
-										<h2>{FavoriteDetail.rating}</h2>
-										<h2>{FavoriteDetail.phone_number}</h2>
-										<h3>{FavoriteDetail.address}</h3>
-										<h3>{FavoriteDetail.url}</h3>
-									</div>
-								);
-							})}
+											<Card.Body>
+												<Card.Title>{FavoriteDetail.name}</Card.Title>
+												Mi nota : {FavoriteDetail.rating} / 5 <br></br>
+												Teléfono : {FavoriteDetail.phone_number} <br></br>
+												Dirección : {FavoriteDetail.address} <br></br>
+												Sitio web :{' '}
+												<a href={FavoriteDetail.url}>
+													{FavoriteDetail.url}
+												</a>{' '}
+												<br></br>
+											</Card.Body>
+										</Card>
+									);
+								})}
+							</CardDeck>
 						</div>
 					</section>
 
 					{/* PICTURES */}
-					<section>
+					<section className="section--body">
 						{/* PICTURES HEADER */}
-						<div>
+						<div className="favorites--header">
 							<h3>Mis Fotos</h3>
-							<button>Add picture</button>
+							<button className="button--request">Add picture</button>
 						</div>
-						<div>slider with pictures</div>
+						<div>
+							<Carousel>
+								<Carousel.Item>
+									<img
+										className="d-block w-100"
+										src="https://media.iatiseguros.com/wp-content/uploads/2019/12/04012454/trekking-deporte-aventura-1.jpg"
+										alt="First slide"
+									/>
+									<Carousel.Caption>
+										<h3>
+											haciendo una caminata antes de bajar el rio en canoa
+										</h3>
+									</Carousel.Caption>
+								</Carousel.Item>
+								<Carousel.Item>
+									<img
+										className="d-block w-100"
+										src="https://img.redbull.com/images/c_limit,w_1500,h_1000,f_auto,q_auto/redbullcom/2018/11/05/376a0320-a405-4c44-8534-cec6c7c8e02d/canyoning-spain"
+										alt="Third slide"
+									/>
+
+									<Carousel.Caption>
+										<h3>al lado de Lleida</h3>
+									</Carousel.Caption>
+								</Carousel.Item>
+								<Carousel.Item>
+									<img
+										className="d-block w-100"
+										src="https://checkyeti.imgix.net/images/optimized/canyoning-in-the-susec-gorge-top-rafting.jpg"
+										alt="Third slide"
+									/>
+
+									<Carousel.Caption>
+										<h3>Yo en los pirineos franceses</h3>
+									</Carousel.Caption>
+								</Carousel.Item>
+							</Carousel>
+						</div>
 					</section>
 					{/* REVIEWS */}
 
-					<section>
-						<div>
+					<section className="section--body">
+						<div className="favorites--header">
 							<h3>Mis Reviews</h3>
-							<button>Edit my reviews</button>
+							<button className="button--request">Edit my reviews</button>
 						</div>
 						<div className="reviewsCard">
-							{profile[0]['my_reviews'].map((ReviewDetail) => {
-								return (
-									<div>
-										<h1>{ReviewDetail.place_name}</h1>
-										<h2>{ReviewDetail.my_rating}</h2>
-										<h3>{ReviewDetail.url}</h3>
-										<text>{ReviewDetail.my_description}</text>
-										<h4>{ReviewDetail.user_name}</h4>
-									</div>
-								);
-							})}
+							<CardDeck>
+								{profile[0]['my_reviews'].map((ReviewDetail) => {
+									return (
+										<Card border="light" style={{ width: '18rem' }}>
+											<Card.Body style={{ height: 'auto', width: 'auto' }}>
+												<Card.Title>{ReviewDetail.place_name}</Card.Title>
+												Mi nota : {ReviewDetail.my_rating} / 5 <br></br>
+												{ReviewDetail.my_description}
+												<br></br>
+												Página web : {ReviewDetail.url} <br></br>
+												<Card.Footer>{ReviewDetail.user_name}</Card.Footer>
+											</Card.Body>
+										</Card>
+									);
+								})}
+							</CardDeck>
 						</div>
 					</section>
 
 					{/* FRIENDS */}
-					<section>
-						<div>
+					<section className="userProfile--friends">
+						<div className="favorites--header">
 							<h3>Mi círculo de amigos</h3>
-							<button>Invitar a un amigo</button>
+							<div>
+								<button className="button--invitar">Invitar</button>
+							</div>
 						</div>
-						<div className="cardFav">
+						<div className="friends--deck">
 							{profile[0]['my_friends'].map((FriendsDetail) => {
 								return (
-									<div className="card">
+									<div>
 										<figure>
 											<img
 												src={FriendsDetail['friend_picture']}
 												alt="PictBestFriend"
+												className="userProfile--friends--image"
 											/>
 										</figure>
 										<h3>{FriendsDetail.name}</h3>

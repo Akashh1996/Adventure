@@ -1,8 +1,8 @@
 [
     {
     "me": {
-        "my_name": "Pepito los Palotes",
-        "my_picture": "https://fiverr-res.cloudinary.com/images/t_main1,q_auto,f_auto,q_auto,f_auto/gigs/75238076/original/d274960485df2a5b8b3e9960c2c9dda01eb8237d/ask-20-random-strangers-to-choose-your-best-profile-picture.jpg"
+        "my_name": "Marilu Jimenez",
+        "my_picture": "https://pbs.twimg.com/profile_images/694233717712228354/pvsZC423_400x400.jpg"
     },
     "my_favourites": [{
 		"id": 1,
@@ -28,7 +28,61 @@
 			}
 		],
 		"rating": 4.5
-	}],
+    },
+    {
+        "id": 2,
+		"phone_number": "608 27 35 50",
+		"address": "Panta de Darnius, Girona",
+		"location": { "lat": 42.337487, "lng": 2.79427 },
+		"name": "Rafting Darnius",
+		"url": "https://www.livewater.es/",
+		"type": "rafting",
+		"price": "50€-60€",
+		"description":
+			"Tras  varios años de experiencia en el sector del  turismo de aventura, los componentes de nuestro equipo decidimos juntarnos y ofertar al mercado un servicio más personal y profesional: nuestros visitantes disfrutarían  tanto de la actividad como lo hacemos nosotros mismos. Para ello contamos con guías titulados, apasionados por su trabajo y con los pies en la tierra. Brindamos la seguridad que buscas en tus aventuras, con la equipación homologada y adecuada para cada tipo de actividad, ofreciéndote así un servicio de calidad y confianza.",
+            "photos": [
+                {
+                    "photo1":
+                        "https://static2.laverdad.es/www/multimedia/201805/04/media/cortadas/rafting1-k9iF-U501818270540hF-624x385@La%20Verdad.jpg",
+                    "photo2":
+                        "https://alcorceaventura.com/wp-content/uploads/2017/03/rafting-pirineos.jpg",
+                    "photo3":
+                        "https://upload.wikimedia.org/wikipedia/commons/a/ac/Rio_Salvaje_Jalcomulco.jpeg",
+                    "photo4":
+                        "https://cdn.getyourguide.com/img/tour/5c8ff2db67d63.jpeg/146.jpg",
+                    "photo5":
+                        "https://media.tacdn.com/media/attractions-splice-spp-674x446/06/70/7f/63.jpg"
+                }
+            ],
+            "rating": 4.6
+    },
+    {
+        "id": 3,
+		"phone_number": "973 62 21 58",
+		"address": "Panta de Darnius, Girona",
+		"location": { "lat": 42.495309, "lng": 1.211471 },
+		"name": "Rafting Llavorsí",
+		"url": "https://raftingllavorsi.cat/",
+		"type": "rafting",
+		"price": "50€-70€",
+		"description":
+			"Somos un equipo dedicado por entero a los deportes de aventura y a la actividad al aire libre. Nuestro objetivo es enseñarte todo lo que sabemos y hacer que cada momento que pases con nosotros sea inolvidable.",
+		"photos": [
+			{
+				"photo1":
+					"https://www.somosaventura.com/wp-content/uploads/2016/09/Raf1.jpg",
+				"photo2":
+					"https://media.tacdn.com/media/attractions-splice-spp-674x446/06/6c/81/ad.jpg",
+				"photo3":
+					"https://alua.es/wp-content/uploads/2018/03/RAFTING-2-600x400.jpg",
+				"photo4":
+					"https://activasur.com/wp-content/themes/yootheme/cache/medidas-de-seguridad-en-el-rafting...-94d8734c.jpeg",
+				"photo5":
+					"https://jairecanoas.com/blog/wp-content/uploads/2019/09/rafting3-825x510.jpg"
+			}
+		],
+		"rating": 4.6
+    }],
     "my_reviews": [{
 		"place_name": "Hecho el loco" ,
 		"url": "https://hechoelloco.com",
