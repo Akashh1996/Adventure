@@ -2,7 +2,6 @@ import axios from 'axios';
 import dispatcher from '../dispatcher/dispatcher';
 import { loadPlaces, loadPlacesData } from './place-actions';
 
-/* 
 jest.mock('axios');
 jest.mock('../dispatcher/dispatcher');
 
@@ -28,10 +27,6 @@ describe('loadPlaces should be true', () => {
 		]);
 	});
 });
- */
-
-jest.mock('axios');
-jest.mock('../dispatcher/dispatcher');
 
 describe('place-actions', () => {
 	beforeEach(async () => {
