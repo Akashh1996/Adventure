@@ -6,7 +6,6 @@ import { loadMyProfile } from '../../../actions/place-actions';
 import { signInWithGoogle } from '../../../actions/auth-actions';
 import './Profile.css';
 import { Card, CardDeck, Carousel } from 'react-bootstrap';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 function Profile() {
 	const [profile, setProfile] = useState(userStore.getMyProfile());
