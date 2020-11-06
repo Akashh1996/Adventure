@@ -7,9 +7,10 @@
 		"name": "Rafting Catalunya",
 		"url": "https://raftingcatalunya.es/",
 		"type": "rafting",
+		"icon_style": "https://trello-attachments.s3.amazonaws.com/5f9fe516582bea5ce01d06b2/5f9fe5242167b873b8f1f631/aea4c1694ca3dc10fe48bcda71a0278a/17-170067_green-map-pin-png.png",
 		"price": "40€-80€",
 		"description":
-			"Comparte en familia o con amigos la aventura del Rafting en las bravas aguas del río Noguera Pallaresa. Descenderás en una balsa neumática un río de aguas bravas acompañado de guías experto con gran experiencia y profesionalidad Tu seguridad será lo primero. Y tu disfrute también",
+			"Share with family or friends the adventure of Rafting in the rough waters of the Noguera Pallaresa River. You will descend a whitewater river in an inflatable raft accompanied by expert guides with great experience and professionalism. Your safety will come first. And your enjoyment too",
 		"photos": [
 			{
 				"photo1":
@@ -81,9 +82,10 @@
 		"name": "Rafting Darnius",
 		"url": "https://www.livewater.es/",
 		"type": "rafting",
+		"icon_style": "https://trello-attachments.s3.amazonaws.com/5f9fe516582bea5ce01d06b2/5f9fe5242167b873b8f1f631/aea4c1694ca3dc10fe48bcda71a0278a/17-170067_green-map-pin-png.png",
 		"price": "50€-60€",
 		"description":
-			"Tras  varios años de experiencia en el sector del  turismo de aventura, los componentes de nuestro equipo decidimos juntarnos y ofertar al mercado un servicio más personal y profesional: nuestros visitantes disfrutarían  tanto de la actividad como lo hacemos nosotros mismos. Para ello contamos con guías titulados, apasionados por su trabajo y con los pies en la tierra. Brindamos la seguridad que buscas en tus aventuras, con la equipación homologada y adecuada para cada tipo de actividad, ofreciéndote así un servicio de calidad y confianza.",
+			"After several years of experience in the adventure tourism sector, the members of our team decided to get together and offer the market a more personal and professional service: our visitors would enjoy the activity as much as we do ourselves. For this we have qualified guides, passionate about their work and with their feet on the ground. We provide the security you are looking for on your adventures, with approved and appropriate equipment for each type of activity, thus offering you a quality and trustworthy service.",
 		"photos": [
 			{
 				"photo1":
@@ -153,9 +155,10 @@
 		"name": "Rafting Llavorsí",
 		"url": "https://raftingllavorsi.cat/",
 		"type": "rafting",
+		"icon_style": "https://trello-attachments.s3.amazonaws.com/5f9fe516582bea5ce01d06b2/5f9fe5242167b873b8f1f631/aea4c1694ca3dc10fe48bcda71a0278a/17-170067_green-map-pin-png.png",
 		"price": "50€-70€",
 		"description":
-			"Somos un equipo dedicado por entero a los deportes de aventura y a la actividad al aire libre. Nuestro objetivo es enseñarte todo lo que sabemos y hacer que cada momento que pases con nosotros sea inolvidable.",
+			"We are a team dedicated entirely to adventure sports and outdoor activities. Our goal is to teach you everything we know and make every moment you spend with us unforgettable.",
 		"photos": [
 			{
 				"photo1":
@@ -228,9 +231,10 @@
 		"name": "Alta Ruta Aventura",
 		"url": "https://www.altaruta.com/",
 		"type": "canyoning",
+		"icon_style": "https://trello-attachments.s3.amazonaws.com/5f9fe5242167b873b8f1f631/816x1200/31e34612d7d623d6040462f026e386ae/pngwing.com.png",
 		"price": "40€-60€",
 		"description":
-			"Alta Ruta Aventura S.L. es una empresa dedicada a la organización y realización de actividades de aventura para todas las edades, gustos y condiciones físicas. Con más de 27 años de historia, ponemos a tu disposición todo nuestro conocimiento y experiencia para hacer de vuestra aventura un recuerdo inolvidable.",
+			"Alta Ruta AventuraS.L. is a company dedicated to the organization and realization of adventure activities for all ages, tastes and physical conditions. With more than 27 years of history, we put at your disposal all our knowledge and experience to make your adventure an unforgettable memory.",
 		"photos": [
 			{
 				"photo1":
@@ -301,9 +305,10 @@
 		"name": "Aventura Girona",
 		"url": "https://www.aventuragirona.com/index.php/ca/",
 		"type": "canyoning",
+		"icon_style": "https://trello-attachments.s3.amazonaws.com/5f9fe5242167b873b8f1f631/816x1200/31e34612d7d623d6040462f026e386ae/pngwing.com.png",
 		"price": "60€-80€",
 		"description":
-			"A Aventura Girona ens avalen més de 10 anys d’experiència en activitats d’aventura i les apliquem per reforçar el llaç entre els companys de feina, amb l’objectiu de buscar l’evasió, la diversió i la sociabilitat allunyats de l’entorn quotidià.",
+			"At Aventura Girona we are backed by more than 10 years of experience in adventure activities applied to reinforcing the bond between co-workers, with the aim of seeking escape, fun and sociability away from the everyday environment.",
 		"photos": [
 			{
 				"photo1":
@@ -366,5 +371,250 @@
 					"Via Ferrat was great! Well organised and the guide was a very helpful patient and encouraging. This was my first time and I really recommend it to everyone."
 			}
 		]
+	},
+	{
+		"id": 6,
+		"phone_number": "676 36 84 48",
+		"address": "Carretera de Lleida, 27, 25794 Organyà, Lleida",
+		"location": { "lat": 42.210161, "lng": 1.326680 },
+		"name": "SB Canyoning",
+		"url": "https://sbcanyoning.com/es/sb-canyoning/",
+		"type": "canyoning",
+		"icon_style": "https://trello-attachments.s3.amazonaws.com/5f9fe5242167b873b8f1f631/816x1200/31e34612d7d623d6040462f026e386ae/pngwing.com.png",
+		"price": "50€-70€",
+		"description":
+			"At Aventura Girona we are backed by more than 10 years of experience in adventure activities applied to reinforcing the bond between co-workers, with the aim of seeking escape, fun and sociability away from the everyday environment.",
+		"photos": [
+			{
+				"photo1":
+					"https://images.squarespace-cdn.com/content/v1/556dca52e4b0d2a6aeb52684/1594375438969-6GSM46FUV95MVCRM3SGZ/ke17ZwdGBToddI8pDm48kDITAuO7WvGYe_HtkNx7UXUUqsxRUqqbr1mOJYKfIPR7LoDQ9mXPOjoJoqy81S2I8N_N4V1vUb5AoIIIbLZhVYxCRW4BPu10St3TBAUQYVKccSshEJlWdTt0omCZRbgujVtY4VXZAEc5nErFE5qOWR3S1FgW-KjVULYQWGVDwFXf/9FF371D7-A8F1-4C84-A8EC-574C33E2D5C6.JPG",
+				"photo2":
+					"https://naturaliste.es/wp-content/uploads/2016/05/barranquismo-jerte-papuos.jpg",
+				"photo3":
+					"https://img.redbull.com/images/c_crop,x_0,y_0,h_1413,w_2119/c_fill,w_1040,h_650/q_auto,f_auto/redbullcom/2018/11/05/376a0320-a405-4c44-8534-cec6c7c8e02d/barranquismo-espana",
+				"photo4":
+					"https://d2q2l2ko2chbyo.cloudfront.net/uploads/activity_image/image/5031/barranquismo.jpg",
+				"photo5":
+					"https://marinalia.es/698-large_default/barranquismo-acuatico-en-alicante.jpg"
+			}
+		],
+		"rating": 5,
+		"reviews": [
+            {
+                "author_name": "Danny Kloosterhuis",
+                "profile_photo_url": "https://lh3.googleusercontent.com/-AZIv1y_cVrg/AAAAAAAAAAI/AAAAAAAAAAA/AMZuucmOviBFNkMB_DlxFqp0Ou7QXjA3Ww/s128-c0x00000000-cc-rp-mo/photo.jpg",
+                "rating": 5,
+                "relative_time_description": "3 months ago",
+                "text": "We had a superb tour in the Boixols canyon today with Alex. The weather was perfect, the canyon was marvellous and Alex is just a fantastic guide. His English was perfect, he showed a lot of patience in explaining everything to our kids and the whole trip went supersmooth and 100% safe. SB canyoning is highly recommended, we will definitely come back!!"
+            },
+            {
+                "author_name": "Tom Oude Luttikhuis",
+                "profile_photo_url": "https://lh3.googleusercontent.com/a-/AOh14GjVFK2hOy_bOD61g0DVlNm4VJZStcpvQf5Ha0UUHA=s128-c0x00000000-cc-rp-mo",
+                "rating": 5,
+                "relative_time_description": "a year ago",
+                "text": "Can only recommend to go with Bernat to visit some of the Canyons he knows. He is a very good guide, gives a lot of confidence and if you fear something he always has an alternative route! We had 2 amazing days with him, and as soon as we are back in the neighborhood we will book another trip with him!"
+            },
+            {
+                "author_name": "Harrold Muda",
+                "profile_photo_url": "https://lh3.googleusercontent.com/a-/AOh14GgZ5PZ0GPXQk0lQNGueLNtc7Bq6Y0KcR_44zA9d=s128-c0x00000000-cc-rp-mo",
+                "rating": 4,
+                "relative_time_description": "a year ago",
+                "text": "Professional and wel trained guideance"
+            },
+            {
+                "author_name": "Anna Marta Sánchez",
+                "profile_photo_url": "https://lh6.googleusercontent.com/-UjX6XIrTa6Q/AAAAAAAAAAI/AAAAAAAAAAA/AMZuucnbi-UTHIVxYGIH30nnGv3a7U-6Og/s128-c0x00000000-cc-rp-mo/photo.jpg",
+                "rating": 5,
+                "relative_time_description": "a month ago",
+                "text": "Amazing! Especially thanks to Oscar and Àlex for making everything much easier for me 100% recommended, we will even repeat for sure. Thank you!!"
+            },
+            {
+                "author_name": "Clàudia Tapioles",
+                "profile_photo_url": "https://lh3.googleusercontent.com/a-/AOh14GgT1yIn0czVwutffxuotz6y8k7X3ZhpKvHbNsX_qA=s128-c0x00000000-cc-rp-mo",
+                "rating": 5,
+                "relative_time_description": "2 months ago",
+                "text": "Very good experience! Last Sunday a group of 4 friends went to the Boixols canyoning route and we had a great time. The monitors are very attentive and guide you at all times, we feel very comfortable. 100% recommendable!"
+            }
+        ]
+	},
+	{
+		"id": 7,
+		"phone_number": "608 32 58 30",
+		"address": "Camí de l'Observatori, s/n, 25691 Àger, Lleida",
+		"location": { "lat": 42.017396, "lng": 0.744210 },
+		"name": "Àger parapent",
+		"url": "https://ager-parapent.com/",
+		"type": "paragliding",
+		"icon_style": "https://trello-attachments.s3.amazonaws.com/5f9fe5242167b873b8f1f631/372x594/69d66633dffceabc33074ec6670c06b1/clipart51531.png",
+		"price": "70€-120€",
+		"description":"We are professionals with a lot of experience, we have taught hundreds of students to fly, we have made thousands of two-seater flights making people of all ages enjoy and feel happy. All the pilots in our team have been flying in the Vall d'Àger for more than 18 years and we know this valley and its flight conditions perfectly, and even though we are of diverse origins, we consider this valley as our home.",
+		"photos": [
+			{
+				"photo1":
+					"https://media.istockphoto.com/photos/paraglider-flying-over-mountains-picture-id522078473?k=6&m=522078473&s=612x612&w=0&h=7ARDBf_TrY4KAEqaaGkjBgVanFNmPQTVSyix2IoKBXU=",
+				"photo2":
+					"https://i1.wp.com/paraglidemaui.com/Fly-Maui/wp-content/updir/2010/03/paraglidephoto020-1.jpg",
+				"photo3":
+					"https://www.altitude-activities.com/wp-content/uploads/2019/02/Paragliding-Lake-Bled.jpg"
+			}
+		],
+		"rating": 4.9,
+		"reviews": [
+            {
+                "author_name": "Sergi jimenez Work",
+                "profile_photo_url": "https://lh3.googleusercontent.com/a-/AOh14GiT7Z__C_8Hu7rioB5dNgoDGU6SuJpeMoiNZmnn=s128-c0x00000000-cc-rp-mo",
+                "rating": 5,
+                "relative_time_description": "a month ago",
+                "text": "Nice site, and very beautiful"
+            },
+            {
+                "author_name": "David Acuña Torras",
+                "profile_photo_url": "https://lh6.googleusercontent.com/-SD3k0DnYD_o/AAAAAAAAAAI/AAAAAAAAAAA/AMZuuck9YIxLiE5D9WGDD7x5WDIbrkBPLQ/s128-c0x00000000-cc-rp-mo-ba4/photo.jpg",
+                "rating": 5,
+                "relative_time_description": "2 months ago",
+                "text": "Very professional and kind."
+            },
+            {
+                "author_name": "Helen Sanchez",
+                "profile_photo_url": "https://lh3.googleusercontent.com/a-/AOh14GguuFmYsbqoSOqcCxu8XtCwFNa0eVDjZ6loAWRWyw=s128-c0x00000000-cc-rp-mo",
+                "rating": 5,
+                "relative_time_description": "2 months ago",
+                "text": "100% recommended.\nAll very nice and pleasant. We really liked the experience, it's worth it."
+            },
+            {
+                "author_name": "Clara Ponsxx",
+                "profile_photo_url": "https://lh3.googleusercontent.com/-7ws1TXenR5M/AAAAAAAAAAI/AAAAAAAAAAA/AMZuuckJt7riqQCzMVDJa0RK3NuzwqCxvw/s128-c0x00000000-cc-rp-mo-ba3/photo.jpg",
+                "rating": 5,
+                "relative_time_description": "3 months ago",
+                "text": "My partner paraglided this morning and was delighted with the experience! He didn’t have them all and when they landed he was left wanting more!\n\nThank you all for everything, and especially to your Genius monitor, you made him feel calm and safe at all times!\n\nFor its part,\nJames."
+            },
+            {
+                "author_name": "Dunia Morenilla",
+                "profile_photo_url": "https://lh3.googleusercontent.com/a-/AOh14Gj6Ft-jxnyww334MNn9dRBIlVaAhIcCg0aqbZ69kw=s128-c0x00000000-cc-rp-mo",
+                "rating": 5,
+                "relative_time_description": "3 weeks ago",
+                "text": "Excellent experience!!! An exquisite treatment by Cristina and Antonio, the pilot.\nWe will certainly deliver."
+			}
+		]
+	},
+	{
+		"id": 8,
+		"phone_number": "626 31 99 49",
+		"address": "Pla dels Vinyets s/n, 25794 Organyà, Lleida",
+		"location": { "lat": 42.221353, "lng": 1.332133 },
+		"name": "Organyà Xperience",
+		"url": "http://www.organyaxperience.cat/",
+		"type": "paragliding",
+		"icon_style": "https://trello-attachments.s3.amazonaws.com/5f9fe5242167b873b8f1f631/372x594/69d66633dffceabc33074ec6670c06b1/clipart51531.png",
+		"price": "70€-100€",
+		"description":"Come paragliding and discover the magnificent views of the Alt Urgell, take off from the ground to discover a lot of new and indescribable sensations and enjoy the landscape from a bird's eye view. Discover another way of seeing the world with our technical team, which has extensive experience in the field of teaching and free flight.",
+		"photos": [
+			{
+				"photo1":
+					"https://www.altitude-activities.com/wp-content/uploads/2019/02/Paragliding-Lake-Bled.jpg",
+				"photo2":
+					"https://media.istockphoto.com/photos/paraglider-flying-over-mountains-picture-id522078473?k=6&m=522078473&s=612x612&w=0&h=7ARDBf_TrY4KAEqaaGkjBgVanFNmPQTVSyix2IoKBXU=",
+				"photo3":
+					"https://i1.wp.com/paraglidemaui.com/Fly-Maui/wp-content/updir/2010/03/paraglidephoto020-1.jpg"
+			}
+		],
+		"rating": 5,
+		"reviews": [
+            {
+                "author_name": "Ernest Tapias",
+                "profile_photo_url": "https://lh3.googleusercontent.com/a-/AOh14GiG-1tdXemAQMF0zckD-KIWo05REKTVN8SFZUSOyA=s128-c0x00000000-cc-rp-mo",
+                "rating": 5,
+                "relative_time_description": "a year ago",
+                "text": "Jordi Medina, a professional"
+            },
+            {
+                "author_name": "Albert Polo",
+                "profile_photo_url": "https://lh3.googleusercontent.com/a-/AOh14Gj0Mxf_mD4GAVm-_aApuHMKUI03xq7QVZc0f9AWPw=s128-c0x00000000-cc-rp-mo-ba2",
+                "rating": 5,
+                "relative_time_description": "3 years ago",
+                "text": "Jordi is a vocational paragliding instructor. He likes to teach and he does it transmitting confidence and rigor. Excellent."
+            },
+            {
+                "author_name": "ares franch",
+                "profile_photo_url": "https://lh3.googleusercontent.com/a-/AOh14GhkOHbFPQ0FEzuFRmBiJZqod7Sc-BHJLhPKV5OYeA=s128-c0x00000000-cc-rp-mo",
+                "rating": 5,
+                "relative_time_description": "3 years ago",
+                "text": "The instructors are very professional and friendly. 100% recommended."
+            },
+            {
+                "author_name": "maribel garcia cotto",
+                "profile_photo_url": "https://lh3.googleusercontent.com/a-/AOh14Gjo0bPh8q4GztxSxXCPKBQdYc_Cx2N3FH6dL8Cjpw=s128-c0x00000000-cc-rp-mo",
+                "rating": 5,
+                "relative_time_description": "6 years ago",
+                "text": "It has been a phenomenal experience, recommended activity, great.\nThe professional and delivered team.\nThank you !!!"
+            },
+            {
+                "author_name": "anabella duccoli",
+                "profile_photo_url": "https://lh3.googleusercontent.com/-QC_Hc712_5I/AAAAAAAAAAI/AAAAAAAAAAA/AMZuucl6jvHaLlKaOWWISubzDfZNqm0uYg/s128-c0x00000000-cc-rp-mo/photo.jpg",
+                "rating": 5,
+                "relative_time_description": "3 years ago",
+                "text": "Amazing!!! A great and unparalleled experience !! All in good time the structure as the organizer! RECOMMENDABLE"
+            }
+        ]
+	},
+	{
+		"id": 9,
+		"phone_number": "664 20 37 47",
+		"address": "San Pedro de Torelló, Girona",
+		"location": { "lat": 42.100858, "lng": 2.287766 },
+		"name": "Tandem Team: Paragliding school",
+		"url": "https://www.tandemteam.es/",
+		"type": "paragliding",
+		"icon_style": "https://trello-attachments.s3.amazonaws.com/5f9fe5242167b873b8f1f631/372x594/69d66633dffceabc33074ec6670c06b1/clipart51531.png",
+		"price": "60€-110€",
+		"description":"TandemTeam is a professional paragliding school located in Castejón de sos. In the heart of the Pyrenees, in the Benasque Valley. In our school you can find all the official courses for you to become an autonomous pilot with guarantees. In addition, we are an Active Tourism company, so we offer paragliding flights for all people who want to have the experience of flying in a unique place such as the Pyrenees.",
+		"photos": [
+			{
+				"photo1":
+					"https://i1.wp.com/paraglidemaui.com/Fly-Maui/wp-content/updir/2010/03/paraglidephoto020-1.jpg",
+				"photo2":
+					"https://www.altitude-activities.com/wp-content/uploads/2019/02/Paragliding-Lake-Bled.jpg",
+				"photo3":
+					"https://media.istockphoto.com/photos/paraglider-flying-over-mountains-picture-id522078473?k=6&m=522078473&s=612x612&w=0&h=7ARDBf_TrY4KAEqaaGkjBgVanFNmPQTVSyix2IoKBXU="
+			}
+		],
+		"rating": 4.9,
+		"reviews": [
+            {
+                "author_name": "Jean Pierre Martens",
+                "profile_photo_url": "https://lh3.googleusercontent.com/a-/AOh14Gi8K5MGrmttfHBUbqdolNZ6PmcIktddqNt8IyXmNek=s128-c0x00000000-cc-rp-mo",
+                "rating": 5,
+                "relative_time_description": "a year ago",
+                "text": "Fantastic experience. Worth every cent. Myself and our three children 16, 14 and 12 did tandem jumps. Nico and Alberto were two of the pilots. Very relaxed and professional pilots. Would recommend them anytime!"
+            },
+            {
+                "author_name": "Rosa Maria Soriano",
+                "profile_photo_url": "https://lh4.googleusercontent.com/-dBMrPzKjEr8/AAAAAAAAAAI/AAAAAAAAAAA/AMZuuclZncmBK6_f_pFKS8_tna6SUbxuxg/s128-c0x00000000-cc-rp-mo/photo.jpg",
+                "rating": 5,
+                "relative_time_description": "a month ago",
+                "text": "It has been a very good experience.\nAll the staff of Tandem Team extraordinary, very professional.\nThanks, we will repeat"
+            },
+            {
+                "author_name": "Alex Galofré",
+                "profile_photo_url": "https://lh3.googleusercontent.com/a-/AOh14GjSFtwHJUk1lEfn3yIWWCAvu5nyfrQPE64YgPFNVg=s128-c0x00000000-cc-rp-mo",
+                "rating": 5,
+                "relative_time_description": "a month ago",
+                "text": "An unforgettable experience!!\nEli's attention in the Tandem Team office was exceptional, and we already knew that we had not been in the wrong place. Sympathy and absolute professionalism.\n\nAnd the pilots made us have a very special experience that will remain\nin our memory. Great professionals who took care of all the details, inspiring a lot of confidence.\nWe visited some other center before flying, and I honestly think they are the best in Castejón de Sos.\nWith them you will not be wrong! 👏🏼\n\nThanks to all the team for making our flight a great experience 👍🏼\n\nWe will be back for other activities !!!"
+            },
+            {
+                "author_name": "Anna Domènech",
+                "profile_photo_url": "https://lh4.googleusercontent.com/-JEOjZpadqFw/AAAAAAAAAAI/AAAAAAAAAAA/AMZuucnM-nVQ8SvbU1tP1tKW1W0MqMkriw/s128-c0x00000000-cc-rp-mo/photo.jpg",
+                "rating": 5,
+                "relative_time_description": "2 months ago",
+                "text": "I did the Paragliding Progression course for 5 days in August. We made a total of 10 flights, and that taking into account that a day and a half we dedicated to the theory for bad weather.\nWe have flown in calm conditions and also in more active conditions at midday, and I have felt very monitored and guided by the station at all times. The instructor flew near us and indicated exercises to practice.\nThe equipment they loaned me was in excellent condition.\nIt has made me short and I will surely do more courses with them.\nThis has only started!"
+            },
+            {
+                "author_name": "Esmeralda CP",
+                "profile_photo_url": "https://lh6.googleusercontent.com/-UROYz16VWvY/AAAAAAAAAAI/AAAAAAAAAAA/AMZuucmBZPzhHF5Bt_ojRWcTawaPbMgnVQ/s128-c0x00000000-cc-rp-mo/photo.jpg",
+                "rating": 5,
+                "relative_time_description": "a month ago",
+                "text": "100% recommendable.\nVery good treatment from the girl in the office, as well as from the boys who do the jumps. I advise calling to reserve the day and time. They send you the reservation confirmation and advice on what clothes and shoes to wear. With the Covid issue, jumping with a mask is mandatory. It is not inconvenient and does not disturb the jump.\nThe meeting point is at the Castejón de Sos office, and from there they take you by van to the jump point.\nIt takes about 45 minutes to get to the highest point, with spectacular views while ascending, although it is a bumpy ride due to the bumping of the poor condition of the road. The problem is the track, which is shameful that it is not fixed and in good condition. I urge the Government of Aragon, the City Council, or whoever is concerned, ... to get down to work, since Castejón de Sos is one of the main paragliding spots in Europe, and it gives a very bad image how is the way up with the traffic that there is.\nThe companions of those who jump are given directions to easily walk along a path in which you reach the point where they land in 10 minutes, being able to take photos and watch how they descend. You can also go by car.\nIn our case, I must say that my mother-in-law finally fulfilled her dream at the age of 72, and her tandem flight from El Gallinero was spectacular. They treated her very well, and both takeoff and landing were perfect. She is looking forward to coming back. 😊"
+            }
+        ]
 	}
 ]

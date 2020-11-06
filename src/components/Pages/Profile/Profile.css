@@ -1,0 +1,86 @@
+.userProfile {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	background-color: #283d3b;
+	color: white;
+	border-bottom: solid 4px;
+	border-color: #edddd4;
+	padding-top: 20px;
+	border-top: none;
+}
+
+.userProfile--picture {
+	width: 70%;
+	height: 70%;
+	border-radius: 50%;
+}
+
+.userProfile--name {
+	padding: 40px;
+	font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
+		'Lucida Sans', Arial, sans-serif;
+}
+
+.favorites--header {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: space-between;
+	padding: 30px;
+	color: #edddd4;
+}
+
+.favorites--deck {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+}
+
+.friends--deck {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	align-items: flex-start;
+	text-align: center;
+	padding-left: 40px;
+}
+
+.userProfile--friends {
+	display: flex;
+	flex-direction: column;
+	background-color: #283d3b;
+	color: white;
+}
+
+.userProfile--friends--image {
+	width: 40%;
+	height: 40%;
+	border-radius: 50%;
+}
+.button--request {
+	border: solid 1px;
+	border-color: #283d3b;
+	border-radius: 10px;
+	color: #283d3b;
+	padding: 5px;
+}
+
+.button--invitar {
+	border: solid 1px;
+	border-color: #edddd4;
+	border-radius: 10px;
+	background-color: #283d3b;
+	color: #edddd4;
+	padding: 5px;
+}
+
+.section--body {
+	background-color: #772e25;
+	padding: 40px;
+	border-bottom: solid 4px;
+	border-color: #edddd4;
+}

@@ -8,18 +8,20 @@ import {
 	Marker,
 	InfoWindow
 } from '@react-google-maps/api';
+import authStore from '../../../store/auth-store';
 
 const GOOGLE_MAPS_API_KEY = 'AIzaSyD6YZ7TzQl_TKgHxHWI9s_9u-NLM1B1nRo';
 
 const libraries = ['places'];
 
 const mapContainerStyle = {
-	width: '100vh',
-	height: '100vh'
+	width: '100%',
+	height: '87vh'
 };
+
 const center = {
-	lat: 41.390205,
-	lng: 2.154007
+	lat: 42.357209,
+	lng: 2.802071
 };
 
 function Map() {
@@ -59,7 +61,7 @@ function Map() {
 				<div>
 					<GoogleMap
 						mapContainerStyle={mapContainerStyle}
-						zoom={14}
+						zoom={7}
 						center={center}
 					>
 						{places.map((placeDetail) => {
@@ -78,8 +80,7 @@ function Map() {
 									phone={placeDetail.phone_number}
 									website={placeDetail.url}
 									icon={{
-										url:
-											'https://trello-attachments.s3.amazonaws.com/5f9fe5242167b873b8f1f631/372x594/69d66633dffceabc33074ec6670c06b1/clipart51531.png',
+										url: placeDetail.icon_style,
 										scaledSize: new window.google.maps.Size(20, 30)
 									}}
 									onClick={() => setMarkerSelected(placeDetail)}
@@ -101,7 +102,6 @@ function Map() {
 					);
 				})}
  */}
-
 						{markerSelected && (
 							<InfoWindow
 								position={markerSelected.location}
