@@ -6,7 +6,7 @@ footer {
 	display: flex;
 	background-color: #283d3b;
 	color: white;
-	padding: 15px;
+	padding: 10px;
 	font-size: 18px;
 	z-index: 1000;
 	width: 100%;
@@ -20,5 +20,15 @@ footer {
 }
 
 .footer-strings:hover {
-	color: ;
+	color: #d48928;
+}
+
+.footer-separator {
+	color: white;
+	font-weight: bold;
+}
+
+.footer-icon:hover {
+	cursor: pointer;
+	color: #d48928;
 }
