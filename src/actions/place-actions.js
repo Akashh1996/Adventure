@@ -29,12 +29,18 @@ export async function loadPlacesData() {
 }
 
 export async function loadMyProfile() {
-	const myprofile = await axios('/myprofile.json');
+	try {
+		const myprofile = await axios('/myprofile.json');
 
-	dispatcher.dispatch({
-		type: 'LOAD_MY_PROFILE',
-		payload: myprofile.data
-	});
+		dispatcher.dispatch({
+			type: 'LOAD_MY_PROFILE',
+			payload: myprofile.data
+		});
+	} catch (error) {
+		dispatcher.dispatch({
+			type: 'Error'
+		});
+	}
 }
 
 export async function loadPlaces() {
