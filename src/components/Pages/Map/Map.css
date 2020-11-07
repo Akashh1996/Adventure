@@ -1,0 +1,12 @@
+.infowindow {
+	padding: 3px;
+	text-align: justify;
+}
+
+.infowindow h1 {
+	font-size: 10px;
+}
+
+.infowindow h2 {
+	font-size: 8px;
+}

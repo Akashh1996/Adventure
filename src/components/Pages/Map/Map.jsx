@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { loadPlaces, loadPlacesData } from '../../../actions/place-actions';
 import { Link } from 'react-router-dom';
 import placeStore from '../../../store/place-store';
+import './Map.css';
 import {
 	GoogleMap,
 	useLoadScript,
@@ -109,18 +110,15 @@ function Map() {
 									setMarkerSelected(null);
 								}}
 							>
-								<div>
-									<h1>{markerSelected.name}</h1>
-									{/* <img src="{markerSelected.photos}" /> */}
-									<h3>{markerSelected.type}</h3>
-									<h3>{markerSelected.price}</h3>
-									<h3>{markerSelected.rating}</h3>
-									<h3>{markerSelected.address}</h3>
-									<h3>{markerSelected.phone_number}</h3>
-									<h3>{markerSelected.url}</h3>
-									<Link to={`/detail/${markerSelected.id}`}>
-										Get more detials
-									</Link>
+								<div className="infowindow">
+									<h3>{markerSelected.name}</h3>
+									<figcaption>{markerSelected.type}</figcaption>
+									<h6>Nota del sitio : {markerSelected.rating}</h6>
+									<h6>Dirección : {markerSelected.address}</h6>
+									<h5>{markerSelected.phone_number}</h5>
+									<h6>Precios entre {markerSelected.price}</h6>
+									<h6>{markerSelected.url}</h6>
+									<Link to={`/detail/${markerSelected.id}`}>Más detalles</Link>
 								</div>
 							</InfoWindow>
 						)}
