@@ -48,3 +48,27 @@ describe(' place store getByid', () => {
 		expect(placeStore.getPlaceDetailByID(1)).toEqual(action.payload[0]);
 	});
 });
+
+describe(' place store Load_place_id', () => {
+	let action;
+	let mockCallBackFunction;
+
+	beforeEach(() => {
+		mockCallBackFunction = jest.fn();
+		placeStore.addEventListener(mockCallBackFunction);
+	});
+	afterEach(() => {
+		placeStore.removeEventListener(mockCallBackFunction);
+	});
+	test('should exist the function', () => {
+		expect(placeStore).toBeDefined();
+	});
+	test('should load data', () => {
+		action = {
+			type: 'LOAD_PLACE_ID',
+			payload: { id: 1, name: 'rafting' }
+		};
+		dispacher.dispatch(action);
+		expect(placeStore.getPlace()).toEqual(action.payload);
+	});
+});

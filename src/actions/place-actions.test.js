@@ -1,6 +1,6 @@
 import axios from 'axios';
 import dispatcher from '../dispatcher/dispatcher';
-import { loadPlaces, loadPlacesData } from './place-actions';
+import { loadPlaces, loadPlacesData, loadMyProfile } from './place-actions';
 
 jest.mock('axios');
 jest.mock('../dispatcher/dispatcher');
@@ -56,6 +56,32 @@ describe('Place Actions', () => {
 			axios.mockImplementation(() => Promise.reject());
 			await loadPlacesData();
 
+			expect(dispatcher.dispatch.mock.calls[0][0]).toEqual({
+				type: 'Error'
+			});
+		});
+	});
+	describe('Load My profile try', () => {
+		beforeEach(async () => {
+			axios.mockImplementationOnce(() =>
+				Promise.resolve({ data: [{ me: 'edith', rating: 5 }] })
+			);
+			await loadMyProfile();
+		});
+		test('should load my profile data', () => {
+			expect(dispatcher.dispatch.mock.calls[0][0]).toEqual({
+				type: 'LOAD_MY_PROFILE',
+				payload: [{ me: 'edith', rating: 5 }]
+			});
+		});
+		test('should have length 1', () => {
+			expect(dispatcher.dispatch.mock.calls[0][0].payload.length).toBe(1);
+		});
+	});
+	describe('Load my profile catch', () => {
+		test('should throw a error with type error', async () => {
+			axios.mockImplementation(() => Promise.reject());
+			await loadMyProfile();
 			expect(dispatcher.dispatch.mock.calls[0][0]).toEqual({
 				type: 'Error'
 			});

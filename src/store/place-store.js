@@ -29,9 +29,9 @@ export class PlaceStore extends EventEmitter {
 		_placeData = value;
 	}
 
-	getMap() {
+	/* getMap() {
 		return _map;
-	}
+	} */
 
 	getPlaceDetailByID(id) {
 		_placeByID = _placeData?.find((place) => place.id === id);
@@ -53,10 +53,10 @@ dispatcher.register((action) => {
 			placeStore.emitChange();
 			break;
 
-		case 'LOAD_MAP':
+		/* case 'LOAD_MAP':
 			_map = action.payload;
 			placeStore.emitChange();
-			break;
+			break; */
 		default:
 			break;
 	}
