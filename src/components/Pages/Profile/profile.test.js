@@ -1,15 +1,27 @@
-import Profile from './Profile';
 import React from 'react';
 import { act } from 'react-dom/test-utils';
-import { unmountComponentAtNode, render } from 'react-DOM';
+import { unmountComponentAtNode, render } from 'react-dom';
 import { BrowserRouter } from 'react-router-dom/cjs/react-router-dom.min';
+import Profile from './Profile';
+import userStore from '../../../store/user-store';
 
-let container = null;
+describe('Card Component', () => {
+	let container;
 
-describe('Profile component', () => {
 	beforeEach(() => {
 		container = document.createElement('div');
 		document.body.appendChild(container);
+		let myfavorite = [
+			{
+				photos: [{ photo2: 'ae3242342v34g' }],
+				name: 'akash',
+				rating: 10,
+				phone_number: 'rafting',
+				address: 'somedesc',
+				url: 'htttp://test.com'
+			}
+		];
+		userStore.setMyProfile(myfavorite);
 	});
 
 	afterEach(() => {
@@ -18,23 +30,12 @@ describe('Profile component', () => {
 		container = null;
 	});
 
-	['name', 'rating', 'phone_number', 'address', 'url', 'photos'].forEach(
-		(text) => {
-			test(`should contain a div with text ${text}`, () => {
-				act(() => {
-					render(
-						<BrowserRouter>
-							<Profile />
-						</BrowserRouter>,
-						container
-					);
-				});
+	let cardImage = document.getElementById('card-img');
+	test('should render card.img with photo', () => {
+		act(() => {
+			render(<Profile />, container, console.log(container));
+		});
 
-				expect(
-					document.querySelector([`data-test-id="profile_div__${text}"`])
-						.firstElementChild.innerHTML
-				).toBe(text);
-			});
-		}
-	);
+		expect(cardImage.innerHTML).toBe('ae3242342v34g');
+	});
 });

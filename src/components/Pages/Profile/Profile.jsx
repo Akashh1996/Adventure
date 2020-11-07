@@ -65,6 +65,7 @@ function Profile() {
 									return (
 										<Card border="light" style={{ width: '20rem' }}>
 											<Card.Img
+												id="card-img"
 												variant="top"
 												src={FavoriteDetail.photos[0]['photo2']}
 												style={{ height: '300px', width: 'auto' }}
