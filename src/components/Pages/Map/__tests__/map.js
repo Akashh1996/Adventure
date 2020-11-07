@@ -7,7 +7,7 @@ import placeStore from '../../../../store/place-store';
 
 let container = null;
 
-describe('Map', () => {
+describe.skip('Map', () => {
 	beforeEach(() => {
 		container = document.createElement('div');
 		document.body.appendChild(container);
