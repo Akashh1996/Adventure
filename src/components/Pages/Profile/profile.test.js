@@ -16,7 +16,7 @@ describe('Profile', () => {
 				my_favourites: [
 					{
 						id: 1,
-						photos: [{ photo1: 'url' }]
+						photos: [{ photo2: 'Gerard' }]
 					}
 				],
 				my_reviews: [
@@ -44,7 +44,7 @@ describe('Profile', () => {
 			}
 		];
 
-		userStore.setUserProfile(profile);
+		userStore.setMyProfile(profile);
 		authStore.setUser(myuser);
 	});
 
@@ -54,11 +54,15 @@ describe('Profile', () => {
 		container = null;
 	});
 
+
+	
 	test('should ...', async () => {
+		let cardImage;
 		act(() => {
 			render(<Profile />, container);
-			let gg = document.getElementById('gg');
-			expect(gg.innerHTML).toBe('Edit my profile');
+			cardImage = document.getElementsByClassName('card-img')[0];
+			expect(cardImage.src).toBe('http://localhost/Gerard');
+
 		});
 	});
 });

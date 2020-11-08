@@ -60,23 +60,28 @@ function Profile() {
 
 						{/* FAVOURITES CARD DETAIL */}
 						<div className="favorites--deck">
-							<CardDeck>
-								{profile[0]['my_favourites'].map((FavoriteDetail) => {
+							<CardDeck key={'favoritesCard'}>
+								{profile[0]['my_favourites'].map((favoriteDetail) => {
 									return (
-										<Card border="light" style={{ width: '20rem' }}>
+										<Card
+											border="light"
+											style={{ width: '20rem' }}
+											key={favoriteDetail.name}
+										>
 											<Card.Img
+												className="card-img"
 												variant="top"
-												src={FavoriteDetail.photos[0]['photo2']}
+												src={favoriteDetail.photos[0]['photo2']}
 												style={{ height: '300px', width: 'auto' }}
 											/>
 											<Card.Body>
-												<Card.Title>{FavoriteDetail.name}</Card.Title>
-												Mi nota : {FavoriteDetail.rating} / 5 <br></br>
-												Teléfono : {FavoriteDetail.phone_number} <br></br>
-												Dirección : {FavoriteDetail.address} <br></br>
+												<Card.Title>{favoriteDetail.name}</Card.Title>
+												Mi nota : {favoriteDetail.rating} / 5 <br></br>
+												Teléfono : {favoriteDetail.phone_number} <br></br>
+												Dirección : {favoriteDetail.address} <br></br>
 												Sitio web :{' '}
-												<a href={FavoriteDetail.url}>
-													{FavoriteDetail.url}
+												<a href={favoriteDetail.url}>
+													{favoriteDetail.url}
 												</a>{' '}
 												<br></br>
 											</Card.Body>
@@ -141,17 +146,21 @@ function Profile() {
 							<button className="button--request">Edit my reviews</button>
 						</div>
 						<div className="reviewsCard">
-							<CardDeck>
-								{profile[0]['my_reviews'].map((ReviewDetail) => {
+							<CardDeck key={'reviewsCard'}>
+								{profile[0]['my_reviews'].map((reviewDetail) => {
 									return (
-										<Card border="light" style={{ width: '18rem' }}>
+										<Card
+											border="light"
+											style={{ width: '18rem' }}
+											key={reviewDetail.place_name}
+										>
 											<Card.Body style={{ height: 'auto', width: 'auto' }}>
-												<Card.Title>{ReviewDetail.place_name}</Card.Title>
-												Mi nota : {ReviewDetail.my_rating} / 5 <br></br>
-												{ReviewDetail.my_description}
+												<Card.Title>{reviewDetail.place_name}</Card.Title>
+												Mi nota : {reviewDetail.my_rating} / 5 <br></br>
+												{reviewDetail.my_description}
 												<br></br>
-												Página web : {ReviewDetail.url} <br></br>
-												<Card.Footer>{ReviewDetail.user_name}</Card.Footer>
+												Página web : {reviewDetail.url} <br></br>
+												<Card.Footer>{reviewDetail.user_name}</Card.Footer>
 											</Card.Body>
 										</Card>
 									);
@@ -169,17 +178,17 @@ function Profile() {
 							</div>
 						</div>
 						<div className="friends--deck">
-							{profile[0]['my_friends'].map((FriendsDetail) => {
+							{profile[0]['my_friends'].map((friendsDetails) => {
 								return (
-									<div>
+									<div key={friendsDetails.name}>
 										<figure>
 											<img
-												src={FriendsDetail['friend_picture']}
+												src={friendsDetails['friend_picture']}
 												alt="PictBestFriend"
 												className="userProfile--friends--image"
 											/>
 										</figure>
-										<h3>{FriendsDetail.name}</h3>
+										<h3>{friendsDetails.name}</h3>
 									</div>
 								);
 							})}

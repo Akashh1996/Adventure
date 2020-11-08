@@ -8,7 +8,8 @@ export class UserStore extends EventEmitter {
 	getMyProfile() {
 		return _myprofile;
 	}
-	setUserProfile(value) {
+
+	setMyProfile(value) {
 		_myprofile = value;
 	}
 
@@ -28,7 +29,7 @@ const userStore = new UserStore();
 dispatcher.register((action) => {
 	switch (action.type) {
 		case 'LOAD_MY_PROFILE':
-			userStore.setUserProfile(action.payload);
+			userStore.setMyProfile(action.payload);
 			userStore.emitChange();
 			break;
 
