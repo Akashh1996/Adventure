@@ -42,10 +42,10 @@ function Profile() {
 					{/* PICTURE PROFILE AND NAME */}
 					<section>
 						<div className="userProfile">
-							<span id="gg">
+							<span >
 								<img src={myuser.photoURL} className="userProfile--picture" />
 							</span>
-							<text>Edit my profile</text>
+							<text id="gg">Edit my profile</text>
 							<h2 className="userProfile--name" id="place-title" >{myuser.displayName}</h2>
 						</div>
 					</section>
@@ -54,7 +54,7 @@ function Profile() {
 					<section className="section--body">
 						{/* FAVOURITES HEADER */}
 						<div className="favorites--header">
-							<h3>Favoritos</h3>
+							<h3 id="favorites" >Favoritos</h3>
 							<button className="button--request">Edit my favourites</button>
 						</div>
 
