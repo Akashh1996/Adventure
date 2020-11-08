@@ -1,41 +1,60 @@
+import { unmountComponentAtNode, render } from 'react-DOM';
 import React from 'react';
 import { act } from 'react-dom/test-utils';
-import { unmountComponentAtNode, render } from 'react-dom';
-import { BrowserRouter } from 'react-router-dom/cjs/react-router-dom.min';
 import Profile from './Profile';
 import userStore from '../../../store/user-store';
+import authStore from '../../../store/auth-store';
 
-describe('Card Component', () => {
+describe('Profile', () => {
 	let container;
-
 	beforeEach(() => {
 		container = document.createElement('div');
 		document.body.appendChild(container);
-		let myfavorite = [
+		let profile = [
 			{
-				photos: [{ photo2: 'ae3242342v34g' }],
-				name: 'akash',
-				rating: 10,
-				phone_number: 'rafting',
-				address: 'somedesc',
-				url: 'htttp://test.com'
+				my_favourites: [
+					{
+						id: 1,
+						photos: [{ photo2: 'Gerard' }]
+					}
+				],
+				my_reviews: [
+					{
+						place_name: 'pepe'
+					}
+				],
+				my_friends: [
+					{
+						friend_name: 'Eric Sanz'
+					}
+				]
 			}
 		];
-		userStore.setMyProfile(myfavorite);
+		let myuser = [
+			{
+				id: 6,
+				name: 'akash',
+				rating: 10,
+				type: 'rafting',
+				description: 'somedesc',
+				photos: [{ photo2: 'ae3242342v34g' }],
+				reviews: [{ profile_photo_url: '34234' }]
+			}
+		];
+		userStore.setMyProfile(profile);
+		authStore.setUser(myuser);
 	});
-
 	afterEach(() => {
 		unmountComponentAtNode(container);
 		container.remove();
 		container = null;
 	});
-
-	let cardImage = document.getElementById('card-img');
-	test('should render card.img with photo', () => {
+	test('should ...', async () => {
+		let cardImage;
 		act(() => {
-			render(<Profile />, container, console.log(container));
+			render(<Profile />, container);
+			cardImage = document.getElementsByClassName('card-img')[0];
+			expect(cardImage.src).toBe('http://localhost/Gerard');
 		});
-
-		expect(cardImage.innerHTML).toBe('ae3242342v34g');
 	});
 });
