@@ -5,6 +5,7 @@ import { loadPlacesData } from '../../../actions/place-actions';
 import placeStore from '../../../store/place-store';
 import { Link } from "react-router-dom"
 
+
 function DetailSlider(props) {
 	const [placeId, setPlaceId] = useState(+props.match.params.id);
 	const [places, setPlaces] = useState(placeStore.getPlaceDetailByID(placeId));
