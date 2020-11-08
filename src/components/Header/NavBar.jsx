@@ -59,8 +59,8 @@ function NavBar() {
 				Log Out
 			</li>
 		) : (
-			getSignInButton()
-		);
+				getSignInButton()
+			);
 	}
 
 	return (
