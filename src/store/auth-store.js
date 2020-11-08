@@ -18,6 +18,10 @@ class AuthStore extends EventEmitter {
 	getUser() {
 		return user;
 	}
+
+	setUser(value) {
+		user = value;
+	}
 }
 
 const authStore = new AuthStore();
@@ -26,11 +30,13 @@ dispatcher.register((action) => {
 	debugger;
 	switch (action.type) {
 		case actionTypes.AUTH_LOGIN:
-			user = action.payload;
+			// user = action.payload;
+			authStore.setUser(action.payload);
 			authStore.emitChange();
 			break;
 		case actionTypes.AUTH_LOGOUT:
-			user = null;
+			// user = null;
+			authStore.setUser(null);
 			authStore.emitChange();
 			break;
 		case actionTypes.AUTH_LOGIN_ERROR:
