@@ -4,7 +4,6 @@ main {
 
 .detail-img {
 	box-shadow: 0px 1px 10px;
-	border-radius: 20px;
 	height: 400px;
 	width: 500px;
 }
@@ -19,14 +18,12 @@ main {
 	background-color: #772e25;
 }
 .form-wrapper {
-	margin-right: 30px;
 	width: 100%;
 	display: flex;
 	flex-direction: column;
 	padding: 20px 40px;
-	border-radius: 20px;
-	margin-left: -100px;
 	background-color: snow;
+	border-radius: 0px;
 }
 
 .space {
@@ -50,7 +47,6 @@ main {
 	flex-direction: column;
 	justify-content: center;
 	padding: 20px 40px;
-	border-radius: 20px;
 	background-color: snow;
 }
 
@@ -66,12 +62,10 @@ main {
 .form-wrapper-img {
 	padding-top: 10px;
 	padding-left: 10px;
-	margin-left: -100px;
 	width: 520px;
 	height: 420px;
 	display: flex;
 	flex-direction: column;
-	border-radius: 20px;
 	background-color: snow;
 }
 
@@ -98,8 +92,31 @@ main {
 .detail_descrition {
 	word-break: break-all;
 }
+.back-to-maps {
+	width: 40px;
+	height: auto;
+	background-color: #283d3b;
+	writing-mode: vertical-rl;
+	text-orientation: upright;
+	float: right;
+	padding: 10px;
+	position: sticky;
+	top: 0;
+	margin-top: 40vh;
+	border: 1px solid black;
+	color: white;
+}
+.back-to-maps a {
+	color: white;
+}
+.back-to-maps a:hover {
+	color: #d48928;
+}
+.wrapper-all {
+	background-color: #762f26;
+}
 
-@media only screen and (max-width: 949px) {
+@media only screen and (max-width: 1200px) {
 	main {
 		flex-direction: column;
 	}
@@ -114,5 +131,8 @@ main {
 
 	.wrapper {
 		flex-wrap: wrap;
+	}
+	.form-wrapper {
+		margin-left: 20px;
 	}
 }
