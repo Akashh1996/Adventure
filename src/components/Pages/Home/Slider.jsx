@@ -16,7 +16,7 @@ function Slider() {
 						alt="First slide"
 					/>
 					<Carousel.Caption style={{ bottom: '42%' }}>
-						<h2 className="quote">
+						<h2 className="quote" id="first-quote">
 							"If it scares you, it might be a good thing to try"
 						</h2>
 					</Carousel.Caption>
