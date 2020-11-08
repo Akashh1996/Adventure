@@ -6,7 +6,7 @@ import { BrowserRouter, Link } from 'react-router-dom';
 
 let container = null;
 
-describe('Footer', () => {
+describe.only('Footer', () => {
 	beforeEach(() => {
 		container = document.createElement('div');
 		document.body.appendChild(container);
@@ -30,7 +30,7 @@ describe('Footer', () => {
 			});
 			expect(
 				document.querySelector(`[data-test-id="footer-link__${text}"]`)
-					.textContent
+					.firstElementChild.innerHTML
 			).toBe(text);
 		});
 	});

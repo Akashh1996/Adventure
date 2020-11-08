@@ -1,25 +1,15 @@
+import { act } from '@testing-library/react';
 import { EventEmitter } from 'events';
 import dispatcher from '../dispatcher/dispatcher';
 
 const CHANGE = 'CHANGE';
 let _placeByID = [];
+let _placeByType = [];
 let _place;
 let _placeData;
 let _map;
 
 export class PlaceStore extends EventEmitter {
-	getPlace() {
-		return _place;
-	}
-
-	getPlaceData() {
-		return _placeData;
-	}
-
-	getMap() {
-		return _map;
-	}
-
 	addEventListener(callback) {
 		this.on(CHANGE, callback);
 	}
@@ -29,9 +19,30 @@ export class PlaceStore extends EventEmitter {
 	emitChange() {
 		this.emit(CHANGE);
 	}
+
+	getPlace() {
+		return _place;
+	}
+
+	getPlaceData() {
+		return _placeData;
+	}
+	setPlaceData(value) {
+		_placeData = value;
+	}
+
+	/* getMap() {
+		return _map;
+	} */
+
 	getPlaceDetailByID(id) {
-		_placeByID = _placeData.find((place) => place.id === id);
+		_placeByID = _placeData?.find((place) => place.id === id);
 		return _placeByID;
+	}
+
+	getPlaceByType(type) {
+		_placeByType = _placeData?.find((place) => place.type === type);
+		return _placeByType;
 	}
 }
 
@@ -45,14 +56,14 @@ dispatcher.register((action) => {
 			break;
 
 		case 'LOAD_PLACE_DATA':
-			_placeData = action.payload;
+			placeStore.setPlaceData(action.payload);
 			placeStore.emitChange();
 			break;
 
-		case 'LOAD_MAP':
+		/* case 'LOAD_MAP':
 			_map = action.payload;
 			placeStore.emitChange();
-			break;
+			break; */
 		default:
 			break;
 	}

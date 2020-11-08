@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { loadPlaces, loadPlacesData } from '../../../actions/place-actions';
 import { Link } from 'react-router-dom';
 import placeStore from '../../../store/place-store';
+import './Map.css';
 import {
 	GoogleMap,
 	useLoadScript,
@@ -24,10 +25,18 @@ const center = {
 	lng: 2.802071
 };
 
+const options = {
+	disableDefaultUI: true,
+	zoomControl: true
+};
+
 function Map() {
 	const [placeApi, setPlaceApi] = useState(placeStore.getPlace());
 	const [places, setPlaces] = useState(placeStore.getPlaceData());
 	const [markerSelected, setMarkerSelected] = useState(null);
+	const [raftingPlaces, setRaftingPlaces] = useState(
+		placeStore.getPlaceByType('rafting')
+	);
 
 	const { isLoaded, loadError } = useLoadScript({
 		googleMapsApiKey: GOOGLE_MAPS_API_KEY,
@@ -63,7 +72,15 @@ function Map() {
 						mapContainerStyle={mapContainerStyle}
 						zoom={7}
 						center={center}
+						options={options}
 					>
+						<div className="buttonBlock">
+							<button style={{ color: 'green', margin: '5px' }}>Rafting</button>
+							<button style={{ color: 'rgb(102, 22, 109)', margin: '5px' }}>
+								Paragliding
+							</button>
+							<button style={{ color: 'red', margin: '5px' }}>Canyoning</button>
+						</div>
 						{places.map((placeDetail) => {
 							return (
 								<Marker
@@ -109,18 +126,18 @@ function Map() {
 									setMarkerSelected(null);
 								}}
 							>
-								<div>
+								<div className="infowindow">
 									<h1>{markerSelected.name}</h1>
-									{/* <img src="{markerSelected.photos}" /> */}
-									<h3>{markerSelected.type}</h3>
-									<h3>{markerSelected.price}</h3>
-									<h3>{markerSelected.rating}</h3>
-									<h3>{markerSelected.address}</h3>
-									<h3>{markerSelected.phone_number}</h3>
-									<h3>{markerSelected.url}</h3>
-									<Link to={`/detail/${markerSelected.id}`}>
-										Get more detials
-									</Link>
+									<figcaption>{markerSelected.type}</figcaption>
+									<br></br>
+									<h2>Nota del sitio : {markerSelected.rating}</h2>
+									<h2>Dirección : {markerSelected.address}</h2>
+									<h2>{markerSelected.phone_number}</h2>
+									<h3>Precios entre {markerSelected.price}</h3>
+									<a href={`${markerSelected.url}`}>{markerSelected.url}</a>
+									<br></br>
+									<br></br>
+									<Link to={`/detail/${markerSelected.id}`}>Más detalles</Link>
 								</div>
 							</InfoWindow>
 						)}

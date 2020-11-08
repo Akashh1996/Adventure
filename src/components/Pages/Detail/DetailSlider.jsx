@@ -5,8 +5,6 @@ import { loadPlacesData } from '../../../actions/place-actions';
 import placeStore from '../../../store/place-store';
 
 function DetailSlider(props) {
-	console.log(props);
-
 	const [placeId, setPlaceId] = useState(+props.match.params.id);
 	const [places, setPlaces] = useState(placeStore.getPlaceDetailByID(placeId));
 
@@ -34,7 +32,7 @@ function DetailSlider(props) {
 							<div className="form-wrapper-img">
 								<img
 									className="detail-img"
-									src={places.photos[0].photo2}
+									src={places.photos[0]?.photo2}
 									alt=""
 								/>{' '}
 							</div>
@@ -42,7 +40,7 @@ function DetailSlider(props) {
 						<div className="wrapper">
 							<div className="form-wrapper">
 								<div className="detail_place">
-									<h2>{places.name}</h2>
+									<h2 id='place-title'>{places.name}</h2>
 									{places.rating}
 								</div>
 								<div className="detail_place_type">Type:{places.type}</div>
@@ -73,17 +71,18 @@ function DetailSlider(props) {
 							</div>
 						</div>
 					</main>
-					<div>
+					<div  >
 						{places.reviews.map((review) => (
-							<div className="space">
+							<div className="space" key={Date.now()}>
 								<div className="wrapper-map">
-									<div className="form-wrapper-map">
+									<div className="form-wrapper-map" >
 										<img
 											className="photo-reviewer"
 											src={review.profile_photo_url}
 											alt=""
+											key={Math.random() * 3}
 										/>
-										<div className="reviewer">{review.author_name} </div>
+										<div className="reviewer" >{review.author_name} </div>
 										{review.text}{' '}
 									</div>
 								</div>
@@ -91,7 +90,8 @@ function DetailSlider(props) {
 						))}
 					</div>
 				</div>
-			)}
+			)
+			}
 		</>
 	);
 }
