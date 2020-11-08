@@ -42,11 +42,11 @@ function Profile() {
 					{/* PICTURE PROFILE AND NAME */}
 					<section>
 						<div className="userProfile">
-							<span>
+							<span id="gg">
 								<img src={myuser.photoURL} className="userProfile--picture" />
 							</span>
 							<text>Edit my profile</text>
-							<h2 className="userProfile--name">{myuser.displayName}</h2>
+							<h2 className="userProfile--name" id="place-title" >{myuser.displayName}</h2>
 						</div>
 					</section>
 					{/* FAVOURITES */}

@@ -23,7 +23,6 @@ class AuthStore extends EventEmitter {
 const authStore = new AuthStore();
 
 dispatcher.register((action) => {
-	debugger;
 	switch (action.type) {
 		case actionTypes.AUTH_LOGIN:
 			user = action.payload;

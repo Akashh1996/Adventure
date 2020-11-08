@@ -1,3 +1,4 @@
+import { act } from '@testing-library/react';
 import { EventEmitter } from 'events';
 import dispatcher from '../dispatcher/dispatcher';
 

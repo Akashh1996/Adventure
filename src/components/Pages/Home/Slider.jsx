@@ -11,13 +11,13 @@ function Slider() {
 			<Carousel>
 				<Carousel.Item>
 					<img
-						className="d-block w-100 img-carrousel"
-						src="https://i.pinimg.com/originals/5c/98/31/5c98316423594c8ee268e6aae44c1b66.jpg"
+						className="d-block w-100 item"
+						src="https://i.pinimg.com/originals/1f/85/ca/1f85caf1332d058ba7af34e3620aeb27.jpg"
 						alt="First slide"
 					/>
-					<Carousel.Caption style={{ bottom: '50%' }}>
+					<Carousel.Caption style={{ bottom: '42%' }}>
 						<h2 className="quote">
-							"If you think adventure is dangerous, try routine. It’s lethal!"
+							"If it scares you, it might be a good thing to try"
 						</h2>
 					</Carousel.Caption>
 					<Carousel.Caption className="button--block">
@@ -27,6 +27,7 @@ function Slider() {
 						</Link>
 					</Carousel.Caption>
 				</Carousel.Item>
+
 				<Carousel.Item>
 					<img
 						className="d-block w-100 item"
@@ -47,13 +48,13 @@ function Slider() {
 				</Carousel.Item>
 				<Carousel.Item>
 					<img
-						className="d-block w-100 item"
-						src="https://i.pinimg.com/originals/1f/85/ca/1f85caf1332d058ba7af34e3620aeb27.jpg"
+						className="d-block w-100 img-carrousel"
+						src="https://i.pinimg.com/originals/5c/98/31/5c98316423594c8ee268e6aae44c1b66.jpg"
 						alt="First slide"
 					/>
-					<Carousel.Caption style={{ bottom: '42%' }}>
+					<Carousel.Caption style={{ bottom: '50%' }}>
 						<h2 className="quote">
-							"If it scares you, it might be a good thing to try"
+							"If you think adventure is dangerous, try routine. It’s lethal!"
 						</h2>
 					</Carousel.Caption>
 					<Carousel.Caption className="button--block">
@@ -63,6 +64,7 @@ function Slider() {
 						</Link>
 					</Carousel.Caption>
 				</Carousel.Item>
+
 			</Carousel>
 		</main>
 	);
