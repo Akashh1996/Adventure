@@ -1,4 +1,5 @@
 import { EventEmitter } from 'events';
+import actionTypes from '../actions/action-types';
 import dispatcher from '../dispatcher/dispatcher';
 
 const CHANGE = 'CHANGE';
@@ -28,7 +29,7 @@ const userStore = new UserStore();
 
 dispatcher.register((action) => {
 	switch (action.type) {
-		case 'LOAD_MY_PROFILE':
+		case actionTypes.LOAD_MY_PROFILE:
 			userStore.setMyProfile(action.payload);
 			userStore.emitChange();
 			break;

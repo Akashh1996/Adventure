@@ -1,18 +1,15 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
 import userStore from '../../../store/user-store';
 import authStore from '../../../store/auth-store';
 import { loadMyProfile } from '../../../actions/place-actions';
 import { signInWithGoogle } from '../../../actions/auth-actions';
 import './Profile.css';
 import { Card, CardDeck, Carousel, Form, Button } from 'react-bootstrap';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 
 function Profile() {
 	const [profile, setProfile] = useState(userStore.getMyProfile());
 	const [myuser, setUser] = useState(authStore.getUser());
-	const [formSelected, setFormSelected] = useState(false);
 
 	function handleChange() {
 		setProfile(userStore.getMyProfile());
@@ -41,7 +38,6 @@ function Profile() {
 		<>
 			{profile && myuser && (
 				<>
-					{/* PICTURE PROFILE AND NAME */}
 					<section>
 						<div className="userProfile">
 							<span>
@@ -53,15 +49,12 @@ function Profile() {
 							</h2>
 						</div>
 					</section>
-					{/* FAVOURITES */}
 
 					<section className="section--body">
-						{/* FAVOURITES HEADER */}
 						<div className="favorites--header">
 							<h3 id="favorites">Favoritos</h3>
 						</div>
 
-						{/* FAVOURITES CARD DETAIL */}
 						<div className="favorites--deck">
 							<CardDeck key={'favoritesCard'}>
 								{profile[0]['my_favourites'].map((favoriteDetail) => {
@@ -95,9 +88,7 @@ function Profile() {
 						</div>
 					</section>
 
-					{/* PICTURES */}
 					<section className="section--body">
-						{/* PICTURES HEADER */}
 						<div className="favorites--header">
 							<h3>Mis Fotos</h3>
 						</div>
@@ -145,7 +136,6 @@ function Profile() {
 							</Form>
 						</div>
 					</section>
-					{/* REVIEWS */}
 
 					<section className="section--body">
 						<div className="favorites--header">
@@ -175,7 +165,6 @@ function Profile() {
 						</div>
 					</section>
 
-					{/* FRIENDS */}
 					<section className="userProfile--friends">
 						<div className="favorites--header">
 							<h3>Mi círculo de amigos</h3>
@@ -197,41 +186,7 @@ function Profile() {
 								);
 							})}
 						</div>
-						{/* <button
-							className="button--invitar"
-							onClick={() => setFormSelected(true)}
-						>
-							Invitar
-						</button> */}
 					</section>
-
-					{formSelected && (
-						<Form
-							className="formInvitation"
-							onCloseClick={() => {
-								setFormSelected(false);
-							}}
-						>
-							<Form.Group controlId="formBasicEmail">
-								<Form.Label>Email address</Form.Label>
-								<Form.Control type="email" placeholder="Enter email" />
-								<Form.Text className="text-muted">
-									We'll never share your email with anyone else.
-								</Form.Text>
-							</Form.Group>
-
-							<Form.Group controlId="formBasicPassword">
-								<Form.Label>Password</Form.Label>
-								<Form.Control type="password" placeholder="Password" />
-							</Form.Group>
-							<Form.Group controlId="formBasicCheckbox">
-								<Form.Check type="checkbox" label="Check me out" />
-							</Form.Group>
-							<Button variant="primary" type="submit">
-								Submit
-							</Button>
-						</Form>
-					)}
 				</>
 			)}
 		</>
