@@ -135,4 +135,16 @@ main {
 	.form-wrapper {
 		margin-left: 20px;
 	}
+
+	.form-wrapper-img {
+		width: 300px;
+		height: 220px;
+		margin-top: -200px;
+	}
+
+	.detail-img {
+		box-shadow: 0px 1px 10px;
+		height: 260px;
+		width: 280px;
+	}
 }
