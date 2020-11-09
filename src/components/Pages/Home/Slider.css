@@ -16,6 +16,7 @@ p {
 	font-size: 25px;
 	padding: 10px;
 	border: 0px;
+	border-color: white;
 }
 
 .button--block {

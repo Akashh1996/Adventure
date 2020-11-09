@@ -5,12 +5,13 @@ import authStore from '../../../store/auth-store';
 import { loadMyProfile } from '../../../actions/place-actions';
 import { signInWithGoogle } from '../../../actions/auth-actions';
 import './Profile.css';
-import { Card, CardDeck, Carousel } from 'react-bootstrap';
+import { Card, CardDeck, Carousel, Form, Button } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 function Profile() {
 	const [profile, setProfile] = useState(userStore.getMyProfile());
 	const [myuser, setUser] = useState(authStore.getUser());
+	const [formSelected, setFormSelected] = useState(false);
 
 	function handleChange() {
 		setProfile(userStore.getMyProfile());
@@ -42,11 +43,13 @@ function Profile() {
 					{/* PICTURE PROFILE AND NAME */}
 					<section>
 						<div className="userProfile">
-							<span >
+							<span>
 								<img src={myuser.photoURL} className="userProfile--picture" />
 							</span>
 							<text id="gg">Edit my profile</text>
-							<h2 className="userProfile--name" id="place-title" >{myuser.displayName}</h2>
+							<h2 className="userProfile--name" id="place-title">
+								{myuser.displayName}
+							</h2>
 						</div>
 					</section>
 					{/* FAVOURITES */}
@@ -54,8 +57,7 @@ function Profile() {
 					<section className="section--body">
 						{/* FAVOURITES HEADER */}
 						<div className="favorites--header">
-							<h3 id="favorites" >Favoritos</h3>
-							<button className="button--request">Edit my favourites</button>
+							<h3 id="favorites">Favoritos</h3>
 						</div>
 
 						{/* FAVOURITES CARD DETAIL */}
@@ -97,7 +99,6 @@ function Profile() {
 						{/* PICTURES HEADER */}
 						<div className="favorites--header">
 							<h3>Mis Fotos</h3>
-							<button className="button--request">Add picture</button>
 						</div>
 						<div>
 							<Carousel>
@@ -136,6 +137,11 @@ function Profile() {
 									</Carousel.Caption>
 								</Carousel.Item>
 							</Carousel>
+							<Form>
+								<Form.Group>
+									<Form.File id="exampleFormControlFile1" />
+								</Form.Group>
+							</Form>
 						</div>
 					</section>
 					{/* REVIEWS */}
@@ -143,7 +149,6 @@ function Profile() {
 					<section className="section--body">
 						<div className="favorites--header">
 							<h3>Mis Reviews</h3>
-							<button className="button--request">Edit my reviews</button>
 						</div>
 						<div className="reviewsCard">
 							<CardDeck key={'reviewsCard'}>
@@ -173,9 +178,7 @@ function Profile() {
 					<section className="userProfile--friends">
 						<div className="favorites--header">
 							<h3>Mi círculo de amigos</h3>
-							<div>
-								<button className="button--invitar">Invitar</button>
-							</div>
+							<div></div>
 						</div>
 						<div className="friends--deck">
 							{profile[0]['my_friends'].map((friendsDetails) => {
@@ -193,7 +196,41 @@ function Profile() {
 								);
 							})}
 						</div>
+						{/* <button
+							className="button--invitar"
+							onClick={() => setFormSelected(true)}
+						>
+							Invitar
+						</button> */}
 					</section>
+
+					{formSelected && (
+						<Form
+							className="formInvitation"
+							onCloseClick={() => {
+								setFormSelected(false);
+							}}
+						>
+							<Form.Group controlId="formBasicEmail">
+								<Form.Label>Email address</Form.Label>
+								<Form.Control type="email" placeholder="Enter email" />
+								<Form.Text className="text-muted">
+									We'll never share your email with anyone else.
+								</Form.Text>
+							</Form.Group>
+
+							<Form.Group controlId="formBasicPassword">
+								<Form.Label>Password</Form.Label>
+								<Form.Control type="password" placeholder="Password" />
+							</Form.Group>
+							<Form.Group controlId="formBasicCheckbox">
+								<Form.Check type="checkbox" label="Check me out" />
+							</Form.Group>
+							<Button variant="primary" type="submit">
+								Submit
+							</Button>
+						</Form>
+					)}
 				</>
 			)}
 		</>
