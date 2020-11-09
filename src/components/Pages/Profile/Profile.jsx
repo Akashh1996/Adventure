@@ -8,6 +8,7 @@ import './Profile.css';
 import { Card, CardDeck, Carousel, Form, Button } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
+
 function Profile() {
 	const [profile, setProfile] = useState(userStore.getMyProfile());
 	const [myuser, setUser] = useState(authStore.getUser());

@@ -18,6 +18,7 @@ class AuthStore extends EventEmitter {
 	getUser() {
 		return user;
 	}
+  
 	setUser(value) {
 		user = value;
 	}
@@ -32,7 +33,7 @@ dispatcher.register((action) => {
 			authStore.emitChange();
 			break;
 		case actionTypes.AUTH_LOGOUT:
-			user = null;
+			authStore.setUser(null);
 			authStore.emitChange();
 			break;
 		case actionTypes.AUTH_LOGIN_ERROR:
