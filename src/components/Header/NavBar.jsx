@@ -77,7 +77,6 @@ function NavBar() {
 					data-testid="buttontest"
 				>
 					<FaIcons.FaBars />
-					<div>Menu</div>
 				</Link>
 				<img className="logo" src={logo} alt="logo" />
 				{user && (
