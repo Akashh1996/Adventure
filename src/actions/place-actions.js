@@ -1,5 +1,6 @@
 import dispatcher from '../dispatcher/dispatcher';
 import axios from 'axios';
+import actionTypes from './action-types';
 
 const GOOGLE_API_KEY = 'AIzaSyD6YZ7TzQl_TKgHxHWI9s_9u-NLM1B1nRo';
 const GOOGLE_PLACES_DETAILS_ENDPOINT =
@@ -18,7 +19,7 @@ export async function loadPlacesData() {
 		const adventures = await axios('/adventures.json');
 
 		dispatcher.dispatch({
-			type: 'LOAD_PLACE_DATA',
+			type: actionTypes.LOAD_PLACE_DATA,
 			payload: adventures.data
 		});
 	} catch (error) {
@@ -33,7 +34,7 @@ export async function loadMyProfile() {
 		const myprofile = await axios('/myprofile.json');
 
 		dispatcher.dispatch({
-			type: 'LOAD_MY_PROFILE',
+			type: actionTypes.LOAD_MY_PROFILE,
 			payload: myprofile.data
 		});
 	} catch (error) {
@@ -57,7 +58,7 @@ export async function loadPlaces() {
 			});
 			placesInfo.push(dataplaceById.data);
 			dispatcher.dispatch({
-				type: 'LOAD_PLACE_ID',
+				type: actionTypes.LOAD_PLACE_ID,
 				payload: placesInfo
 			});
 		} catch (error) {
