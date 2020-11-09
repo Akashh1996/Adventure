@@ -63,8 +63,8 @@ function NavBar() {
 				<span className="nav-text-log">Log Out</span>
 			</li>
 		) : (
-				getSignInButton()
-			);
+			getSignInButton()
+		);
 	}
 
 	return (
@@ -82,7 +82,7 @@ function NavBar() {
 				<img className="logo" src={logo} alt="logo" />
 				{user && (
 					<Link to="/profile">
-						<img src={user.photoURL} className="userProfile--picture" />
+						<img src={user.photoURL} className="scaled" />
 					</Link>
 				)}
 			</div>
