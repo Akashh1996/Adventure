@@ -9,7 +9,7 @@ main {
 	width: 500px;
 }
 
-.wrapper {
+.wrapper-detail {
 	height: 450px;
 	width: 100%;
 	display: flex;
@@ -18,7 +18,7 @@ main {
 	align-items: center;
 	background-color: #772e25;
 }
-.form-wrapper {
+.form-wrapper-detail {
 	margin-right: 30px;
 	width: 100%;
 	display: flex;

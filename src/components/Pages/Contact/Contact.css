@@ -11,17 +11,16 @@ magenta/low -- #772e25
 */
 
 .wrapper {
-	height: 85vh;
-	width: 100%;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
 	background-color: #772e25;
+	height: 85vh;
 }
 
 .form-wrapper {
-	width: 400px;
+	width: 500px;
 	display: flex;
 	flex-direction: column;
 	padding: 20px 40px;
@@ -34,6 +33,7 @@ form {
 	width: 100%;
 	display: flex;
 	flex-wrap: wrap;
+	max-height: 500px;
 }
 
 h1 {
@@ -82,6 +82,10 @@ input::placeholder {
 .email,
 .password {
 	width: 100%;
+}
+
+.password {
+	max-height: 200px;
 }
 
 .createAccount {
@@ -141,7 +145,7 @@ small:hover {
 	color: #283d3b;
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 600px) {
 	.form-wrapper {
 		width: 350px;
 	}

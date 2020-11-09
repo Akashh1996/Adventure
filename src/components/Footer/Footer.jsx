@@ -34,7 +34,6 @@ function Footer() {
 			<span className="footer-icon">
 				<FaIcons.FaYoutube />
 			</span>
-			<span className="footer-separator">|</span>
 		</footer>
 	);
 }
