@@ -12,8 +12,9 @@
 }
 
 .userProfile--picture {
-	width: 70%;
-	height: 70%;
+	width: 200%;
+	height: 200%;
+	margin-left: -50%;
 	border-radius: 50%;
 }
 
@@ -26,10 +27,10 @@
 .favorites--header {
 	display: flex;
 	flex-direction: row;
-	justify-content: space-between;
-	align-items: space-between;
-	padding: 30px;
+	justify-content: flex-start;
+	align-items: flex-start;
 	color: #edddd4;
+	margin-bottom: 20px;
 }
 
 .favorites--deck {
@@ -51,6 +52,7 @@
 
 .userProfile--friends {
 	display: flex;
+	padding: 50px;
 	flex-direction: column;
 	background-color: #283d3b;
 	color: white;
@@ -80,7 +82,13 @@
 
 .section--body {
 	background-color: #772e25;
-	padding: 40px;
+	padding: 50px;
 	border-bottom: solid 4px;
 	border-color: #edddd4;
+}
+
+.formInvitation {
+	display: flex;
+	position: absolute;
+	z-index: 100;
 }

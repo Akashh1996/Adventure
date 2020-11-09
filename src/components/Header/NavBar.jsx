@@ -63,8 +63,8 @@ function NavBar() {
 				<span className="nav-text-log">Log Out</span>
 			</li>
 		) : (
-			getSignInButton()
-		);
+				getSignInButton()
+			);
 	}
 
 	return (
