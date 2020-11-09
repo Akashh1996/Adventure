@@ -12,20 +12,24 @@ p {
 }
 
 .button--margin {
-	border-radius: 10px;
 	background-color: #283d3b;
 	font-size: 25px;
 	padding: 10px;
+	border: 0px;
 	border-color: white;
 }
 
 .button--block {
 	margin-bottom: 5%;
 }
+.btn-primary:hover {
+	background-color: #197278;
+	color: #d48928;
+}
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 650px) {
 	.quote {
-		font-size: 1rem;
+		display: none;
 	}
 	img {
 		max-height: 100%;
@@ -33,15 +37,16 @@ p {
 	}
 }
 
-@media screen and (max-width: 400px) {
-	.quote {
-		display: none;
-	}
+@media screen and (max-width: 550px) {
 	p {
-		padding: 3px;
+		padding: 1px;
 	}
 	img {
 		max-height: 100%;
 		height: auto;
+	}
+	.button--margin {
+		padding: 2px;
+		font-size: 20px;
 	}
 }

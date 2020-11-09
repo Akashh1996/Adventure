@@ -3,6 +3,7 @@ import React from 'react';
 import { act } from 'react-dom/test-utils';
 import DetailSlider from './DetailSlider';
 import placeStore from '../../../store/place-store';
+import { BrowserRouter, Link } from 'react-router-dom';
 
 describe('Detail Slider Component', () => {
 	let container;
@@ -38,7 +39,12 @@ describe('Detail Slider Component', () => {
 		};
 
 		act(() => {
-			render(<DetailSlider match={props} />, container);
+			render(
+				<BrowserRouter>
+					<DetailSlider match={props} />
+				</BrowserRouter>,
+				container
+			);
 		});
 
 		let placeTitle = document.getElementById('place-title');
@@ -82,7 +88,12 @@ describe('Detail Slider Component removeListener', () => {
 		};
 		act(() => {
 			placeStore.emitChange();
-			render(<DetailSlider match={props} />, container);
+			render(
+				<BrowserRouter>
+					<DetailSlider match={props} />
+				</BrowserRouter>,
+				container
+			);
 		});
 
 		let placeTitle = document.getElementById('place-title');
