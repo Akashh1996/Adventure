@@ -8,7 +8,7 @@ main {
 	width: 500px;
 }
 
-.wrapper {
+.wrapper-detail {
 	height: 450px;
 	width: 100%;
 	display: flex;
@@ -121,8 +121,23 @@ main {
 		flex-direction: column;
 	}
 	.img-container {
-		width: 100%;
+		width: 80%;
 		max-width: none;
+	}
+
+	.wrapper-detail {
+		padding-left: 100px;
+	}
+
+	.detail-img {
+		height: 230px;
+		width: 330px;
+	}
+
+	.form-wrapper-img {
+		margin-top: -100px;
+		width: 350px;
+		height: 250px;
 	}
 
 	.detail {

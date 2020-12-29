@@ -31,7 +31,7 @@ function DetailSlider(props) {
 				<div className="wrapper-all">
 					<div className="back-to-maps"><Link className="maps-text" to="/maps">Maps</Link> </div>
 					<main>
-						<div className="wrapper">
+						<div className="wrapper-detail">
 							<div className="form-wrapper-img">
 								<img
 									className="detail-img"
@@ -40,10 +40,10 @@ function DetailSlider(props) {
 								/>{' '}
 							</div>
 						</div>
-						<div className="wrapper">
-							<div className="form-wrapper">
+						<div className="wrapper-detail">
+							<div className="form-wrapper-detail">
 								<div className="detail_place">
-									<h2 id='place-title'>{places.name}</h2>
+									<h2 id="place-title">{places.name}</h2>
 									{places.rating}
 								</div>
 								<div className="detail_place_type"> <u>Type:</u> {places.type}</div>
@@ -78,14 +78,14 @@ function DetailSlider(props) {
 						{places.reviews.map((review) => (
 							<div className="space" key={Date.now()}>
 								<div className="wrapper-map">
-									<div className="form-wrapper-map" >
+									<div className="form-wrapper-map">
 										<img
 											className="photo-reviewer"
 											src={review.profile_photo_url}
 											alt=""
 											key={Math.random() * 3}
 										/>
-										<div className="reviewer" >{review.author_name} </div>
+										<div className="reviewer">{review.author_name} </div>
 										{review.text}{' '}
 									</div>
 								</div>
@@ -93,8 +93,7 @@ function DetailSlider(props) {
 						))}
 					</div>
 				</div>
-			)
-			}
+			)}
 		</>
 	);
 }

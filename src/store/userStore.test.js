@@ -1,6 +1,5 @@
 import userStore from './user-store';
 import dispatcher from '../dispatcher/dispatcher';
-import { act } from '@testing-library/react';
 
 describe('User store', () => {
 	let action;

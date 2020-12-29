@@ -11,7 +11,7 @@ function Footer() {
 				return (
 					<Link
 						data-test-id={`footer-link__${item.name}`}
-						to={item.path}
+						to={`/${item.name}`}
 						key={item.id}
 					>
 						<div className="footer-strings">{item.name}</div>
