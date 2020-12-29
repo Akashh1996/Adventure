@@ -2,9 +2,8 @@ import NavBar from '../NavBar';
 import React from 'react';
 import { unmountComponentAtNode, render } from 'react-DOM';
 import { act } from 'react-dom/test-utils';
-import { BrowserRouter, Link } from 'react-router-dom';
-import * as FaIcons from 'react-icons/fa';
-import { GenIcon } from 'react-icons/lib';
+import { BrowserRouter } from 'react-router-dom';
+
 
 let container = null;
 
@@ -55,7 +54,6 @@ describe('Navbar Component', () => {
 		});
 
 		expect(buttonElement.lastChild.innerHTML).toBe('Menu');
-		// expect(onChange).toHaveBeenCalledTimes(1);
 		expect(menuElement.style.left).toBe(0);
 	});
 });

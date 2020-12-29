@@ -116,7 +116,7 @@ function Map() {
 									<h2>Dirección : {markerSelected.address}</h2>
 									<h2>{markerSelected.phone_number}</h2>
 									<h3>Precios entre {markerSelected.price}</h3>
-									<a href={`${markerSelected.url}`} target="_blank">{markerSelected.url}</a>
+									<a href={`${markerSelected.url}`} target="_blank" rel="noreferrer">{markerSelected.url}</a>
 									<br></br>
 									<br></br>
 									<Link to={`/detail/${markerSelected.id}`}>Más detalles</Link>

@@ -18,6 +18,7 @@ function DetailSlider(props) {
 		return () => {
 			placeStore.removeEventListener(handleChange);
 		};
+	// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [places, placeId]);
 
 	function handleChange() {

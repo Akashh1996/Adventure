@@ -4,7 +4,7 @@ import authStore from '../../../store/auth-store';
 import { loadMyProfile } from '../../../actions/place-actions';
 import { signInWithGoogle } from '../../../actions/auth-actions';
 import './Profile.css';
-import { Card, CardDeck, Carousel, Form, Button } from 'react-bootstrap';
+import { Card, CardDeck, Carousel, Form } from 'react-bootstrap';
 
 
 function Profile() {
@@ -41,7 +41,7 @@ function Profile() {
 					<section>
 						<div className="userProfile">
 							<span>
-								<img src={myuser.photoURL} className="userProfile--picture" />
+								<img src={myuser.photoURL} className="userProfile--picture" alt="userImage"/>
 							</span>
 							<text id="gg">Edit my profile</text>
 							<h2 className="userProfile--name" id="place-title">

@@ -12,9 +12,7 @@ const logo =
 
 function NavBar() {
 	const [sidebar, setSidebar] = useState(false);
-	const [loginOn, setLoginOn] = useState(true);
 	const [user, setUser] = useState(authStore.getUser());
-	const offOnLogin = () => setLoginOn(!loginOn);
 	const showSidebar = () => {
 		setSidebar(!sidebar);
 	};
@@ -81,7 +79,7 @@ function NavBar() {
 				<img className="logo" src={logo} alt="logo" />
 				{user && (
 					<Link to="/profile">
-						<img src={user.photoURL} className="scaled" />
+						<img src={user.photoURL} className="scaled" alt="userImage" />
 					</Link>
 				)}
 			</div>

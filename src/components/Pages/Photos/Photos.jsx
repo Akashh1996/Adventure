@@ -33,6 +33,7 @@ function Photos() {
 									<img
 										className="d-block w-100"
 										src={placeDetail.photos[0]['photo4']}
+										alt= "photos"
 									/>
 
 									<Carousel.Caption className="button--block">
