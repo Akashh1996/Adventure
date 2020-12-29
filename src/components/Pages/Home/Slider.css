@@ -26,6 +26,9 @@ p {
 	background-color: #197278;
 	color: #d48928;
 }
+.slider{
+	margin: 0;
+}
 
 @media screen and (max-width: 650px) {
 	.quote {

@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom';
 
 function Slider() {
 	return (
-		<main>
+		<main className="slider">
 			<Carousel>
 				<Carousel.Item>
 					<img

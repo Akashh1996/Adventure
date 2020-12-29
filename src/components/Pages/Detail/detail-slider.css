@@ -1,5 +1,6 @@
 main {
 	display: flex;
+	margin: 0px 20px;
 }
 
 .detail-img {
@@ -15,7 +16,7 @@ main {
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	background-color: #772e25;
+	background-color: skyblue;
 }
 .form-wrapper {
 	width: 100%;
@@ -31,7 +32,7 @@ main {
 	display: flex;
 	width: 100%;
 	justify-content: center;
-	background-color: #772e25;
+	background-color: skyblue;
 }
 
 .wrapper-map {
@@ -39,7 +40,7 @@ main {
 	width: 90%;
 	display: flex;
 	flex-wrap: wrap;
-	background-color: #772e25;
+	background-color: skyblue;
 }
 .form-wrapper-map {
 	width: 100%;
@@ -87,7 +88,6 @@ main {
 .detail_place {
 	display: flex;
 	align-items: center;
-	margin-left: 15px;
 }
 .detail_descrition {
 	word-break: break-all;
@@ -113,7 +113,10 @@ main {
 	color: #d48928;
 }
 .wrapper-all {
-	background-color: #762f26;
+	background-color: skyblue;
+}
+a{
+	color: #d48928;
 }
 
 @media only screen and (max-width: 1200px) {
@@ -126,7 +129,10 @@ main {
 	}
 
 	.wrapper-detail {
-		padding-left: 100px;
+		padding-left: 30px;
+		align-items: baseline;
+		height: auto;
+	
 	}
 
 	.detail-img {
@@ -154,12 +160,16 @@ main {
 	.form-wrapper-img {
 		width: 300px;
 		height: 220px;
-		margin-top: -200px;
+		margin-top: 10px;
+		background: none;
+		padding-left: 0;
 	}
 
 	.detail-img {
 		box-shadow: 0px 1px 10px;
-		height: 260px;
-		width: 280px;
+	
+	}
+	.overall-reviews{
+		margin-top: 20px;
 	}
 }

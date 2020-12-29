@@ -69,7 +69,7 @@ function DetailSlider(props) {
 								<div className="detail_website">
 									{' '}
 									<u>Website:</u>
-									<span>{places.url}</span>
+									<span><a href={`${places.url}`} target="_blank" rel="noreferrer">{places.url}</a></span>
 								</div>
 							</div>
 						</div>
