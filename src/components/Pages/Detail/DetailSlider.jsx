@@ -3,11 +3,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './detail-slider.css';
 import { loadPlacesData } from '../../../actions/place-actions';
 import placeStore from '../../../store/place-store';
-<<<<<<< HEAD
-=======
 import { Link } from "react-router-dom"
 
->>>>>>> master
 
 function DetailSlider(props) {
 	const [placeId, setPlaceId] = useState(+props.match.params.id);
@@ -77,11 +74,7 @@ function DetailSlider(props) {
 							</div>
 						</div>
 					</main>
-<<<<<<< HEAD
-					<div>
-=======
 					<div className="overall-reviews">
->>>>>>> master
 						{places.reviews.map((review) => (
 							<div className="space" key={Date.now()}>
 								<div className="wrapper-map">

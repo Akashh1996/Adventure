@@ -11,7 +11,7 @@ function Footer() {
 				return (
 					<Link
 						data-test-id={`footer-link__${item.name}`}
-						to={item.path}
+						to={`/${item.name}`}
 						key={item.id}
 					>
 						<div className="footer-strings">{item.name}</div>
@@ -19,23 +19,6 @@ function Footer() {
 					</Link>
 				);
 			})}
-<<<<<<< HEAD
-			<span className="footer-icon">
-				<FaIcons.FaFacebookSquare />
-			</span>
-			<span className="footer-separator">|</span>
-			<span className="footer-icon">
-				<FaIcons.FaInstagram />
-			</span>
-			<span className="footer-separator">|</span>
-			<span className="footer-icon">
-				<FaIcons.FaTwitter />
-			</span>
-			<span className="footer-separator">|</span>
-			<span className="footer-icon">
-				<FaIcons.FaYoutube />
-			</span>
-=======
 			<br />
 
 			<div >
@@ -56,7 +39,6 @@ function Footer() {
 				</span>
 				<span className="footer-separator">|</span>
 			</div>
->>>>>>> master
 		</footer>
 	);
 }
