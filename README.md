@@ -1,3 +1,10 @@
+# Adventure App
+This single page app was a 7 days project created by Eric Sanz, Edith Cantegrith and me (Akash Sapkota) as a front end application.
+The app aim to find the top adventure places in Catalunya.
+
+# Tecgnology
+The app was created using React.JS with flux architecture, all the functions created are tested with jest 
+
 # Deploy URL:
 https://akash-47-03.herokuapp.com/
 
