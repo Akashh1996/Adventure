@@ -6,7 +6,7 @@ The app aim to find the top adventure places in Catalunya.
 The app was created using React.JS with flux architecture, all the functions created are tested with jest 
 
 # Deploy URL:
-https://akash-47-03.herokuapp.com/
+https://adventure-d28a5.web.app/
 
 # Getting Started with Create React App
 
