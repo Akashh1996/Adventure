@@ -1,0 +1,35 @@
+.infowindow {
+	padding: 3px;
+	text-align: justify;
+	margin-left: 5px;
+}
+
+.infowindow h1 {
+	font-size: 30px;
+}
+
+.infowindow h2 {
+	font-size: 20px;
+}
+
+.infowindow h3 {
+	font-size: 20px;
+}
+
+.infowindow a {
+	font-size: 20px;
+}
+
+.buttonBlock {
+	display: flex;
+	position: absolute;
+	flex-direction: column;
+	top: 1rem;
+	right: 1rem;
+	z-index: 10;
+	margin: 0px;
+	padding: 20px;
+	line-height: 35px;
+	font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
+		'Lucida Sans', Arial, sans-serif;
+}

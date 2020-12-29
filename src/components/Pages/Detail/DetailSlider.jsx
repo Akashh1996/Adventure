@@ -3,21 +3,26 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './detail-slider.css';
 import { loadPlacesData } from '../../../actions/place-actions';
 import placeStore from '../../../store/place-store';
+<<<<<<< HEAD
+=======
+import { Link } from "react-router-dom"
+
+>>>>>>> master
 
 function DetailSlider(props) {
 	const [placeId, setPlaceId] = useState(+props.match.params.id);
-
 	const [places, setPlaces] = useState(placeStore.getPlaceDetailByID(placeId));
 
 	useEffect(() => {
 		placeStore.addEventListener(handleChange);
-		if (!places || !places.length) {
+		if (!places) {
 			loadPlacesData();
 		}
 		return () => {
 			placeStore.removeEventListener(handleChange);
 		};
-	}, []);
+	}, [places, placeId]);
+
 	function handleChange() {
 		setPlaces(placeStore.getPlaceDetailByID(placeId));
 		setPlaceId(+props.match.params.id);
@@ -26,7 +31,8 @@ function DetailSlider(props) {
 	return (
 		<>
 			{places && (
-				<div>
+				<div className="wrapper-all">
+					<div className="back-to-maps"><Link className="maps-text" to="/maps">Maps</Link> </div>
 					<main>
 						<div className="wrapper-detail">
 							<div className="form-wrapper-img">
@@ -43,7 +49,7 @@ function DetailSlider(props) {
 									<h2 id="place-title">{places.name}</h2>
 									{places.rating}
 								</div>
-								<div className="detail_place_type">Type:{places.type}</div>
+								<div className="detail_place_type"> <u>Type:</u> {places.type}</div>
 								<div className="detail_descrition">
 									{' '}
 									<u>Description: </u> {places.description}{' '}
@@ -71,7 +77,11 @@ function DetailSlider(props) {
 							</div>
 						</div>
 					</main>
+<<<<<<< HEAD
 					<div>
+=======
+					<div className="overall-reviews">
+>>>>>>> master
 						{places.reviews.map((review) => (
 							<div className="space" key={Date.now()}>
 								<div className="wrapper-map">

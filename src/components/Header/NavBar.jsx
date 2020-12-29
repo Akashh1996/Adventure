@@ -15,7 +15,9 @@ function NavBar() {
 	const [loginOn, setLoginOn] = useState(true);
 	const [user, setUser] = useState(authStore.getUser());
 	const offOnLogin = () => setLoginOn(!loginOn);
-	const showSidebar = () => setSidebar(!sidebar);
+	const showSidebar = () => {
+		setSidebar(!sidebar);
+	};
 
 	function handleChange() {
 		setUser(authStore.getUser());
@@ -30,16 +32,17 @@ function NavBar() {
 	function getSignInButton() {
 		return (
 			<li
-				className="nav-text-button"
+				className="nav-text"
 				type="button"
 				onClick={(event) => {
 					event.preventDefault();
 					signInWithGoogle();
 				}}
 			>
-				<AiIcons.AiOutlineLogin />
-				<span></span>
-				Log In
+				<div className="nav-text-icon">
+					<AiIcons.AiOutlineLogin />
+				</div>
+				<span className="nav-text-log">Log In</span>
 			</li>
 		);
 	}
@@ -47,16 +50,17 @@ function NavBar() {
 	function isSigninVisible() {
 		return user ? (
 			<li
-				className="nav-text-button"
+				className="nav-text"
 				type="button"
 				onClick={(event) => {
 					event.preventDefault();
 					signOut();
 				}}
 			>
-				<AiIcons.AiOutlineLogout />
-				<span></span>
-				Log Out
+				<div className="nav-text-icon">
+					<AiIcons.AiOutlineLogout />
+				</div>
+				<span className="nav-text-log">Log Out</span>
 			</li>
 		) : (
 			getSignInButton()
@@ -66,11 +70,22 @@ function NavBar() {
 	return (
 		<>
 			<div className="NavBar">
-				<Link to="#" className="menu-bars">
-					<FaIcons.FaBars onClick={showSidebar} />
+				<Link
+					to="#"
+					onClick={showSidebar}
+					className="menu-bars"
+					data-testid="buttontest"
+				>
+					<FaIcons.FaBars />
 				</Link>
 				<img className="logo" src={logo} alt="logo" />
+				{user && (
+					<Link to="/profile">
+						<img src={user.photoURL} className="scaled" />
+					</Link>
+				)}
 			</div>
+
 			<nav className={sidebar ? 'nav-menu active' : 'nav-menu'}>
 				<ul className="nav-menu-items" onClick={showSidebar}>
 					<li className="navbar-toggle">
@@ -78,22 +93,24 @@ function NavBar() {
 							<FaIcons.FaWindowClose />
 						</Link>
 					</li>
-					<li onClick={offOnLogin} className="nav-text">
-						{isSigninVisible()}
-					</li>
-					<li className={!loginOn ? 'nav-text' : 'nav-text-inactive'}>
-						<Link to="/profile">
-							<FaIcons.FaUserAlt />
-							<span>My profile</span>
-						</Link>
-					</li>
+					<li className="nav-text">{isSigninVisible()}</li>
+					{user && (
+						<li className="nav-text">
+							<div className="nav-text-icon">
+								<FaIcons.FaUserAlt />
+							</div>
+							<Link to="/profile">My profile</Link>
+						</li>
+					)}
 					{SidebarData.map((item, index) => {
 						return (
-							<li key={index} className={item.cName}>
-								<Link to={item.path}>
-									{item.icon}
-									<span>{item.title}</span>
-								</Link>
+							<li
+								data-test-id={`navbar-link__${item.title}`}
+								key={index}
+								className={item.cName}
+							>
+								<div className="nav-text-icon">{item.icon}</div>
+								<Link to={item.path}>{item.title}</Link>
 							</li>
 						);
 					})}

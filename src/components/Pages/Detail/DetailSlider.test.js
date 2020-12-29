@@ -3,7 +3,7 @@ import React from 'react';
 import { act } from 'react-dom/test-utils';
 import DetailSlider from './DetailSlider';
 import placeStore from '../../../store/place-store';
-import * as action from '../../../actions/place-actions';
+import { BrowserRouter, Link } from 'react-router-dom';
 
 describe('Detail Slider Component', () => {
 	let container;
@@ -31,7 +31,7 @@ describe('Detail Slider Component', () => {
 		container = null;
 	});
 
-	test('should render h2 with place name', () => {
+	test('should render h2 with place name', async () => {
 		let props = {
 			params: {
 				id: 6
@@ -39,15 +39,21 @@ describe('Detail Slider Component', () => {
 		};
 
 		act(() => {
-			render(<DetailSlider match={props} />, container);
+			render(
+				<BrowserRouter>
+					<DetailSlider match={props} />
+				</BrowserRouter>,
+				container
+			);
 		});
 
 		let placeTitle = document.getElementById('place-title');
 
 		expect(placeTitle.innerHTML).toBe('akash');
+
+		expect(container.querySelector('#place-title').textContent).toBe('akash');
 	});
 });
-
 describe('Detail Slider Component removeListener', () => {
 	let container;
 
@@ -82,7 +88,12 @@ describe('Detail Slider Component removeListener', () => {
 		};
 		act(() => {
 			placeStore.emitChange();
-			render(<DetailSlider match={props} />, container);
+			render(
+				<BrowserRouter>
+					<DetailSlider match={props} />
+				</BrowserRouter>,
+				container
+			);
 		});
 
 		let placeTitle = document.getElementById('place-title');

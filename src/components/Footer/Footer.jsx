@@ -19,6 +19,7 @@ function Footer() {
 					</Link>
 				);
 			})}
+<<<<<<< HEAD
 			<span className="footer-icon">
 				<FaIcons.FaFacebookSquare />
 			</span>
@@ -34,6 +35,28 @@ function Footer() {
 			<span className="footer-icon">
 				<FaIcons.FaYoutube />
 			</span>
+=======
+			<br />
+
+			<div >
+				<span className="footer-icon">
+					<FaIcons.FaFacebookSquare />
+				</span>
+				<span className="footer-separator">|</span>
+				<span className="footer-icon">
+					<FaIcons.FaInstagram />
+				</span>
+				<span className="footer-separator">|</span>
+				<span className="footer-icon">
+					<FaIcons.FaTwitter />
+				</span>
+				<span className="footer-separator">|</span>
+				<span className="footer-icon">
+					<FaIcons.FaYoutube />
+				</span>
+				<span className="footer-separator">|</span>
+			</div>
+>>>>>>> master
 		</footer>
 	);
 }

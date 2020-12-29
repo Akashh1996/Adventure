@@ -4,7 +4,6 @@ main {
 
 .detail-img {
 	box-shadow: 0px 1px 10px;
-	border-radius: 20px;
 	height: 400px;
 	width: 500px;
 }
@@ -18,15 +17,18 @@ main {
 	align-items: center;
 	background-color: #772e25;
 }
+<<<<<<< HEAD
 .form-wrapper-detail {
 	margin-right: 30px;
+=======
+.form-wrapper {
+>>>>>>> master
 	width: 100%;
 	display: flex;
 	flex-direction: column;
 	padding: 20px 40px;
-	border-radius: 20px;
-	margin-left: -100px;
 	background-color: snow;
+	border-radius: 0px;
 }
 
 .space {
@@ -50,7 +52,6 @@ main {
 	flex-direction: column;
 	justify-content: center;
 	padding: 20px 40px;
-	border-radius: 20px;
 	background-color: snow;
 }
 
@@ -66,12 +67,10 @@ main {
 .form-wrapper-img {
 	padding-top: 10px;
 	padding-left: 10px;
-	margin-left: -100px;
 	width: 520px;
 	height: 420px;
 	display: flex;
 	flex-direction: column;
-	border-radius: 20px;
 	background-color: snow;
 }
 
@@ -98,8 +97,35 @@ main {
 .detail_descrition {
 	word-break: break-all;
 }
+.back-to-maps {
+	width: 40px;
+	height: auto;
+	background-color: #283d3b;
+	writing-mode: vertical-rl;
+	text-orientation: upright;
+	float: right;
+	padding: 10px;
+	position: sticky;
+	top: 0;
+	margin-top: 40vh;
+	border: 1px solid black;
+	color: white;
+}
+.back-to-maps a {
+	color: white;
+}
+.back-to-maps a:hover {
+	color: #d48928;
+}
+.wrapper-all {
+	background-color: #762f26;
+}
 
+<<<<<<< HEAD
 @media only screen and (max-width: 900px) {
+=======
+@media only screen and (max-width: 1200px) {
+>>>>>>> master
 	main {
 		flex-direction: column;
 	}
@@ -130,6 +156,7 @@ main {
 	.wrapper {
 		flex-wrap: wrap;
 	}
+<<<<<<< HEAD
 
 	.form-wrapper-detail {
 		margin-right: 0px;
@@ -158,5 +185,21 @@ main {
 
 	.space {
 		height: 250px;
+=======
+	.form-wrapper {
+		margin-left: 20px;
+	}
+
+	.form-wrapper-img {
+		width: 300px;
+		height: 220px;
+		margin-top: -200px;
+	}
+
+	.detail-img {
+		box-shadow: 0px 1px 10px;
+		height: 260px;
+		width: 280px;
+>>>>>>> master
 	}
 }

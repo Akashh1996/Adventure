@@ -2,13 +2,13 @@ import React, { useEffect, useState } from 'react';
 import { loadPlaces, loadPlacesData } from '../../../actions/place-actions';
 import { Link } from 'react-router-dom';
 import placeStore from '../../../store/place-store';
+import './Map.css';
 import {
 	GoogleMap,
 	useLoadScript,
 	Marker,
 	InfoWindow
 } from '@react-google-maps/api';
-import authStore from '../../../store/auth-store';
 
 const GOOGLE_MAPS_API_KEY = 'AIzaSyD6YZ7TzQl_TKgHxHWI9s_9u-NLM1B1nRo';
 
@@ -22,6 +22,11 @@ const mapContainerStyle = {
 const center = {
 	lat: 42.357209,
 	lng: 2.802071
+};
+
+const options = {
+	disableDefaultUI: true,
+	zoomControl: true
 };
 
 function Map() {
@@ -57,13 +62,21 @@ function Map() {
 
 	return (
 		<>
-			{places && placeApi && (
+			{places && (
 				<div>
 					<GoogleMap
 						mapContainerStyle={mapContainerStyle}
 						zoom={7}
 						center={center}
+						options={options}
 					>
+						<div className="buttonBlock">
+							<button style={{ color: 'green', margin: '5px' }}>Rafting</button>
+							<button style={{ color: 'rgb(102, 22, 109)', margin: '5px' }}>
+								Paragliding
+							</button>
+							<button style={{ color: 'red', margin: '5px' }}>Canyoning</button>
+						</div>
 						{places.map((placeDetail) => {
 							return (
 								<Marker
@@ -87,21 +100,7 @@ function Map() {
 								/>
 							);
 						})}
-						{/* {placeApi?.map((placeDetail) => {
-					return (
-						<Marker
-							key={placeDetail.result.name}
-							position={placeDetail.result.geometry.location}
-							icon={{
-								url:
-									'https://trello-attachments.s3.amazonaws.com/5f9fe5242167b873b8f1f631/372x594/69d66633dffceabc33074ec6670c06b1/clipart51531.png',
-								scaledSize: new window.google.maps.Size(20, 30)
-							}}
-							// onMouseOver={()=> setMarkerSelected(placeDetail)}
-						/>
-					);
-				})}
- */}
+
 						{markerSelected && (
 							<InfoWindow
 								position={markerSelected.location}
@@ -109,18 +108,18 @@ function Map() {
 									setMarkerSelected(null);
 								}}
 							>
-								<div>
+								<div className="infowindow">
 									<h1>{markerSelected.name}</h1>
-									{/* <img src="{markerSelected.photos}" /> */}
-									<h3>{markerSelected.type}</h3>
-									<h3>{markerSelected.price}</h3>
-									<h3>{markerSelected.rating}</h3>
-									<h3>{markerSelected.address}</h3>
-									<h3>{markerSelected.phone_number}</h3>
-									<h3>{markerSelected.url}</h3>
-									<Link to={`/detail/${markerSelected.id}`}>
-										Get more detials
-									</Link>
+									<figcaption>{markerSelected.type}</figcaption>
+									<br></br>
+									<h2>Nota del sitio : {markerSelected.rating}</h2>
+									<h2>Dirección : {markerSelected.address}</h2>
+									<h2>{markerSelected.phone_number}</h2>
+									<h3>Precios entre {markerSelected.price}</h3>
+									<a href={`${markerSelected.url}`} target="_blank">{markerSelected.url}</a>
+									<br></br>
+									<br></br>
+									<Link to={`/detail/${markerSelected.id}`}>Más detalles</Link>
 								</div>
 							</InfoWindow>
 						)}
